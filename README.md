@@ -30,4 +30,4 @@ F07 | Obavijesti | Obavijesti za događaje poput priredba, izleta i sličnog. Ro
 
 ## Tehnologije i oprema
 
-MySQL, .NET, GitHub, Photoshop, Draw.io, Word, Visual Paradigm, MySQL Server, https://www.freelogodesign.org/
+MySQL, .NET, GitHub, Photoshop, Draw.io, Word, Visual Paradigm, MySQL Workbench, https://www.freelogodesign.org/
