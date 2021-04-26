@@ -22,9 +22,9 @@ FO2 | Upravljanje ulogama | To znači da admin svakom registriranom korisniku do
 F03 | Upis/uređivanje/brisanje profila u bazu podataka | Kreirani korisnik roditelja obavlja upis djeteta sa svim njegovim potrebnim informacijama. Uređivanje/brisanje tj. izmjena profila napravljenog pri registraciji| Filip Pavliš
 F04 | Evidencija dolaska djece | Evidencija dolaska djece u točno određeno vrijeme i grupu kojoj pripada | Ivan Jure Parać
 F05 | Pregled i dodavanje aktivnosti | Teta izrađuje tjedne aktivnosti koje će biti vidljive roditeljima preko aplikacije, tjedne aktivnosti se šalju u obliku PDF-a ODMAH roditeljima na mail | Silvio Kovačić
-F05 | Bilješke | Mogućnost dodavanja bilješka od strane teta za svako određeno dijete, te se bilješka šalje u obliku PDF-a NA KRAJU DANA u obliku skupnog izvješća za taj dan dobije na mail| Ivan Jure Parać
-F06 | Statistika | Statistički podaci o radu vrtića i evidenciji djece (grafove, tekst i tablice) | Silvio Kovačić
-F07 | Obavijesti | Obavijesti za događaje poput priredba, izleta i sličnog. Roditelji se mogu pretplatiti na podsjetnik za obavjesti koji ih podsjeća dan prije | Silvio Kovačić, Filip Pavliš
+F06 | Bilješke | Mogućnost dodavanja bilješka od strane teta za svako određeno dijete, te se bilješka šalje u obliku PDF-a NA KRAJU DANA u obliku skupnog izvješća za taj dan dobije na mail| Ivan Jure Parać
+F07 | Statistika | Statistički podaci o radu vrtića i evidenciji djece (grafove, tekst i tablice) | Silvio Kovačić
+F08 | Obavijesti | Obavijesti za događaje poput priredba, izleta i sličnog. Roditelji se mogu pretplatiti na podsjetnik za obavjesti koji ih podsjeća dan prije | Silvio Kovačić, Filip Pavliš
 
 
 
