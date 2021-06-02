@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace KindergartenJoy
 {
-    public partial class GlavnaForma : Form
+    public partial class FormPrijava : Form
     {
-        public GlavnaForma()
+        public FormPrijava()
         {
             InitializeComponent();
         }
