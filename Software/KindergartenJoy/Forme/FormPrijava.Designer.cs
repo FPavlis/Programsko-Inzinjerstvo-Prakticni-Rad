@@ -33,8 +33,16 @@ namespace KindergartenJoy
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtLozinka = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnPrijava = new System.Windows.Forms.Button();
+            this.lblKreiraj = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -58,10 +66,87 @@ namespace KindergartenJoy
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.panel2.Controls.Add(this.lblKreiraj);
+            this.panel2.Controls.Add(this.btnPrijava);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.txtLozinka);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.txtEmail);
+            this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(478, -2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(463, 562);
             this.panel2.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Nexa Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(196, 137);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(58, 20);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "EMAIL";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.BackColor = System.Drawing.SystemColors.Window;
+            this.txtEmail.Location = new System.Drawing.Point(111, 170);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(225, 20);
+            this.txtEmail.TabIndex = 4;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Nexa Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(186, 234);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(77, 20);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "LOZINKA";
+            // 
+            // txtLozinka
+            // 
+            this.txtLozinka.Location = new System.Drawing.Point(111, 266);
+            this.txtLozinka.Name = "txtLozinka";
+            this.txtLozinka.Size = new System.Drawing.Size(225, 20);
+            this.txtLozinka.TabIndex = 6;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Nexa Bold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(152, 29);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(153, 39);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Prijavi se";
+            // 
+            // btnPrijava
+            // 
+            this.btnPrijava.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnPrijava.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnPrijava.Font = new System.Drawing.Font("Lucida Console", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrijava.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnPrijava.Location = new System.Drawing.Point(147, 361);
+            this.btnPrijava.Name = "btnPrijava";
+            this.btnPrijava.Size = new System.Drawing.Size(146, 42);
+            this.btnPrijava.TabIndex = 8;
+            this.btnPrijava.Text = "PRIJAVA";
+            this.btnPrijava.UseVisualStyleBackColor = false;
+            // 
+            // lblKreiraj
+            // 
+            this.lblKreiraj.AutoSize = true;
+            this.lblKreiraj.Font = new System.Drawing.Font("Lucida Console", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblKreiraj.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.lblKreiraj.Location = new System.Drawing.Point(156, 417);
+            this.lblKreiraj.Name = "lblKreiraj";
+            this.lblKreiraj.Size = new System.Drawing.Size(124, 13);
+            this.lblKreiraj.TabIndex = 10;
+            this.lblKreiraj.Text = "KREIRAJ RAČUN";
             // 
             // FormPrijava
             // 
@@ -74,6 +159,8 @@ namespace KindergartenJoy
             this.Text = "Kindergarten Joy App";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -83,6 +170,13 @@ namespace KindergartenJoy
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtLozinka;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnPrijava;
+        private System.Windows.Forms.Label lblKreiraj;
     }
 }
 
