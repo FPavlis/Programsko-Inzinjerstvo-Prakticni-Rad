@@ -33,20 +33,20 @@ namespace KindergartenJoy.Forme
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnPrijava = new System.Windows.Forms.Button();
+            this.label3213 = new System.Windows.Forms.Label();
+            this.txtTelefon = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtPrezime = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtLozinkaReg = new System.Windows.Forms.TextBox();
+            this.txtKorIme = new System.Windows.Forms.TextBox();
+            this.btnRegistracija = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.txtIme = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtEmailReg = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtKorIme = new System.Windows.Forms.TextBox();
-            this.txtLozinkaReg = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtPrezime = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.txtTelefon = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -73,15 +73,15 @@ namespace KindergartenJoy.Forme
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.panel2.Controls.Add(this.label3213);
             this.panel2.Controls.Add(this.txtTelefon);
-            this.panel2.Controls.Add(this.textBox1);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.txtPrezime);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.txtLozinkaReg);
             this.panel2.Controls.Add(this.txtKorIme);
-            this.panel2.Controls.Add(this.btnPrijava);
+            this.panel2.Controls.Add(this.btnRegistracija);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.txtIme);
             this.panel2.Controls.Add(this.label2);
@@ -92,18 +92,90 @@ namespace KindergartenJoy.Forme
             this.panel2.Size = new System.Drawing.Size(473, 564);
             this.panel2.TabIndex = 4;
             // 
-            // btnPrijava
+            // label3213
             // 
-            this.btnPrijava.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnPrijava.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnPrijava.Font = new System.Drawing.Font("Lucida Console", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrijava.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnPrijava.Location = new System.Drawing.Point(128, 426);
-            this.btnPrijava.Name = "btnPrijava";
-            this.btnPrijava.Size = new System.Drawing.Size(189, 42);
-            this.btnPrijava.TabIndex = 8;
-            this.btnPrijava.Text = "REGISTRACIJA";
-            this.btnPrijava.UseVisualStyleBackColor = false;
+            this.label3213.AutoSize = true;
+            this.label3213.Font = new System.Drawing.Font("Nexa Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3213.Location = new System.Drawing.Point(314, 304);
+            this.label3213.Name = "label3213";
+            this.label3213.Size = new System.Drawing.Size(82, 20);
+            this.label3213.TabIndex = 18;
+            this.label3213.Text = "TELEFON";
+            // 
+            // txtTelefon
+            // 
+            this.txtTelefon.BackColor = System.Drawing.SystemColors.Window;
+            this.txtTelefon.Location = new System.Drawing.Point(253, 336);
+            this.txtTelefon.Name = "txtTelefon";
+            this.txtTelefon.Size = new System.Drawing.Size(189, 20);
+            this.txtTelefon.TabIndex = 17;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Nexa Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(313, 206);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(78, 20);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "PREZIME";
+            // 
+            // txtPrezime
+            // 
+            this.txtPrezime.BackColor = System.Drawing.SystemColors.Window;
+            this.txtPrezime.Location = new System.Drawing.Point(253, 240);
+            this.txtPrezime.Name = "txtPrezime";
+            this.txtPrezime.Size = new System.Drawing.Size(189, 20);
+            this.txtPrezime.TabIndex = 15;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Nexa Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(97, 206);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(37, 20);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "IME";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Nexa Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(49, 117);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(138, 20);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "KORISNICKO IME";
+            // 
+            // txtLozinkaReg
+            // 
+            this.txtLozinkaReg.BackColor = System.Drawing.SystemColors.Window;
+            this.txtLozinkaReg.Location = new System.Drawing.Point(253, 149);
+            this.txtLozinkaReg.Name = "txtLozinkaReg";
+            this.txtLozinkaReg.Size = new System.Drawing.Size(189, 20);
+            this.txtLozinkaReg.TabIndex = 12;
+            // 
+            // txtKorIme
+            // 
+            this.txtKorIme.BackColor = System.Drawing.SystemColors.Window;
+            this.txtKorIme.Location = new System.Drawing.Point(22, 149);
+            this.txtKorIme.Name = "txtKorIme";
+            this.txtKorIme.Size = new System.Drawing.Size(189, 20);
+            this.txtKorIme.TabIndex = 11;
+            // 
+            // btnRegistracija
+            // 
+            this.btnRegistracija.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnRegistracija.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRegistracija.Font = new System.Drawing.Font("Lucida Console", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistracija.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnRegistracija.Location = new System.Drawing.Point(128, 426);
+            this.btnRegistracija.Name = "btnRegistracija";
+            this.btnRegistracija.Size = new System.Drawing.Size(189, 42);
+            this.btnRegistracija.TabIndex = 8;
+            this.btnRegistracija.Text = "REGISTRACIJA";
+            this.btnRegistracija.UseVisualStyleBackColor = false;
             // 
             // label3
             // 
@@ -117,7 +189,7 @@ namespace KindergartenJoy.Forme
             // 
             // txtIme
             // 
-            this.txtIme.Location = new System.Drawing.Point(253, 239);
+            this.txtIme.Location = new System.Drawing.Point(22, 240);
             this.txtIme.Name = "txtIme";
             this.txtIme.Size = new System.Drawing.Size(189, 20);
             this.txtIme.TabIndex = 6;
@@ -135,7 +207,7 @@ namespace KindergartenJoy.Forme
             // txtEmailReg
             // 
             this.txtEmailReg.BackColor = System.Drawing.SystemColors.Window;
-            this.txtEmailReg.Location = new System.Drawing.Point(22, 239);
+            this.txtEmailReg.Location = new System.Drawing.Point(22, 336);
             this.txtEmailReg.Name = "txtEmailReg";
             this.txtEmailReg.Size = new System.Drawing.Size(189, 20);
             this.txtEmailReg.TabIndex = 4;
@@ -144,83 +216,11 @@ namespace KindergartenJoy.Forme
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Nexa Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(95, 210);
+            this.label1.Location = new System.Drawing.Point(88, 304);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(58, 20);
             this.label1.TabIndex = 3;
             this.label1.Text = "EMAIL";
-            // 
-            // txtKorIme
-            // 
-            this.txtKorIme.BackColor = System.Drawing.SystemColors.Window;
-            this.txtKorIme.Location = new System.Drawing.Point(22, 149);
-            this.txtKorIme.Name = "txtKorIme";
-            this.txtKorIme.Size = new System.Drawing.Size(189, 20);
-            this.txtKorIme.TabIndex = 11;
-            // 
-            // txtLozinkaReg
-            // 
-            this.txtLozinkaReg.BackColor = System.Drawing.SystemColors.Window;
-            this.txtLozinkaReg.Location = new System.Drawing.Point(253, 149);
-            this.txtLozinkaReg.Name = "txtLozinkaReg";
-            this.txtLozinkaReg.Size = new System.Drawing.Size(189, 20);
-            this.txtLozinkaReg.TabIndex = 12;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Nexa Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(49, 117);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(138, 20);
-            this.label4.TabIndex = 13;
-            this.label4.Text = "KORISNICKO IME";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Nexa Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(331, 210);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(37, 20);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "IME";
-            // 
-            // txtPrezime
-            // 
-            this.txtPrezime.BackColor = System.Drawing.SystemColors.Window;
-            this.txtPrezime.Location = new System.Drawing.Point(22, 336);
-            this.txtPrezime.Name = "txtPrezime";
-            this.txtPrezime.Size = new System.Drawing.Size(189, 20);
-            this.txtPrezime.TabIndex = 15;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Nexa Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(75, 304);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(78, 20);
-            this.label6.TabIndex = 16;
-            this.label6.Text = "PREZIME";
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox1.Location = new System.Drawing.Point(253, 336);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(189, 20);
-            this.textBox1.TabIndex = 17;
-            // 
-            // txtTelefon
-            // 
-            this.txtTelefon.AutoSize = true;
-            this.txtTelefon.Font = new System.Drawing.Font("Nexa Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefon.Location = new System.Drawing.Point(314, 304);
-            this.txtTelefon.Name = "txtTelefon";
-            this.txtTelefon.Size = new System.Drawing.Size(82, 20);
-            this.txtTelefon.TabIndex = 18;
-            this.txtTelefon.Text = "TELEFON";
             // 
             // FormRegistracija
             // 
@@ -244,7 +244,7 @@ namespace KindergartenJoy.Forme
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btnPrijava;
+        private System.Windows.Forms.Button btnRegistracija;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtIme;
         private System.Windows.Forms.Label label2;
@@ -254,8 +254,8 @@ namespace KindergartenJoy.Forme
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtLozinkaReg;
         private System.Windows.Forms.TextBox txtKorIme;
-        private System.Windows.Forms.Label txtTelefon;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label3213;
+        private System.Windows.Forms.TextBox txtTelefon;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtPrezime;
     }
