@@ -52,6 +52,12 @@
     <Compile Include="Forme\FormPrijava.Designer.cs">
       <DependentUpon>FormPrijava.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forme\FormRegistracija.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\FormRegistracija.Designer.cs">
+      <DependentUpon>FormRegistracija.cs</DependentUpon>
+    </Compile>
     <Compile Include="Klase\Aktivnost.cs" />
     <Compile Include="Klase\Bilješka.cs" />
     <Compile Include="Klase\Dijete.cs" />
@@ -67,6 +73,9 @@
     <Compile Include="Klase\TipKorisnika.cs" />
     <EmbeddedResource Include="Forme\FormPrijava.resx">
       <DependentUpon>FormPrijava.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\FormRegistracija.resx">
+      <DependentUpon>FormRegistracija.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
