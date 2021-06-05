@@ -8,12 +8,13 @@ namespace KindergartenJoy
 {
     public partial class aktivnost
     {
-        public void DodajAktivnost(string opis, DateTime vrijeme)
+        public void DodajAktivnost(string naziv, string opis, DateTime vrijeme)
         {
             aktivnost novaAktivnost = new aktivnost()
             {
+                naziv = naziv,
                 opis = opis,
-                vrijeme = vrijeme
+                vrijeme = vrijeme,
             };
             using (var context = new Entities())
             {

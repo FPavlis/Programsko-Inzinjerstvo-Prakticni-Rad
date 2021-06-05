@@ -4,12 +4,13 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="aktivnost">
           <Key>
             <PropertyRef Name="aktivnost_id" />
           </Key>
-          <Property Name="aktivnost_id" Type="int" Nullable="false" />
+          <Property Name="aktivnost_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="naziv" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="korisnik_id" Type="int" />
           <Property Name="opis" Type="varchar" MaxLength="45" Nullable="false" />
           <Property Name="vrijeme" Type="datetime2" Precision="7" Nullable="false" />
@@ -70,7 +71,8 @@
           <Property Name="korisnik_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="aktivnost_id" Type="int" Nullable="false" />
           <Property Name="tip_korisnik_id" Type="int" Nullable="false" />
-          <Property Name="korisnicko_ime" Type="varchar" MaxLength="45" />
+          <Property Name="korisnicko_ime" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="ime" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="prezime" Type="varchar" MaxLength="45" Nullable="false" />
           <Property Name="lozinka" Type="varchar" MaxLength="45" Nullable="false" />
           <Property Name="lozinka_sha256" Type="varchar" MaxLength="64" Nullable="false" />
@@ -447,8 +449,7 @@
             <End Role="upis" EntitySet="upis" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -462,6 +463,7 @@
           <Property Name="vrijeme" Type="DateTime" Nullable="false" Precision="7" />
           <NavigationProperty Name="korisnik" Relationship="Self.FK_aktivnost_korisnik" FromRole="aktivnost" ToRole="korisnik" />
           <NavigationProperty Name="korisnik1" Relationship="Self.FK_korisnik_aktivnost" FromRole="aktivnost" ToRole="korisnik" />
+          <Property Name="naziv" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="biljeska">
           <Key>
@@ -530,7 +532,7 @@
           <Property Name="korisnik_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="aktivnost_id" Type="Int32" Nullable="false" />
           <Property Name="tip_korisnik_id" Type="Int32" Nullable="false" />
-          <Property Name="korisnicko_ime" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="korisnicko_ime" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="prezime" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="lozinka" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="lozinka_sha256" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
@@ -548,6 +550,7 @@
           <NavigationProperty Name="obavijest" Relationship="Self.FK_obavijest_korisnik" FromRole="korisnik" ToRole="obavijest" />
           <NavigationProperty Name="radi_u" Relationship="Self.FK_radi_u_korisnik" FromRole="korisnik" ToRole="radi_u" />
           <NavigationProperty Name="upis" Relationship="Self.FK_upis_korisnik" FromRole="korisnik" ToRole="upis" />
+          <Property Name="ime" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="obavijest">
           <Key>
@@ -939,6 +942,7 @@
           <EntitySetMapping Name="aktivnost">
             <EntityTypeMapping TypeName="Model.aktivnost">
               <MappingFragment StoreEntitySet="aktivnost">
+                <ScalarProperty Name="naziv" ColumnName="naziv" />
                 <ScalarProperty Name="aktivnost_id" ColumnName="aktivnost_id" />
                 <ScalarProperty Name="korisnik_id" ColumnName="korisnik_id" />
                 <ScalarProperty Name="opis" ColumnName="opis" />
@@ -1003,6 +1007,7 @@
           <EntitySetMapping Name="korisnik">
             <EntityTypeMapping TypeName="Model.korisnik">
               <MappingFragment StoreEntitySet="korisnik">
+                <ScalarProperty Name="ime" ColumnName="ime" />
                 <ScalarProperty Name="korisnik_id" ColumnName="korisnik_id" />
                 <ScalarProperty Name="aktivnost_id" ColumnName="aktivnost_id" />
                 <ScalarProperty Name="tip_korisnik_id" ColumnName="tip_korisnik_id" />

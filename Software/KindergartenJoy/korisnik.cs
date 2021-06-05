@@ -37,6 +37,7 @@ namespace KindergartenJoy
         public string status { get; set; }
         public string pretplata { get; set; }
         public int pravo_id { get; set; }
+        public string ime { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<aktivnost> aktivnost { get; set; }

@@ -24,6 +24,7 @@ namespace KindergartenJoy
         public Nullable<int> korisnik_id { get; set; }
         public string opis { get; set; }
         public System.DateTime vrijeme { get; set; }
+        public string naziv { get; set; }
     
         public virtual korisnik korisnik { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
