@@ -17,5 +17,9 @@ namespace KindergartenJoy.Forme
             InitializeComponent();
         }
 
+        private void btnOdustani_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

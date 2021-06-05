@@ -108,6 +108,7 @@ namespace KindergartenJoy.Forme
             this.btnOdustani.TabIndex = 7;
             this.btnOdustani.Text = "Odustani";
             this.btnOdustani.UseVisualStyleBackColor = true;
+            this.btnOdustani.Click += new System.EventHandler(this.btnOdustani_Click);
             // 
             // IzradiAktivnost
             // 
