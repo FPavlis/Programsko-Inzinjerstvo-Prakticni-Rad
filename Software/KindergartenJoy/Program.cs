@@ -1,4 +1,5 @@
-﻿using System;
+﻿using KindergartenJoy.Forme;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace KindergartenJoy
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormPrijava());
+            Application.Run(new IzradiAktivnost());
         }
     }
 }

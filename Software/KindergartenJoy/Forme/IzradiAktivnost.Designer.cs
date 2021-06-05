@@ -99,6 +99,7 @@ namespace KindergartenJoy.Forme
             this.btnSpremiAktivnost.TabIndex = 7;
             this.btnSpremiAktivnost.Text = "Spremi";
             this.btnSpremiAktivnost.UseVisualStyleBackColor = true;
+            this.btnSpremiAktivnost.Click += new System.EventHandler(this.btnSpremiAktivnost_Click);
             // 
             // btnOdustani
             // 
