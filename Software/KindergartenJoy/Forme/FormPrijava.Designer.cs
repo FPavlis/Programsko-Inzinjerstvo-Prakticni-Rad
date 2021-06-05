@@ -157,6 +157,7 @@ namespace KindergartenJoy
             this.Controls.Add(this.panel1);
             this.Name = "FormPrijava";
             this.Text = "Kindergarten Joy App";
+            this.Load += new System.EventHandler(this.FormPrijava_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);

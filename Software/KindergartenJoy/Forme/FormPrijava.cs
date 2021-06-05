@@ -28,5 +28,23 @@ namespace KindergartenJoy
             FormRegistracija form = new FormRegistracija();
             form.ShowDialog();
         }
+
+        private void FormPrijava_Load(object sender, EventArgs e)
+        {
+            lblKreiraj.MouseHover += LblKreiraj_MouseHover;
+            lblKreiraj.MouseLeave += LblKreiraj_MouseLeave;
+            lblKreiraj.Click += lblKreiraj_Click;
+        }
+
+
+        private void LblKreiraj_MouseLeave(object sender, EventArgs e)
+        {
+            lblKreiraj.ForeColor = System.Drawing.Color.RoyalBlue;
+        }
+
+        private void LblKreiraj_MouseHover(object sender, EventArgs e)
+        {
+            lblKreiraj.ForeColor = System.Drawing.Color.Black;
+        }
     }
 }

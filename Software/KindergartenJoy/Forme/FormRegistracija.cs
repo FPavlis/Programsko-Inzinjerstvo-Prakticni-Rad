@@ -1,4 +1,5 @@
-﻿using System;
+﻿using KindergartenJoy.Klase;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,31 @@ namespace KindergartenJoy.Forme
         public FormRegistracija()
         {
             InitializeComponent();
+        }
+
+        private void FormRegistracija_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRegistracija_Click(object sender, EventArgs e)
+        {
+            string korisnickoIme = txtKorIme.Text;
+            string lozinka = txtLozinkaReg.Text;
+            string ime = txtIme.Text;
+            string prezime = txtPrezime.Text;
+            string email = txtEmailReg.Text;
+            string telefon = txtTelefon.Text;
+            lblPogreske.Visible = false;
+
+            string poruka = ValidacijaRegistracija.ValidacijaRegistracije(korisnickoIme, lozinka, ime, prezime, email, telefon);
+
+            if(poruka != "")
+            {
+                lblPogreske.Text = poruka;
+                lblPogreske.Visible = true;               
+            }
+           
         }
     }
 }

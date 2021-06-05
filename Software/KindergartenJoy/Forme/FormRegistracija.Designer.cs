@@ -47,6 +47,7 @@ namespace KindergartenJoy.Forme
             this.label2 = new System.Windows.Forms.Label();
             this.txtEmailReg = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.lblPogreske = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -73,6 +74,7 @@ namespace KindergartenJoy.Forme
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.panel2.Controls.Add(this.lblPogreske);
             this.panel2.Controls.Add(this.label3213);
             this.panel2.Controls.Add(this.txtTelefon);
             this.panel2.Controls.Add(this.label6);
@@ -170,12 +172,13 @@ namespace KindergartenJoy.Forme
             this.btnRegistracija.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRegistracija.Font = new System.Drawing.Font("Lucida Console", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistracija.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnRegistracija.Location = new System.Drawing.Point(128, 426);
+            this.btnRegistracija.Location = new System.Drawing.Point(128, 462);
             this.btnRegistracija.Name = "btnRegistracija";
             this.btnRegistracija.Size = new System.Drawing.Size(189, 42);
             this.btnRegistracija.TabIndex = 8;
             this.btnRegistracija.Text = "REGISTRACIJA";
             this.btnRegistracija.UseVisualStyleBackColor = false;
+            this.btnRegistracija.Click += new System.EventHandler(this.btnRegistracija_Click);
             // 
             // label3
             // 
@@ -222,6 +225,18 @@ namespace KindergartenJoy.Forme
             this.label1.TabIndex = 3;
             this.label1.Text = "EMAIL";
             // 
+            // lblPogreske
+            // 
+            this.lblPogreske.AutoSize = true;
+            this.lblPogreske.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPogreske.ForeColor = System.Drawing.Color.Black;
+            this.lblPogreske.Location = new System.Drawing.Point(19, 386);
+            this.lblPogreske.Name = "lblPogreske";
+            this.lblPogreske.Size = new System.Drawing.Size(75, 16);
+            this.lblPogreske.TabIndex = 19;
+            this.lblPogreske.Text = "Pogreske";
+            this.lblPogreske.Visible = false;
+            // 
             // FormRegistracija
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -231,6 +246,7 @@ namespace KindergartenJoy.Forme
             this.Controls.Add(this.panel1);
             this.Name = "FormRegistracija";
             this.Text = "FormRegistracija";
+            this.Load += new System.EventHandler(this.FormRegistracija_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
@@ -258,5 +274,6 @@ namespace KindergartenJoy.Forme
         private System.Windows.Forms.TextBox txtTelefon;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtPrezime;
+        private System.Windows.Forms.Label lblPogreske;
     }
 }

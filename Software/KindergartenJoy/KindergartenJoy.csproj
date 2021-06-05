@@ -102,6 +102,7 @@
     <Compile Include="Klase\prava.cs" />
     <Compile Include="Klase\TipRadnja.cs" />
     <Compile Include="Klase\Upis.cs" />
+    <Compile Include="Klase\ValidacijaRegistracija.cs" />
     <Compile Include="korisnik.cs">
       <DependentUpon>VrticModel.tt</DependentUpon>
     </Compile>
