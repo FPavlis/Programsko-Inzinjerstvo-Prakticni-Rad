@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace KindergartenJoy.Klase
 {
-    public class Grupa
+    public partial class grupa
     {
         public string ImeGrupe { get; set; }
         public string OpisGrupe { get; set; }

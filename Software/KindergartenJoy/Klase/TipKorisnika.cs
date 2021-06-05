@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace KindergartenJoy
 {
-    public enum TipKorisnik
+    public partial class  tip_korisnik
     {
-        teta, roditelj, administrator
     }
 }

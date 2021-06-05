@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace KindergartenJoy.Klase
 {
-    public class Upis
+    public partial class upis
     {
         public int Roditelj { get; set; }
-        public Dijete Dijete { get; set; }
+        public dijete Dijete { get; set; }
         public DateTime DatumUpisa { get; set; }
 
         private void StvoriDijete()

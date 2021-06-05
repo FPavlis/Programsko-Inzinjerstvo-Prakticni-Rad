@@ -6,10 +6,7 @@ using System.Threading.Tasks;
 
 namespace KindergartenJoy.Klase
 {
-    public partial class tip_radnja
+    public partial class prava
     {
-        public string Ime { get; set; }
-        public string Opis { get; set; }
-
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace KindergartenJoy
 {
-    public class Obavijest
+    public partial class obavijest
     {
         public List<int> Pretplatnici {get; set; }
         public string Naslov { get; set; }

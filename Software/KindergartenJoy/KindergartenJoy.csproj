@@ -33,8 +33,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,6 +55,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="aktivnost.cs">
+      <DependentUpon>VrticModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="biljeska.cs">
+      <DependentUpon>VrticModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dijete.cs">
+      <DependentUpon>VrticModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dnevnik.cs">
+      <DependentUpon>VrticModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="evidencija.cs">
+      <DependentUpon>VrticModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Forme\FormPrijava.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,6 +88,9 @@
     <Compile Include="Forme\FormRegistracija.Designer.cs">
       <DependentUpon>FormRegistracija.cs</DependentUpon>
     </Compile>
+    <Compile Include="grupa.cs">
+      <DependentUpon>VrticModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Klase\Aktivnost.cs" />
     <Compile Include="Klase\Bilješka.cs" />
     <Compile Include="Klase\Dijete.cs" />
@@ -72,11 +99,51 @@
     <Compile Include="Klase\Grupa.cs" />
     <Compile Include="Klase\Korisnik.cs" />
     <Compile Include="Klase\Obavijest.cs" />
+    <Compile Include="Klase\prava.cs" />
     <Compile Include="Klase\TipRadnja.cs" />
     <Compile Include="Klase\Upis.cs" />
+    <Compile Include="korisnik.cs">
+      <DependentUpon>VrticModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="obavijest.cs">
+      <DependentUpon>VrticModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="prava.cs">
+      <DependentUpon>VrticModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Klase\TipKorisnika.cs" />
+    <Compile Include="radi_u.cs">
+      <DependentUpon>VrticModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="se_nalazi.cs">
+      <DependentUpon>VrticModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tip_korisnik.cs">
+      <DependentUpon>VrticModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tip_radnja.cs">
+      <DependentUpon>VrticModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="upis.cs">
+      <DependentUpon>VrticModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VrticModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VrticModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VrticModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VrticModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VrticModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VrticModel.edmx</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Forme\FormPrijava.resx">
       <DependentUpon>FormPrijava.cs</DependentUpon>
     </EmbeddedResource>
@@ -92,6 +159,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -101,9 +169,31 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EntityDeploy Include="VrticModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>VrticModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="VrticModel.edmx.diagram">
+      <DependentUpon>VrticModel.edmx</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="VrticModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>VrticModel.Context.cs</LastGenOutput>
+      <DependentUpon>VrticModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="VrticModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>VrticModel.edmx</DependentUpon>
+      <LastGenOutput>VrticModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
