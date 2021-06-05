@@ -29,6 +29,7 @@ namespace KindergartenJoy
         public int aktivnost_id { get; set; }
         public int tip_korisnik_id { get; set; }
         public string korisnicko_ime { get; set; }
+        public string ime { get; set; }
         public string prezime { get; set; }
         public string lozinka { get; set; }
         public string lozinka_sha256 { get; set; }
@@ -36,7 +37,6 @@ namespace KindergartenJoy
         public string telefon { get; set; }
         public string status { get; set; }
         public string pretplata { get; set; }
-        public int pravo_id { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<aktivnost> aktivnost { get; set; }
@@ -45,7 +45,6 @@ namespace KindergartenJoy
         public virtual ICollection<biljeska> biljeska { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<dnevnik> dnevnik { get; set; }
-        public virtual prava prava { get; set; }
         public virtual tip_korisnik tip_korisnik { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<obavijest> obavijest { get; set; }

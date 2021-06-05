@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\kowas\Documents\pi21-skovacic2-fpavlis-iparac\Software\KindergartenJoy\VrticModel.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\Fiddlezahar\Documents\pi21-skovacic2-fpavlis-iparac\Software\KindergartenJoy\VrticModel.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

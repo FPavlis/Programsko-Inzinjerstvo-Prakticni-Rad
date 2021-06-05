@@ -21,6 +21,7 @@ namespace KindergartenJoy
         }
     
         public int aktivnost_id { get; set; }
+        public string naziv { get; set; }
         public Nullable<int> korisnik_id { get; set; }
         public string opis { get; set; }
         public System.DateTime vrijeme { get; set; }

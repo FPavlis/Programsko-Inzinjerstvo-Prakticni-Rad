@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -36,10 +37,14 @@ namespace KindergartenJoy
             {
                 korisnicko_ime = korisnickoIme,
                 lozinka = lozinka,
-                status = "Neaktivan",
+                lozinka_sha256 = ComputeSha256Hash(lozinka),
+                status = "0",
+                ime = ime,
                 prezime = prezime,
                 email = email,
-                telefon = telefon
+                telefon = telefon,
+                tip_korisnik_id = 3,
+                aktivnost_id = 3 // ovo je sjebano
             };
 
             using(var context = new Entities())
@@ -48,6 +53,24 @@ namespace KindergartenJoy
                 context.SaveChanges();
             }
 
+        }
+
+        static string ComputeSha256Hash(string rawData)
+        {
+            // Create a SHA256   
+            using (SHA256 sha256Hash = SHA256.Create())
+            {
+                // ComputeHash - returns byte array  
+                byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(rawData));
+
+                // Convert byte array to a string   
+                StringBuilder builder = new StringBuilder();
+                for (int i = 0; i < bytes.Length; i++)
+                {
+                    builder.Append(bytes[i].ToString("x2"));
+                }
+                return builder.ToString();
+            }
         }
 
     }

@@ -33,7 +33,6 @@ namespace KindergartenJoy
         public virtual DbSet<grupa> grupa { get; set; }
         public virtual DbSet<korisnik> korisnik { get; set; }
         public virtual DbSet<obavijest> obavijest { get; set; }
-        public virtual DbSet<prava> prava { get; set; }
         public virtual DbSet<radi_u> radi_u { get; set; }
         public virtual DbSet<se_nalazi> se_nalazi { get; set; }
         public virtual DbSet<tip_korisnik> tip_korisnik { get; set; }

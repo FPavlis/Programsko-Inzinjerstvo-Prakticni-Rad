@@ -109,9 +109,6 @@
     <Compile Include="obavijest.cs">
       <DependentUpon>VrticModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="prava.cs">
-      <DependentUpon>VrticModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Klase\TipKorisnika.cs" />
