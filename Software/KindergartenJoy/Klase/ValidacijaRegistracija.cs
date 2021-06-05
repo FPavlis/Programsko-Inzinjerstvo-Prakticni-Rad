@@ -13,6 +13,7 @@ namespace KindergartenJoy.Klase
         public static string ValidacijaRegistracije(string korIme, string lozinka, string ime, string prezime, string email, string telefon)
         {
             string poruka = "";
+            List<korisnik> listaKorisnika = korisnik.DohvatiListuKorisnika();
 
             if(ime.Length < 2)
             {
@@ -50,7 +51,44 @@ namespace KindergartenJoy.Klase
                 poruka = "Lozinka mora imati 6 ili više znakova. Bez razmaka i jedno\rveliko i malo slovo.";
             }
 
+            if(korIme.Length == 0)
+            {
+                poruka = "Unesite korisnicko ime!";
+            }
+
+            if(telefon.Length == 0)
+            {
+                poruka = "Unesite broj telefona!";
+            }
+
+            if(poruka.Length == 0)
+            {
+                foreach (var item in listaKorisnika)
+                {
+                    if(email == item.email)
+                    {
+                        poruka = "Email je već zauzet!";
+                    }
+                }          
+            }
+
             return poruka;
+        }
+
+        public static bool ProvjeraKorisnickogRacuna(string email, string lozinka)
+        {
+            List<korisnik> listaKorisnika = korisnik.DohvatiListuKorisnika();
+            bool pronadjen = false;
+
+            foreach (var item in listaKorisnika)
+            {
+                if(email == item.email && lozinka == item.lozinka)
+                {
+                    pronadjen = true;
+                    break;
+                }
+            }
+            return pronadjen;
         }
     }
 }

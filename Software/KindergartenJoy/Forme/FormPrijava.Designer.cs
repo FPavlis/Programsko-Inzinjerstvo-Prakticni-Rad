@@ -101,6 +101,7 @@ namespace KindergartenJoy
             this.btnPrijava.TabIndex = 8;
             this.btnPrijava.Text = "PRIJAVA";
             this.btnPrijava.UseVisualStyleBackColor = false;
+            this.btnPrijava.Click += new System.EventHandler(this.btnPrijava_Click);
             // 
             // label3
             // 

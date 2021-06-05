@@ -1,4 +1,5 @@
 ﻿using KindergartenJoy.Forme;
+using KindergartenJoy.Klase;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -45,6 +46,29 @@ namespace KindergartenJoy
         private void LblKreiraj_MouseHover(object sender, EventArgs e)
         {
             lblKreiraj.ForeColor = System.Drawing.Color.Black;
+        }
+
+        private void btnPrijava_Click(object sender, EventArgs e)
+        {
+            PokreniPrijavu();
+        }
+
+        private void PokreniPrijavu()
+        {
+            string email = txtEmail.Text;
+            string lozinka = txtLozinka.Text;
+
+            bool pronadjen = ValidacijaRegistracija.ProvjeraKorisnickogRacuna(email, lozinka);
+
+            if(pronadjen == true)
+            {
+                MessageBox.Show("Pronađen korisnik!");
+            }
+            else
+            {
+                MessageBox.Show("Nema korisnika!");
+            }
+
         }
     }
 }

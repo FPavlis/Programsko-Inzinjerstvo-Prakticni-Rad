@@ -40,7 +40,14 @@ namespace KindergartenJoy.Forme
                 lblPogreske.Text = poruka;
                 lblPogreske.Visible = true;               
             }
-           
+
+            if(poruka == "")
+            {
+                korisnik.DodajNovogKorisnika(korisnickoIme, lozinka, ime, prezime, email, telefon);
+                MessageBox.Show("Korisnik dodan!");
+                Close();
+            }
+         
         }
     }
 }

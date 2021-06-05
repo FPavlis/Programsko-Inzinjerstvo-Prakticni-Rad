@@ -21,5 +21,34 @@ namespace KindergartenJoy
         public char Status { get; set; }
         public char Pretplata { get; set; }
 
+        internal static List<korisnik> DohvatiListuKorisnika()
+        {
+            using(var context = new Entities())
+            {
+                List<korisnik> listaKorisnika = context.korisnik.ToList();
+                return listaKorisnika;
+            }
+        }
+
+        internal static void DodajNovogKorisnika(string korisnickoIme, string lozinka, string ime, string prezime, string email, string telefon)
+        {
+            korisnik noviKorisnik = new korisnik
+            {
+                korisnicko_ime = korisnickoIme,
+                lozinka = lozinka,
+                status = "Neaktivan",
+                prezime = prezime,
+                email = email,
+                telefon = telefon
+            };
+
+            using(var context = new Entities())
+            {
+                context.korisnik.Add(noviKorisnik);
+                context.SaveChanges();
+            }
+
+        }
+
     }
 }
