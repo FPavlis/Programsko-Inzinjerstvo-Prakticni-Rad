@@ -69,7 +69,15 @@ namespace KindergartenJoy.Klase
                     {
                         poruka = "Email je već zauzet!";
                     }
-                }          
+                }
+
+                foreach (var item in listaKorisnika)
+                {
+                    if (korIme == item.korisnicko_ime)
+                    {
+                        poruka = "Korisnicko ime je već zauzeto!";
+                    }
+                }
             }
 
             return poruka;

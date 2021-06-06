@@ -58,6 +58,10 @@ namespace KindergartenJoy
             string email = txtEmail.Text;
             string lozinka = txtLozinka.Text;
 
+            List<korisnik> listaKorisnika = korisnik.DohvatiListuKorisnika();
+
+            korisnik odabraniKorisnik = korisnik.DohvatiKorisnika(listaKorisnika, email, lozinka);
+
             bool pronadjen = ValidacijaRegistracija.ProvjeraKorisnickogRacuna(email, lozinka);
 
             if(pronadjen == true)

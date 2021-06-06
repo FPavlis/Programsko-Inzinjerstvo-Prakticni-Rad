@@ -31,6 +31,21 @@ namespace KindergartenJoy
             }
         }
 
+        internal static korisnik DohvatiKorisnika(List<korisnik> listaKorisnika, string email, string lozinka)
+        {
+            korisnik odabraniKorisnik = null;
+
+            foreach (var item in listaKorisnika)
+            {
+                if(item.email == email && item.lozinka == lozinka)
+                {
+                    odabraniKorisnik = item;
+                }
+            }
+
+            return odabraniKorisnik;
+        }
+
         internal static void DodajNovogKorisnika(string korisnickoIme, string lozinka, string ime, string prezime, string email, string telefon)
         {
             korisnik noviKorisnik = new korisnik
