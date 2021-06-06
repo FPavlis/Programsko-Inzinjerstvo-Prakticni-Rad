@@ -70,6 +70,12 @@
     <Compile Include="evidencija.cs">
       <DependentUpon>VrticModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Forme\FormGlavna.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\FormGlavna.Designer.cs">
+      <DependentUpon>FormGlavna.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forme\FormPrijava.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +148,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>VrticModel.edmx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forme\FormGlavna.resx">
+      <DependentUpon>FormGlavna.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forme\FormPrijava.resx">
       <DependentUpon>FormPrijava.cs</DependentUpon>
     </EmbeddedResource>

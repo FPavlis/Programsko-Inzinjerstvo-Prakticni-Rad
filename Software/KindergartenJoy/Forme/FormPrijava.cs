@@ -61,7 +61,8 @@ namespace KindergartenJoy
 
             if(pronadjen == true)
             {
-                MessageBox.Show("Pronađen korisnik!");
+                FormGlavna form = new FormGlavna(odabraniKorisnik);
+                form.ShowDialog();
             }
             else
             {
