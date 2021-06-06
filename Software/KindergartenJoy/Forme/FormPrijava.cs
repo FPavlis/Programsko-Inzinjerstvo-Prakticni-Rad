@@ -19,11 +19,6 @@ namespace KindergartenJoy
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void lblKreiraj_Click(object sender, EventArgs e)
         {
             FormRegistracija form = new FormRegistracija();
