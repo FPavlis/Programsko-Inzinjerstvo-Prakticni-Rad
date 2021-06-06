@@ -32,11 +32,13 @@ namespace KindergartenJoy.Forme
             this.dgvAktivnosti = new System.Windows.Forms.DataGridView();
             this.btnDodajAktivnost = new System.Windows.Forms.Button();
             this.btnObrisiAktivnost = new System.Windows.Forms.Button();
+            this.btnExport = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAktivnosti)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvAktivnosti
             // 
+            this.dgvAktivnosti.AllowUserToAddRows = false;
             this.dgvAktivnosti.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAktivnosti.Location = new System.Drawing.Point(12, 12);
             this.dgvAktivnosti.Name = "dgvAktivnosti";
@@ -71,12 +73,27 @@ namespace KindergartenJoy.Forme
             this.btnObrisiAktivnost.UseVisualStyleBackColor = false;
             this.btnObrisiAktivnost.Click += new System.EventHandler(this.btnObrisiAktivnost_Click);
             // 
+            // btnExport
+            // 
+            this.btnExport.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnExport.Font = new System.Drawing.Font("Lucida Console", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExport.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnExport.Location = new System.Drawing.Point(89, 254);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(146, 42);
+            this.btnExport.TabIndex = 11;
+            this.btnExport.Text = "EXPORT U PDF";
+            this.btnExport.UseVisualStyleBackColor = false;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
+            // 
             // PregledajAktivnosti
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(551, 305);
+            this.Controls.Add(this.btnExport);
             this.Controls.Add(this.btnObrisiAktivnost);
             this.Controls.Add(this.btnDodajAktivnost);
             this.Controls.Add(this.dgvAktivnosti);
@@ -93,5 +110,6 @@ namespace KindergartenJoy.Forme
         private System.Windows.Forms.DataGridView dgvAktivnosti;
         private System.Windows.Forms.Button btnDodajAktivnost;
         private System.Windows.Forms.Button btnObrisiAktivnost;
+        private System.Windows.Forms.Button btnExport;
     }
 }
