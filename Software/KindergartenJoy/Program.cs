@@ -17,7 +17,7 @@ namespace KindergartenJoy
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new IzradiAktivnost());
+            Application.Run(new PregledajAktivnosti());
         }
     }
 }

@@ -93,30 +93,38 @@ namespace KindergartenJoy.Forme
             // 
             // btnSpremiAktivnost
             // 
-            this.btnSpremiAktivnost.Location = new System.Drawing.Point(436, 164);
+            this.btnSpremiAktivnost.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnSpremiAktivnost.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSpremiAktivnost.Font = new System.Drawing.Font("Lucida Console", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSpremiAktivnost.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnSpremiAktivnost.Location = new System.Drawing.Point(381, 159);
             this.btnSpremiAktivnost.Name = "btnSpremiAktivnost";
-            this.btnSpremiAktivnost.Size = new System.Drawing.Size(91, 37);
-            this.btnSpremiAktivnost.TabIndex = 7;
-            this.btnSpremiAktivnost.Text = "Spremi";
-            this.btnSpremiAktivnost.UseVisualStyleBackColor = true;
-            this.btnSpremiAktivnost.Click += new System.EventHandler(this.btnSpremiAktivnost_Click);
+            this.btnSpremiAktivnost.Size = new System.Drawing.Size(146, 42);
+            this.btnSpremiAktivnost.TabIndex = 10;
+            this.btnSpremiAktivnost.Text = "SPREMI";
+            this.btnSpremiAktivnost.UseVisualStyleBackColor = false;
+            this.btnSpremiAktivnost.Click += new System.EventHandler(this.btnSpremiAktivnost_Click_1);
             // 
             // btnOdustani
             // 
-            this.btnOdustani.Location = new System.Drawing.Point(533, 164);
+            this.btnOdustani.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnOdustani.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnOdustani.Font = new System.Drawing.Font("Lucida Console", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOdustani.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnOdustani.Location = new System.Drawing.Point(533, 159);
             this.btnOdustani.Name = "btnOdustani";
-            this.btnOdustani.Size = new System.Drawing.Size(91, 37);
-            this.btnOdustani.TabIndex = 7;
-            this.btnOdustani.Text = "Odustani";
-            this.btnOdustani.UseVisualStyleBackColor = true;
-            this.btnOdustani.Click += new System.EventHandler(this.btnOdustani_Click);
+            this.btnOdustani.Size = new System.Drawing.Size(146, 42);
+            this.btnOdustani.TabIndex = 11;
+            this.btnOdustani.Text = "ODUSTANI";
+            this.btnOdustani.UseVisualStyleBackColor = false;
+            this.btnOdustani.Click += new System.EventHandler(this.btnOdustani_Click_1);
             // 
             // IzradiAktivnost
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
-            this.ClientSize = new System.Drawing.Size(637, 213);
+            this.ClientSize = new System.Drawing.Size(682, 213);
             this.Controls.Add(this.btnOdustani);
             this.Controls.Add(this.btnSpremiAktivnost);
             this.Controls.Add(this.dtpDatumIVrijemeAktivnosti);
