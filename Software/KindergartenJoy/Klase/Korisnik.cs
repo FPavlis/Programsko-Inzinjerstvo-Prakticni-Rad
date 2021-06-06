@@ -59,7 +59,7 @@ namespace KindergartenJoy
                 email = email,
                 telefon = telefon,
                 tip_korisnik_id = 3,
-                aktivnost_id = 3 // ovo je sjebano
+                aktivnost_id = 3 
             };
 
             using(var context = new Entities())
