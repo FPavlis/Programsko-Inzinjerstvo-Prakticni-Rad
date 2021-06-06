@@ -25,7 +25,7 @@ namespace KindergartenJoy.Forme
             LoadajDGV();
         }
 
-        private void LoadajDGV()
+        private void LoadajCijeliDGV()
         {
             using (var context = new Entities())
             {
@@ -33,9 +33,24 @@ namespace KindergartenJoy.Forme
                             select a;
                 dgvAktivnosti.DataSource = query.ToList();
                 dgvAktivnosti.Columns["korisnik_id"].Visible = false;
-                dgvAktivnosti.Columns["aktivnost_id"].Visible = false;
                 dgvAktivnosti.Columns["korisnik"].Visible = false;
                 dgvAktivnosti.Columns["korisnik1"].Visible = false;
+                
+            }
+        }
+
+        private void LoadajDGV()
+        {
+            using (var context = new Entities())
+            {
+                var query = from a in context.aktivnost
+                            select new
+                            {
+                                a.naziv,
+                                a.opis,
+                                a.vrijeme
+                            };
+                dgvAktivnosti.DataSource = query.ToList();
             }
         }
 
@@ -50,6 +65,7 @@ namespace KindergartenJoy.Forme
         {
             using (var context = new Entities())
             {
+                LoadajCijeliDGV();
                 aktivnost aktivnostZaBrisanje = dgvAktivnosti.CurrentRow.DataBoundItem as aktivnost;
                 context.aktivnost.Attach(aktivnostZaBrisanje);
                 context.aktivnost.Remove(aktivnostZaBrisanje);
@@ -64,7 +80,7 @@ namespace KindergartenJoy.Forme
             {
                 SaveFileDialog save = new SaveFileDialog();
                 save.Filter = "PDF (*.pdf)|*.pdf";
-                save.FileName = "Result.pdf";
+                save.FileName = "Aktivnosti.pdf";
                 bool ErrorMessage = false;
 
                 if (save.ShowDialog() == DialogResult.OK)
@@ -78,7 +94,7 @@ namespace KindergartenJoy.Forme
                         catch (Exception ex)
                         {
                             ErrorMessage = true;
-                            MessageBox.Show("Unable to write data in disk" + ex.Message);
+                            MessageBox.Show("Nemoguće pisati na disk" + ex.Message);
                         }
                     }
                     if (!ErrorMessage)
@@ -90,7 +106,7 @@ namespace KindergartenJoy.Forme
                             pTable.WidthPercentage = 100;
                             pTable.HorizontalAlignment = Element.ALIGN_LEFT;
                             foreach (DataGridViewColumn col in dgvAktivnosti.Columns)
-                            {
+                            {                               
                                 PdfPCell pCell = new PdfPCell(new Phrase(col.HeaderText));
                                 pTable.AddCell(pCell);
                             }
@@ -110,18 +126,18 @@ namespace KindergartenJoy.Forme
                                 document.Close();
                                 fileStream.Close();
                             }
-                            MessageBox.Show("Data Export Successfully", "info");
+                            MessageBox.Show("Aktivnosti uspješno exportane", "Uspijeh!");
                         }
                         catch (Exception ex)
                         {
-                            MessageBox.Show("Error while exporting Data" + ex.Message);
+                            MessageBox.Show("Greška pri exportu podataka" + ex.Message);
                         }
                     }
                 }
             }
             else
             {
-                MessageBox.Show("No Record Found", "Info");
+                MessageBox.Show("Ne postoje rekordi u DataGridView-u", "Info");
 
             }
 
