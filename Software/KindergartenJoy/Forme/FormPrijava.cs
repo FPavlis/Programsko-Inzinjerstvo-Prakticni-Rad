@@ -52,6 +52,7 @@ namespace KindergartenJoy
         {
             string email = txtEmail.Text;
             string lozinka = txtLozinka.Text;
+            lblNetocno.Visible = false;
 
             List<korisnik> listaKorisnika = korisnik.DohvatiListuKorisnika();
 
@@ -66,7 +67,7 @@ namespace KindergartenJoy
             }
             else
             {
-                MessageBox.Show("Nema korisnika!");
+                lblNetocno.Visible = true;
             }
 
         }

@@ -40,6 +40,7 @@ namespace KindergartenJoy
             this.label2 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.lblNetocno = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -66,6 +67,7 @@ namespace KindergartenJoy
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.panel2.Controls.Add(this.lblNetocno);
             this.panel2.Controls.Add(this.lblKreiraj);
             this.panel2.Controls.Add(this.btnPrijava);
             this.panel2.Controls.Add(this.label3);
@@ -148,6 +150,17 @@ namespace KindergartenJoy
             this.label1.TabIndex = 3;
             this.label1.Text = "EMAIL";
             // 
+            // lblNetocno
+            // 
+            this.lblNetocno.AutoSize = true;
+            this.lblNetocno.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNetocno.Location = new System.Drawing.Point(127, 314);
+            this.lblNetocno.Name = "lblNetocno";
+            this.lblNetocno.Size = new System.Drawing.Size(194, 18);
+            this.lblNetocno.TabIndex = 11;
+            this.lblNetocno.Text = "Netočno uneseni podaci!";
+            this.lblNetocno.Visible = false;
+            // 
             // FormPrijava
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -178,6 +191,7 @@ namespace KindergartenJoy
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnPrijava;
         private System.Windows.Forms.Label lblKreiraj;
+        private System.Windows.Forms.Label lblNetocno;
     }
 }
 
