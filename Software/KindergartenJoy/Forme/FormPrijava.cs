@@ -63,7 +63,9 @@ namespace KindergartenJoy
             if(pronadjen == true)
             {
                 FormGlavna form = new FormGlavna(odabraniKorisnik);
+                this.Hide();
                 form.ShowDialog();
+                this.Close();
             }
             else
             {

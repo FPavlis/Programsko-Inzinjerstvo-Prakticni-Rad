@@ -91,7 +91,7 @@ namespace KindergartenJoy.Forme
         private void PošaljiPoruku()
         {
             string fromMail = "pi21.tim12@gmail.com";
-            string toMail = "silviokovacicofficial@gmail.com";
+            string toMail = "filip.pavlis.0@gmail.com, silviokovacicofficial@gmail.com";
             string subjectOfMail = "Tjedne aktivnosti - KindergartenJoy";
             string messageOfMail = "Poštovani, u privitku Vam šaljemo tjedne aktivnosti.Vaš KindergartenJoy!";
             string smtpValue = "smtp.gmail.com";

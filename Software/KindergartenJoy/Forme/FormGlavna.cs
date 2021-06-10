@@ -25,5 +25,11 @@ namespace KindergartenJoy.Forme
             lblVrijeme.Text = vrijeme;
             lblEmail.Text = OdabraniKorisnik.email;
         }
+
+        private void btnAktivnost_Click(object sender, EventArgs e)
+        {
+            PregledajAktivnosti pregledajAktivnosti = new PregledajAktivnosti();
+            pregledajAktivnosti.ShowDialog();
+        }
     }
 }

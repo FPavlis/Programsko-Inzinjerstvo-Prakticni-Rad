@@ -34,13 +34,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnPrijava = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnAktivnost = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnAktivnost = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.lblVrijeme = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -75,10 +75,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Nexa Bold", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(260, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(217, 46);
+            this.label1.Size = new System.Drawing.Size(218, 42);
             this.label1.TabIndex = 2;
             this.label1.Text = "Dobrodošli!";
             // 
@@ -111,68 +111,18 @@
             this.panel1.Size = new System.Drawing.Size(228, 453);
             this.panel1.TabIndex = 10;
             // 
-            // label2
+            // button5
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Lucida Console", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(58, 18);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(105, 19);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Izbornik";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.RoyalBlue;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Lucida Console", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(5, 105);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(222, 42);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "OBAVIJESTI";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // btnAktivnost
-            // 
-            this.btnAktivnost.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnAktivnost.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAktivnost.Font = new System.Drawing.Font("Lucida Console", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAktivnost.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnAktivnost.Location = new System.Drawing.Point(5, 160);
-            this.btnAktivnost.Name = "btnAktivnost";
-            this.btnAktivnost.Size = new System.Drawing.Size(222, 42);
-            this.btnAktivnost.TabIndex = 12;
-            this.btnAktivnost.Text = "AKTIVNOSTI";
-            this.btnAktivnost.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.RoyalBlue;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Lucida Console", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(5, 215);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(222, 42);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "EVIDENCIJA";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.RoyalBlue;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Font = new System.Drawing.Font("Lucida Console", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button3.Location = new System.Drawing.Point(5, 270);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(222, 42);
-            this.button3.TabIndex = 14;
-            this.button3.Text = "BILJEŠKE";
-            this.button3.UseVisualStyleBackColor = false;
+            this.button5.BackColor = System.Drawing.Color.RoyalBlue;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button5.Font = new System.Drawing.Font("Lucida Console", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button5.Location = new System.Drawing.Point(5, 380);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(222, 42);
+            this.button5.TabIndex = 16;
+            this.button5.Text = "STATISTIKA";
+            this.button5.UseVisualStyleBackColor = false;
             // 
             // button4
             // 
@@ -187,18 +137,69 @@
             this.button4.Text = "UPRAVLJANJE ULOGAMA";
             this.button4.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // button3
             // 
-            this.button5.BackColor = System.Drawing.Color.RoyalBlue;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button5.Font = new System.Drawing.Font("Lucida Console", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button5.Location = new System.Drawing.Point(5, 380);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(222, 42);
-            this.button5.TabIndex = 16;
-            this.button5.Text = "STATISTIKA";
-            this.button5.UseVisualStyleBackColor = false;
+            this.button3.BackColor = System.Drawing.Color.RoyalBlue;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button3.Font = new System.Drawing.Font("Lucida Console", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button3.Location = new System.Drawing.Point(5, 270);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(222, 42);
+            this.button3.TabIndex = 14;
+            this.button3.Text = "BILJEŠKE";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.RoyalBlue;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button2.Font = new System.Drawing.Font("Lucida Console", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button2.Location = new System.Drawing.Point(5, 215);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(222, 42);
+            this.button2.TabIndex = 13;
+            this.button2.Text = "EVIDENCIJA";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // btnAktivnost
+            // 
+            this.btnAktivnost.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnAktivnost.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAktivnost.Font = new System.Drawing.Font("Lucida Console", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAktivnost.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnAktivnost.Location = new System.Drawing.Point(5, 160);
+            this.btnAktivnost.Name = "btnAktivnost";
+            this.btnAktivnost.Size = new System.Drawing.Size(222, 42);
+            this.btnAktivnost.TabIndex = 12;
+            this.btnAktivnost.Text = "AKTIVNOSTI";
+            this.btnAktivnost.UseVisualStyleBackColor = false;
+            this.btnAktivnost.Click += new System.EventHandler(this.btnAktivnost_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.RoyalBlue;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Lucida Console", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button1.Location = new System.Drawing.Point(5, 105);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(222, 42);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "OBAVIJESTI";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Lucida Console", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(58, 18);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(105, 19);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Izbornik";
             // 
             // lblVrijeme
             // 
