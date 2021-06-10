@@ -10,6 +10,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net;
+using System.Net.Mail;
 
 namespace KindergartenJoy.Forme
 {
@@ -72,6 +74,37 @@ namespace KindergartenJoy.Forme
                 context.SaveChanges();
                 LoadajDGV();
             }
+        }
+
+
+        private string DodajAttachmentMailu()
+        {
+            string putanja = "";
+            OpenFileDialog dialog = new OpenFileDialog();
+            if(dialog.ShowDialog() == DialogResult.OK)
+            {
+                 putanja = dialog.FileName.ToString();
+            }
+            return putanja;
+        }
+
+        private void PošaljiPoruku()
+        {
+            string fromMail = "pi21.tim12@gmail.com";
+            string toMail = "silviokovacicofficial@gmail.com";
+            string subjectOfMail = "Tjedne aktivnosti - KindergartenJoy";
+            string messageOfMail = "Poštovani, u privitku Vam šaljemo tjedne aktivnosti.Vaš KindergartenJoy!";
+            string smtpValue = "smtp.gmail.com";
+            string username = "pi21.tim12";
+            string password = "ivanfilipsilvio";
+            MailMessage mail = new MailMessage(fromMail,toMail,subjectOfMail,messageOfMail);
+            mail.Attachments.Add(new Attachment(DodajAttachmentMailu()));
+            SmtpClient client = new SmtpClient(smtpValue);
+            client.Port = 587;
+            client.Credentials = new System.Net.NetworkCredential(username, password);
+            client.EnableSsl = true;
+            client.Send(mail);
+            MessageBox.Show("Poruka uspješno poslana!", "Uspijeh!", MessageBoxButtons.OK);
         }
 
         private void btnExport_Click(object sender, EventArgs e)
@@ -141,6 +174,11 @@ namespace KindergartenJoy.Forme
 
             }
 
+        }
+
+        private void btnPošaljiNaMail_Click(object sender, EventArgs e)
+        {
+            PošaljiPoruku();
         }
     }
 }
