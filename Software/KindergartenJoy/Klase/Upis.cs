@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KindergartenJoy.Klase
+namespace KindergartenJoy
 {
     public partial class upis
     {
@@ -12,8 +12,23 @@ namespace KindergartenJoy.Klase
         public dijete Dijete { get; set; }
         public DateTime DatumUpisa { get; set; }
 
-        private void StvoriDijete()
+        public void UpisiDijete(string ime, string prezime, string spol, DateTime datumRođenja, int oib, int odabraniKorisnik)
         {
+            dijete novoDijete = new dijete
+            {
+                ime = ime,
+                prezime = prezime,
+                spol = spol,
+                datum_rodjenja = datumRođenja,
+                oib = oib
+            };
+
+            using (var context = new Entities())
+            {
+                context.dijete.Add(novoDijete);
+                context.SaveChanges();
+            }
+
 
         }
     }

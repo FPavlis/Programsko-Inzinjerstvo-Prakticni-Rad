@@ -8,10 +8,6 @@ namespace KindergartenJoy.Klase
 {
     public partial class dijete
     {
-        public string Ime { get; set; }
-        public string Prezime { get; set; }
-        public string Spol { get; set; }
-        public DateTime DatumRođenja { get; set; }
-        public string OIB { get; set; }
+        
     }
 }
