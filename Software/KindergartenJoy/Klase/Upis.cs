@@ -12,7 +12,7 @@ namespace KindergartenJoy
         public dijete Dijete { get; set; }
         public DateTime DatumUpisa { get; set; }
 
-        public void UpisiDijete(string ime, string prezime, string spol, DateTime datumRođenja, int oib, int odabraniKorisnik)
+        public dijete UpisiDijete(string ime, string prezime, string spol, DateTime datumRođenja, int oib)
         {
             dijete novoDijete = new dijete
             {
@@ -29,7 +29,7 @@ namespace KindergartenJoy
                 context.SaveChanges();
             }
 
-
+            return novoDijete;
         }
     }
 }

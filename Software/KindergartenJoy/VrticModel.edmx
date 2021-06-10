@@ -130,10 +130,10 @@
           <Key>
             <PropertyRef Name="upis_id" />
           </Key>
-          <Property Name="upis_id" Type="int" Nullable="false" />
-          <Property Name="korisnik_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="upis_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="korisnik_id" Type="int" Nullable="false" StoreGeneratedPattern="None" />
           <Property Name="dijete_id" Type="int" Nullable="false" />
-          <Property Name="datum_upis" Type="date" Nullable="false" />
+          <Property Name="datum_upis" Type="datetime" Nullable="false" />
         </EntityType>
         <Association Name="FK_aktivnost_korisnik">
           <End Role="korisnik" Type="Self.korisnik" Multiplicity="0..1" />
@@ -647,9 +647,9 @@
             <PropertyRef Name="upis_id" />
           </Key>
           <Property Name="upis_id" Type="Int32" Nullable="false" />
-          <Property Name="korisnik_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="korisnik_id" Type="Int32" annotation:StoreGeneratedPattern="None" Nullable="false" />
           <Property Name="dijete_id" Type="Int32" Nullable="false" />
-          <Property Name="datum_upis" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="datum_upis" Type="DateTime" Nullable="false" Precision="3" />
           <NavigationProperty Name="dijete" Relationship="Model.FK_upis_dijete" FromRole="upis" ToRole="dijete" />
           <NavigationProperty Name="korisnik" Relationship="Model.FK_upis_korisnik" FromRole="upis" ToRole="korisnik" />
         </EntityType>

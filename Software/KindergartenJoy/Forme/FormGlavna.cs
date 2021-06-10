@@ -31,5 +31,11 @@ namespace KindergartenJoy.Forme
             PregledajAktivnosti pregledajAktivnosti = new PregledajAktivnosti();
             pregledajAktivnosti.ShowDialog();
         }
+
+        private void btnPrijava_Click(object sender, EventArgs e)
+        {
+            FormUpisDjece form = new FormUpisDjece(OdabraniKorisnik);
+            form.ShowDialog();
+        }
     }
 }

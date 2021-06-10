@@ -94,6 +94,7 @@
             this.btnPrijava.TabIndex = 11;
             this.btnPrijava.Text = "UPIS DJECE";
             this.btnPrijava.UseVisualStyleBackColor = false;
+            this.btnPrijava.Click += new System.EventHandler(this.btnPrijava_Click);
             // 
             // panel1
             // 

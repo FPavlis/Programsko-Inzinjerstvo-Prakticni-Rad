@@ -37,9 +37,9 @@ namespace KindergartenJoy.Forme
             this.txtPrezime = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtSpol = new System.Windows.Forms.TextBox();
-            this.txtDatumRođenja = new System.Windows.Forms.TextBox();
             this.txtOib = new System.Windows.Forms.TextBox();
             this.btnUpisiDijete = new System.Windows.Forms.Button();
+            this.dtpDatumRođenja = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // label1
@@ -108,13 +108,6 @@ namespace KindergartenJoy.Forme
             this.txtSpol.Size = new System.Drawing.Size(100, 20);
             this.txtSpol.TabIndex = 7;
             // 
-            // txtDatumRođenja
-            // 
-            this.txtDatumRođenja.Location = new System.Drawing.Point(167, 189);
-            this.txtDatumRođenja.Name = "txtDatumRođenja";
-            this.txtDatumRođenja.Size = new System.Drawing.Size(100, 20);
-            this.txtDatumRođenja.TabIndex = 8;
-            // 
             // txtOib
             // 
             this.txtOib.Location = new System.Drawing.Point(167, 243);
@@ -136,15 +129,22 @@ namespace KindergartenJoy.Forme
             this.btnUpisiDijete.UseVisualStyleBackColor = false;
             this.btnUpisiDijete.Click += new System.EventHandler(this.btnUpisiDijete_Click);
             // 
+            // dtpDatumRođenja
+            // 
+            this.dtpDatumRođenja.Location = new System.Drawing.Point(167, 190);
+            this.dtpDatumRođenja.Name = "dtpDatumRođenja";
+            this.dtpDatumRođenja.Size = new System.Drawing.Size(200, 20);
+            this.dtpDatumRođenja.TabIndex = 11;
+            // 
             // FormUpisDjece
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PaleTurquoise;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dtpDatumRođenja);
             this.Controls.Add(this.btnUpisiDijete);
             this.Controls.Add(this.txtOib);
-            this.Controls.Add(this.txtDatumRođenja);
             this.Controls.Add(this.txtSpol);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtPrezime);
@@ -170,8 +170,8 @@ namespace KindergartenJoy.Forme
         private System.Windows.Forms.TextBox txtPrezime;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtSpol;
-        private System.Windows.Forms.TextBox txtDatumRođenja;
         private System.Windows.Forms.TextBox txtOib;
         private System.Windows.Forms.Button btnUpisiDijete;
+        private System.Windows.Forms.DateTimePicker dtpDatumRođenja;
     }
 }
