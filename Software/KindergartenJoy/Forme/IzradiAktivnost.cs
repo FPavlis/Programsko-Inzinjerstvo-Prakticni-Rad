@@ -16,8 +16,17 @@ namespace KindergartenJoy.Forme
         {
             InitializeComponent();
         }
+        private void btnSpremiAktivnost_Click_1(object sender, EventArgs e)
+        {
+            string nazivAktivnosti = txtNazivAktivnosti.Text;
+            string opis = txtOpisAktivnosti.Text;
+            DateTime dateTime = dtpDatumIVrijemeAktivnosti.Value;
+            aktivnost aktivnost1 = new aktivnost();
+            aktivnost1.DodajAktivnost(nazivAktivnosti, opis, dateTime);
+            MessageBox.Show("Aktivnost uspiješno spremljena u bazu!");
+        }
 
-        private void btnOdustani_Click(object sender, EventArgs e)
+        private void btnOdustani_Click_1(object sender, EventArgs e)
         {
             Close();
         }

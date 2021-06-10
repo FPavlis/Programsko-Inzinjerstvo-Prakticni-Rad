@@ -4,12 +4,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KindergartenJoy.Klase
+namespace KindergartenJoy
 {
     public partial class aktivnost
     {
-        public List<int> Korisnici{ get; set; }
-        public string Opis { get; set; }
-        public DateTime VrijemeAktivnosti { get; set; }
+        public void DodajAktivnost(string naziv, string opis, DateTime vrijeme)
+        {
+            aktivnost novaAktivnost = new aktivnost()
+            {
+                naziv = naziv,
+                opis = opis,
+                vrijeme = vrijeme,
+            };
+            using (var context = new Entities())
+            {
+                context.aktivnost.Add(novaAktivnost);
+                context.SaveChanges();
+            }
+        }
+
     }
 }
