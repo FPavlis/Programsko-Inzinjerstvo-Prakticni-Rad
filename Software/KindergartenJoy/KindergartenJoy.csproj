@@ -51,6 +51,7 @@
     <Reference Include="System.Net" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -88,6 +89,12 @@
     </Compile>
     <Compile Include="Forme\FormPrijava.Designer.cs">
       <DependentUpon>FormPrijava.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\FormStatistika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\FormStatistika.Designer.cs">
+      <DependentUpon>FormStatistika.cs</DependentUpon>
     </Compile>
     <Compile Include="Forme\FormUpisDjece.cs">
       <SubType>Form</SubType>
@@ -181,6 +188,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\FormRegistracija.resx">
       <DependentUpon>FormRegistracija.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\FormStatistika.resx">
+      <DependentUpon>FormStatistika.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\FormUpisDjece.resx">
       <DependentUpon>FormUpisDjece.cs</DependentUpon>
