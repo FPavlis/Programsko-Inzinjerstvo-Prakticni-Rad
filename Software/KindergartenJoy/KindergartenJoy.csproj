@@ -84,6 +84,12 @@
     <Compile Include="Forme\FormGlavna.Designer.cs">
       <DependentUpon>FormGlavna.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forme\FormObavijesti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\FormObavijesti.Designer.cs">
+      <DependentUpon>FormObavijesti.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forme\FormPrijava.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,6 +188,9 @@
     </Compile>
     <EmbeddedResource Include="Forme\FormGlavna.resx">
       <DependentUpon>FormGlavna.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\FormObavijesti.resx">
+      <DependentUpon>FormObavijesti.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\FormPrijava.resx">
       <DependentUpon>FormPrijava.cs</DependentUpon>
