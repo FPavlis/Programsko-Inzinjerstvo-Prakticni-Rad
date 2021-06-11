@@ -34,7 +34,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnPrijava = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnStatistika = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -99,7 +99,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.panel1.Controls.Add(this.button5);
+            this.panel1.Controls.Add(this.btnStatistika);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button2);
@@ -112,18 +112,19 @@
             this.panel1.Size = new System.Drawing.Size(228, 453);
             this.panel1.TabIndex = 10;
             // 
-            // button5
+            // btnStatistika
             // 
-            this.button5.BackColor = System.Drawing.Color.RoyalBlue;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button5.Font = new System.Drawing.Font("Lucida Console", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button5.Location = new System.Drawing.Point(5, 380);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(222, 42);
-            this.button5.TabIndex = 16;
-            this.button5.Text = "STATISTIKA";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnStatistika.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnStatistika.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnStatistika.Font = new System.Drawing.Font("Lucida Console", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStatistika.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnStatistika.Location = new System.Drawing.Point(5, 380);
+            this.btnStatistika.Name = "btnStatistika";
+            this.btnStatistika.Size = new System.Drawing.Size(222, 42);
+            this.btnStatistika.TabIndex = 16;
+            this.btnStatistika.Text = "STATISTIKA";
+            this.btnStatistika.UseVisualStyleBackColor = false;
+            this.btnStatistika.Click += new System.EventHandler(this.btnStatistika_Click_1);
             // 
             // button4
             // 
@@ -291,7 +292,7 @@
         private System.Windows.Forms.Button btnPrijava;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnStatistika;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;

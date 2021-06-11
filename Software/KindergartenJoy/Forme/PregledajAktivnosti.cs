@@ -88,12 +88,25 @@ namespace KindergartenJoy.Forme
             return putanja;
         }
 
+        private string DohvatiMailingListu()
+        {
+            string mailingLista = "";
+            using (var context = new Entities())
+            {
+                var query = from a in context.korisnik
+                            select a.email;
+                List<string> pomocna = query.ToList();
+                mailingLista = string.Join(",", pomocna);
+            }
+            return mailingLista;
+        }
+
         private void PošaljiPoruku()
         {
             string fromMail = "pi21.tim12@gmail.com";
-            string toMail = "filip.pavlis.0@gmail.com, silviokovacicofficial@gmail.com";
+            string toMail = DohvatiMailingListu();
             string subjectOfMail = "Tjedne aktivnosti - KindergartenJoy";
-            string messageOfMail = "Poštovani, u privitku Vam šaljemo tjedne aktivnosti.Vaš KindergartenJoy!";
+            string messageOfMail = "Poštovani, u privitku Vam šaljemo tjedne aktivnosti. Vaš KindergartenJoy!";
             string smtpValue = "smtp.gmail.com";
             string username = "pi21.tim12";
             string password = "ivanfilipsilvio";

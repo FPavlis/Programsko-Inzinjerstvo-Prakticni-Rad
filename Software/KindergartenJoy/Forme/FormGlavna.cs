@@ -37,5 +37,11 @@ namespace KindergartenJoy.Forme
             FormUpisDjece form = new FormUpisDjece(OdabraniKorisnik);
             form.ShowDialog();
         }
+
+        private void btnStatistika_Click_1(object sender, EventArgs e)
+        {
+            FormStatistika form = new FormStatistika();
+            form.ShowDialog();
+        }
     }
 }
