@@ -69,5 +69,10 @@ namespace KindergartenJoy.Forme
             }
             label6.Text = brojAktivnosti.ToString();
         }
+
+        private void FormStatistika_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

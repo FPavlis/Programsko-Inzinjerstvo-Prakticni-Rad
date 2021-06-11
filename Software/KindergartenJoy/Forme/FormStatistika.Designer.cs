@@ -156,6 +156,7 @@ namespace KindergartenJoy.Forme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -169,6 +170,7 @@ namespace KindergartenJoy.Forme
             this.Controls.Add(this.btnPrikaziDjecu);
             this.Name = "FormStatistika";
             this.Text = "Statistika";
+            this.Load += new System.EventHandler(this.FormStatistika_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvGlavni)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
