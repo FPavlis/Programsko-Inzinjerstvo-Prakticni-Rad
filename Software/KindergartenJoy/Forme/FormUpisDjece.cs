@@ -23,7 +23,18 @@ namespace KindergartenJoy.Forme
         {
             string imeDijeteta = txtIme.Text;
             string prezimeDijeteta = txtPrezime.Text;
-            string spolDijeteta = txtSpol.Text;
+            string spolDijeteta = "";
+
+            if (rbMusko.Checked == true)
+            {
+                spolDijeteta = rbMusko.Text;
+            }
+
+            if (rbZensko.Checked == true)
+            {
+                spolDijeteta = rbZensko.Text;
+            }
+
             int oibDijeteta = int.Parse(txtOib.Text);
             DateTime datumRođenjaDijeteta = dtpDatumRođenja.Value;
             upis noviUpis = new upis();
@@ -38,6 +49,36 @@ namespace KindergartenJoy.Forme
                 context.upis.Add(noviUpis);
                 context.SaveChanges();
             }
+
+            FormUpisObavljen form = new FormUpisObavljen();
+            form.ShowDialog();
+        }
+
+        private void FormUpisDjece_Load(object sender, EventArgs e)
+        {
+            rbMusko.Checked = true;
+            pbDecko.Visible = true;
+            rbMusko.CheckedChanged += RbMusko_CheckedChanged;
+            rbZensko.CheckedChanged += RbZensko_CheckedChanged;
+            lblRoditelj.Text = Roditelj.ime + " " + Roditelj.prezime;
+            lblVrijeme.Text = DateTime.Now.Date.ToShortDateString();
+        }
+
+        private void RbZensko_CheckedChanged(object sender, EventArgs e)
+        {
+            pbGirl.Visible = true;
+            pbDecko.Visible = false;
+        }
+
+        private void RbMusko_CheckedChanged(object sender, EventArgs e)
+        {
+            pbDecko.Visible = true;
+            pbGirl.Visible = false;
+        }
+
+        private void btnOdustani_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

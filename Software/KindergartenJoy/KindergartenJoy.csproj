@@ -95,6 +95,12 @@
     <Compile Include="Forme\FormUpisDjece.Designer.cs">
       <DependentUpon>FormUpisDjece.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forme\FormUpisObavljen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\FormUpisObavljen.Designer.cs">
+      <DependentUpon>FormUpisObavljen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forme\IzradiAktivnost.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,6 +184,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\FormUpisDjece.resx">
       <DependentUpon>FormUpisDjece.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\FormUpisObavljen.resx">
+      <DependentUpon>FormUpisObavljen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\IzradiAktivnost.resx">
       <DependentUpon>IzradiAktivnost.cs</DependentUpon>
