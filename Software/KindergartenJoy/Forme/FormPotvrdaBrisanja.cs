@@ -12,13 +12,29 @@ namespace KindergartenJoy.Forme
 {
     public partial class FormPotvrdaBrisanja : Form
     {
-        public FormPotvrdaBrisanja()
+        public korisnik KorisnikZaBrisanje { get; set; }
+        public FormPotvrdaBrisanja(korisnik odabraniKorisnik)
         {
+            KorisnikZaBrisanje = odabraniKorisnik;
             InitializeComponent();
         }
 
         private void btnNe_Click(object sender, EventArgs e)
         {
+            Close();
+        }
+
+        private void btnDa_Click(object sender, EventArgs e)
+        {
+            FormGlavna.Reset = true;
+
+            using (var context = new Entities())
+            {
+                context.korisnik.Attach(KorisnikZaBrisanje);
+                context.korisnik.Remove(KorisnikZaBrisanje);
+                context.SaveChanges();
+            }
+
             Close();
         }
     }

@@ -56,6 +56,7 @@ namespace KindergartenJoy.Forme
             this.btnDa.TabIndex = 17;
             this.btnDa.Text = "DA";
             this.btnDa.UseVisualStyleBackColor = false;
+            this.btnDa.Click += new System.EventHandler(this.btnDa_Click);
             // 
             // btnNe
             // 

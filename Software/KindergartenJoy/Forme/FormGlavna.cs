@@ -12,11 +12,16 @@ namespace KindergartenJoy.Forme
 {
     public partial class FormGlavna : Form
     {
+        public static bool Reset { get; set; }
         public korisnik OdabraniKorisnik { get; set; }
         public FormGlavna(korisnik odabraniKorisnik)
         {
             OdabraniKorisnik = odabraniKorisnik;
             InitializeComponent();
+        }
+        public FormGlavna()
+        {
+
         }
 
         private void FormGlavna_Load(object sender, EventArgs e)
@@ -62,6 +67,15 @@ namespace KindergartenJoy.Forme
         {
             FormProfilKorisnika form = new FormProfilKorisnika(OdabraniKorisnik);
             form.ShowDialog();
+
+            if (Reset == true)
+            {
+                Reset = false;
+                Hide();
+                FormPrijava prijava = new FormPrijava();
+                prijava.ShowDialog();
+                Close();              
+            }
         }
     }
 }
