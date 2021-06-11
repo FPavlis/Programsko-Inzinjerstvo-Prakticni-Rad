@@ -42,7 +42,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.lblVrijeme = new System.Windows.Forms.Label();
-            this.lblEmail = new System.Windows.Forms.Label();
+            this.lblIme = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -213,15 +213,15 @@
             this.lblVrijeme.TabIndex = 11;
             this.lblVrijeme.Text = "Vrijeme";
             // 
-            // lblEmail
+            // lblIme
             // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Lucida Console", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(638, 31);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(52, 13);
-            this.lblEmail.TabIndex = 12;
-            this.lblEmail.Text = "Email";
+            this.lblIme.AutoSize = true;
+            this.lblIme.Font = new System.Drawing.Font("Lucida Console", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIme.Location = new System.Drawing.Point(638, 31);
+            this.lblIme.Name = "lblIme";
+            this.lblIme.Size = new System.Drawing.Size(34, 13);
+            this.lblIme.TabIndex = 12;
+            this.lblIme.Text = "Ime";
             // 
             // pictureBox3
             // 
@@ -262,7 +262,7 @@
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.lblEmail);
+            this.Controls.Add(this.lblIme);
             this.Controls.Add(this.lblVrijeme);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
@@ -299,7 +299,7 @@
         private System.Windows.Forms.Button btnAktivnost;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lblVrijeme;
-        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.Label lblIme;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;

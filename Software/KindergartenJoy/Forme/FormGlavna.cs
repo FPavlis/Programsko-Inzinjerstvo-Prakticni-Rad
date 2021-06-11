@@ -23,7 +23,7 @@ namespace KindergartenJoy.Forme
         {
             string vrijeme = DateTime.Now.ToShortDateString();
             lblVrijeme.Text = vrijeme;
-            lblEmail.Text = OdabraniKorisnik.email;
+            lblIme.Text = OdabraniKorisnik.ime + " " + OdabraniKorisnik.prezime;
         }
 
         private void btnAktivnost_Click(object sender, EventArgs e)
