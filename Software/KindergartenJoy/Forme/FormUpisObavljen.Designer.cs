@@ -32,6 +32,7 @@ namespace KindergartenJoy.Forme
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormUpisObavljen));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnVrati = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,11 +50,25 @@ namespace KindergartenJoy.Forme
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(51, 98);
+            this.label1.Location = new System.Drawing.Point(58, 46);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(406, 39);
             this.label1.TabIndex = 1;
             this.label1.Text = "Upis uspješno obavljen!";
+            // 
+            // btnVrati
+            // 
+            this.btnVrati.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnVrati.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnVrati.Font = new System.Drawing.Font("Lucida Console", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVrati.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnVrati.Location = new System.Drawing.Point(170, 128);
+            this.btnVrati.Name = "btnVrati";
+            this.btnVrati.Size = new System.Drawing.Size(171, 42);
+            this.btnVrati.TabIndex = 22;
+            this.btnVrati.Text = "VRATI SE NAZAD";
+            this.btnVrati.UseVisualStyleBackColor = false;
+            this.btnVrati.Click += new System.EventHandler(this.btnVrati_Click);
             // 
             // FormUpisObavljen
             // 
@@ -61,6 +76,7 @@ namespace KindergartenJoy.Forme
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PaleTurquoise;
             this.ClientSize = new System.Drawing.Size(683, 229);
+            this.Controls.Add(this.btnVrati);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "FormUpisObavljen";
@@ -75,5 +91,6 @@ namespace KindergartenJoy.Forme
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnVrati;
     }
 }

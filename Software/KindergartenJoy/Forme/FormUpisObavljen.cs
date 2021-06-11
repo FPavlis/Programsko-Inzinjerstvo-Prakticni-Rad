@@ -16,5 +16,10 @@ namespace KindergartenJoy.Forme
         {
             InitializeComponent();
         }
+
+        private void btnVrati_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

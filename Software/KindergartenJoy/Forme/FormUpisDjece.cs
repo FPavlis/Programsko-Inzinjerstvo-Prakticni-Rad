@@ -51,7 +51,9 @@ namespace KindergartenJoy.Forme
             }
 
             FormUpisObavljen form = new FormUpisObavljen();
+            this.Hide();
             form.ShowDialog();
+            this.Close();
         }
 
         private void FormUpisDjece_Load(object sender, EventArgs e)
