@@ -43,5 +43,11 @@ namespace KindergartenJoy.Forme
             FormStatistika form = new FormStatistika();
             form.ShowDialog();
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            FormProfilKorisnika form = new FormProfilKorisnika(OdabraniKorisnik);
+            form.ShowDialog();
+        }
     }
 }

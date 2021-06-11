@@ -90,6 +90,12 @@
     <Compile Include="Forme\FormPrijava.Designer.cs">
       <DependentUpon>FormPrijava.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forme\FormProfilKorisnika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\FormProfilKorisnika.Designer.cs">
+      <DependentUpon>FormProfilKorisnika.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forme\FormStatistika.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +113,12 @@
     </Compile>
     <Compile Include="Forme\FormUpisObavljen.Designer.cs">
       <DependentUpon>FormUpisObavljen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\FormUrediProfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\FormUrediProfil.Designer.cs">
+      <DependentUpon>FormUrediProfil.cs</DependentUpon>
     </Compile>
     <Compile Include="Forme\IzradiAktivnost.cs">
       <SubType>Form</SubType>
@@ -186,6 +198,9 @@
     <EmbeddedResource Include="Forme\FormPrijava.resx">
       <DependentUpon>FormPrijava.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forme\FormProfilKorisnika.resx">
+      <DependentUpon>FormProfilKorisnika.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forme\FormRegistracija.resx">
       <DependentUpon>FormRegistracija.cs</DependentUpon>
     </EmbeddedResource>
@@ -197,6 +212,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\FormUpisObavljen.resx">
       <DependentUpon>FormUpisObavljen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\FormUrediProfil.resx">
+      <DependentUpon>FormUrediProfil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\IzradiAktivnost.resx">
       <DependentUpon>IzradiAktivnost.cs</DependentUpon>
