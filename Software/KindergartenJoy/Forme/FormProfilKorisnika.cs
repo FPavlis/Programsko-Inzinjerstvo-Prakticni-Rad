@@ -57,5 +57,11 @@ namespace KindergartenJoy.Forme
         {
             Close();
         }
+
+        private void btnIzbrisi_Click(object sender, EventArgs e)
+        {
+            FormPotvrdaBrisanja form = new FormPotvrdaBrisanja();
+            form.ShowDialog();
+        }
     }
 }

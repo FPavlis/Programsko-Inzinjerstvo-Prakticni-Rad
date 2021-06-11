@@ -161,6 +161,7 @@ namespace KindergartenJoy.Forme
             this.btnIzbrisi.TabIndex = 23;
             this.btnIzbrisi.Text = "IZBRIŠI PROFIL";
             this.btnIzbrisi.UseVisualStyleBackColor = false;
+            this.btnIzbrisi.Click += new System.EventHandler(this.btnIzbrisi_Click);
             // 
             // label3
             // 
