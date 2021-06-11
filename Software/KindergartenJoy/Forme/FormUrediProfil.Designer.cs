@@ -47,6 +47,7 @@ namespace KindergartenJoy.Forme
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.btnSpremi = new System.Windows.Forms.Button();
             this.btnOdustani = new System.Windows.Forms.Button();
+            this.lbPogreska = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -218,12 +219,13 @@ namespace KindergartenJoy.Forme
             this.btnSpremi.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSpremi.Font = new System.Drawing.Font("Lucida Console", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSpremi.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnSpremi.Location = new System.Drawing.Point(99, 377);
+            this.btnSpremi.Location = new System.Drawing.Point(91, 408);
             this.btnSpremi.Name = "btnSpremi";
             this.btnSpremi.Size = new System.Drawing.Size(210, 42);
             this.btnSpremi.TabIndex = 23;
             this.btnSpremi.Text = "SPREMI PROMIJENE";
             this.btnSpremi.UseVisualStyleBackColor = false;
+            this.btnSpremi.Click += new System.EventHandler(this.btnSpremi_Click);
             // 
             // btnOdustani
             // 
@@ -231,7 +233,7 @@ namespace KindergartenJoy.Forme
             this.btnOdustani.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnOdustani.Font = new System.Drawing.Font("Lucida Console", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOdustani.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnOdustani.Location = new System.Drawing.Point(404, 377);
+            this.btnOdustani.Location = new System.Drawing.Point(413, 408);
             this.btnOdustani.Name = "btnOdustani";
             this.btnOdustani.Size = new System.Drawing.Size(210, 42);
             this.btnOdustani.TabIndex = 24;
@@ -239,12 +241,24 @@ namespace KindergartenJoy.Forme
             this.btnOdustani.UseVisualStyleBackColor = false;
             this.btnOdustani.Click += new System.EventHandler(this.btnOdustani_Click);
             // 
+            // lbPogreska
+            // 
+            this.lbPogreska.AutoSize = true;
+            this.lbPogreska.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPogreska.Location = new System.Drawing.Point(217, 362);
+            this.lbPogreska.Name = "lbPogreska";
+            this.lbPogreska.Size = new System.Drawing.Size(252, 20);
+            this.lbPogreska.TabIndex = 25;
+            this.lbPogreska.Text = "Molimo vas popunite sve polja!";
+            this.lbPogreska.Visible = false;
+            // 
             // FormUrediProfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.ClientSize = new System.Drawing.Size(727, 453);
+            this.ClientSize = new System.Drawing.Size(727, 481);
+            this.Controls.Add(this.lbPogreska);
             this.Controls.Add(this.btnOdustani);
             this.Controls.Add(this.btnSpremi);
             this.Controls.Add(this.panel1);
@@ -286,5 +300,6 @@ namespace KindergartenJoy.Forme
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Button btnSpremi;
         private System.Windows.Forms.Button btnOdustani;
+        private System.Windows.Forms.Label lbPogreska;
     }
 }

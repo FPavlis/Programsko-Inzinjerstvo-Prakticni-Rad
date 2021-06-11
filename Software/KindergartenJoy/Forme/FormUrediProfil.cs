@@ -28,5 +28,39 @@ namespace KindergartenJoy.Forme
         {
             lbImePrezime.Text = KorisnikProfil.ime + " " + KorisnikProfil.prezime;
         }
+
+        private void btnSpremi_Click(object sender, EventArgs e)
+        {
+            lbPogreska.Visible = false;
+
+            if(txtEmail.Text == "" || txtTelefon.Text == "")
+            {
+                lbPogreska.Visible = true;
+            }
+            else
+            {
+                SpremiSvePromijene();
+                Close();
+            }
+        }
+
+        private void SpremiSvePromijene()
+        {
+            string email = txtEmail.Text;
+            string telefon = txtTelefon.Text;
+            string pretplata = "";
+
+            if(rbDa.Checked == true)
+            {
+                pretplata = "D";
+            }
+            if(rbNe.Checked == true)
+            {
+                pretplata = "N";
+            }
+
+            korisnik.PromijeniPodatke(KorisnikProfil, email, telefon, pretplata);
+
+        }
     }
 }

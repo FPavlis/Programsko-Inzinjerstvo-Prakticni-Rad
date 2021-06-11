@@ -24,6 +24,20 @@ namespace KindergartenJoy.Forme
             string vrijeme = DateTime.Now.ToShortDateString();
             lblVrijeme.Text = vrijeme;
             lblIme.Text = OdabraniKorisnik.ime + " " + OdabraniKorisnik.prezime;
+
+            pbProfil.MouseHover += PbProfil_MouseHover;
+            pbProfil.MouseLeave += PbProfil_MouseLeave;
+            
+        }
+
+        private void PbProfil_MouseLeave(object sender, EventArgs e)
+        {
+            lblIme.ForeColor = System.Drawing.Color.Black;
+        }
+
+        private void PbProfil_MouseHover(object sender, EventArgs e)
+        {
+            lblIme.ForeColor = System.Drawing.Color.Red;
         }
 
         private void btnAktivnost_Click(object sender, EventArgs e)

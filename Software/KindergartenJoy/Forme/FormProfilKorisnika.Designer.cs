@@ -44,6 +44,7 @@ namespace KindergartenJoy.Forme
             this.lbPretplata = new System.Windows.Forms.Label();
             this.btnDjeca = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.btnNaslovnica = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -85,19 +86,19 @@ namespace KindergartenJoy.Forme
             // lbImePrezime
             // 
             this.lbImePrezime.AutoSize = true;
-            this.lbImePrezime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbImePrezime.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbImePrezime.Location = new System.Drawing.Point(127, 45);
             this.lbImePrezime.Name = "lbImePrezime";
-            this.lbImePrezime.Size = new System.Drawing.Size(41, 20);
+            this.lbImePrezime.Size = new System.Drawing.Size(41, 16);
             this.lbImePrezime.TabIndex = 18;
             this.lbImePrezime.Text = "IME";
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(548, 148);
+            this.pictureBox2.Location = new System.Drawing.Point(563, 149);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(240, 265);
+            this.pictureBox2.Size = new System.Drawing.Size(202, 184);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 18;
             this.pictureBox2.TabStop = false;
@@ -205,12 +206,27 @@ namespace KindergartenJoy.Forme
             this.pictureBox3.TabIndex = 27;
             this.pictureBox3.TabStop = false;
             // 
+            // btnNaslovnica
+            // 
+            this.btnNaslovnica.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.btnNaslovnica.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnNaslovnica.Font = new System.Drawing.Font("Lucida Console", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNaslovnica.ForeColor = System.Drawing.Color.Black;
+            this.btnNaslovnica.Location = new System.Drawing.Point(563, 371);
+            this.btnNaslovnica.Name = "btnNaslovnica";
+            this.btnNaslovnica.Size = new System.Drawing.Size(202, 42);
+            this.btnNaslovnica.TabIndex = 26;
+            this.btnNaslovnica.Text = "Nazad na naslovnicu";
+            this.btnNaslovnica.UseVisualStyleBackColor = false;
+            this.btnNaslovnica.Click += new System.EventHandler(this.btnNaslovnica_Click);
+            // 
             // FormProfilKorisnika
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PaleTurquoise;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnNaslovnica);
             this.Controls.Add(this.lbPretplata);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnIzbrisi);
@@ -250,5 +266,6 @@ namespace KindergartenJoy.Forme
         private System.Windows.Forms.Label lbPretplata;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button btnDjeca;
+        private System.Windows.Forms.Button btnNaslovnica;
     }
 }

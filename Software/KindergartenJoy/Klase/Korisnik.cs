@@ -57,6 +57,19 @@ namespace KindergartenJoy
 
         }
 
+        public static void PromijeniPodatke(korisnik odabraniKorisnik, string email, string telefon, string pretplata) 
+        {
+            using (var context = new Entities())
+            {
+                context.korisnik.Attach(odabraniKorisnik);
+                odabraniKorisnik.email = email;
+                odabraniKorisnik.telefon = telefon;
+                odabraniKorisnik.pretplata = pretplata;
+
+                context.SaveChanges();
+            }
+        }
+
         static string ComputeSha256Hash(string rawData)
         {
             // Create a SHA256   
