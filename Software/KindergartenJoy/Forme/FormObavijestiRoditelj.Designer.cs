@@ -1,5 +1,4 @@
-﻿
-namespace KindergartenJoy.Forme
+﻿namespace KindergartenJoy.Forme
 {
     partial class FormObavijestiRoditelj
     {
@@ -30,88 +29,52 @@ namespace KindergartenJoy.Forme
         private void InitializeComponent()
         {
             this.dgvObavijesti = new System.Windows.Forms.DataGridView();
-            this.dtpKreiranjaObavijesti = new System.Windows.Forms.DateTimePicker();
             this.txtOpisObavijesti = new System.Windows.Forms.TextBox();
             this.txtNazivObavijesti = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.dtpKreiranjaObavijesti = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dgvObavijesti)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvObavijesti
             // 
             this.dgvObavijesti.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvObavijesti.Location = new System.Drawing.Point(12, 12);
+            this.dgvObavijesti.Location = new System.Drawing.Point(146, 146);
             this.dgvObavijesti.Name = "dgvObavijesti";
-            this.dgvObavijesti.Size = new System.Drawing.Size(776, 150);
+            this.dgvObavijesti.Size = new System.Drawing.Size(240, 150);
             this.dgvObavijesti.TabIndex = 0;
-            // 
-            // dtpKreiranjaObavijesti
-            // 
-            this.dtpKreiranjaObavijesti.Location = new System.Drawing.Point(190, 221);
-            this.dtpKreiranjaObavijesti.Name = "dtpKreiranjaObavijesti";
-            this.dtpKreiranjaObavijesti.Size = new System.Drawing.Size(200, 20);
-            this.dtpKreiranjaObavijesti.TabIndex = 11;
             // 
             // txtOpisObavijesti
             // 
-            this.txtOpisObavijesti.Location = new System.Drawing.Point(49, 264);
-            this.txtOpisObavijesti.Multiline = true;
+            this.txtOpisObavijesti.Location = new System.Drawing.Point(508, 104);
             this.txtOpisObavijesti.Name = "txtOpisObavijesti";
-            this.txtOpisObavijesti.Size = new System.Drawing.Size(283, 102);
-            this.txtOpisObavijesti.TabIndex = 10;
+            this.txtOpisObavijesti.Size = new System.Drawing.Size(100, 20);
+            this.txtOpisObavijesti.TabIndex = 1;
             // 
             // txtNazivObavijesti
             // 
-            this.txtNazivObavijesti.Location = new System.Drawing.Point(101, 175);
+            this.txtNazivObavijesti.Location = new System.Drawing.Point(508, 146);
             this.txtNazivObavijesti.Name = "txtNazivObavijesti";
-            this.txtNazivObavijesti.Size = new System.Drawing.Size(231, 20);
-            this.txtNazivObavijesti.TabIndex = 9;
+            this.txtNazivObavijesti.Size = new System.Drawing.Size(100, 20);
+            this.txtNazivObavijesti.TabIndex = 2;
             // 
-            // label3
+            // dtpKreiranjaObavijesti
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 267);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(31, 13);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Opis:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 221);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(172, 13);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Datum i vrijeme kreiranja obavijesti:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 178);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 13);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Naslov obavijesti:";
+            this.dtpKreiranjaObavijesti.Location = new System.Drawing.Point(508, 205);
+            this.dtpKreiranjaObavijesti.Name = "dtpKreiranjaObavijesti";
+            this.dtpKreiranjaObavijesti.Size = new System.Drawing.Size(200, 20);
+            this.dtpKreiranjaObavijesti.TabIndex = 3;
             // 
             // FormObavijestiRoditelj
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dtpKreiranjaObavijesti);
-            this.Controls.Add(this.txtOpisObavijesti);
             this.Controls.Add(this.txtNazivObavijesti);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtOpisObavijesti);
             this.Controls.Add(this.dgvObavijesti);
             this.Name = "FormObavijestiRoditelj";
-            this.Text = "Obavijesti";
-            this.Load += new System.EventHandler(this.FormObavijestiRoditelj_Load);
+            this.Text = "FormObavijestiRoditelj";
             ((System.ComponentModel.ISupportInitialize)(this.dgvObavijesti)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -121,11 +84,8 @@ namespace KindergartenJoy.Forme
         #endregion
 
         private System.Windows.Forms.DataGridView dgvObavijesti;
-        private System.Windows.Forms.DateTimePicker dtpKreiranjaObavijesti;
         private System.Windows.Forms.TextBox txtOpisObavijesti;
         private System.Windows.Forms.TextBox txtNazivObavijesti;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DateTimePicker dtpKreiranjaObavijesti;
     }
 }

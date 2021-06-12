@@ -90,6 +90,18 @@
     <Compile Include="Forme\FormMojaDjeca.Designer.cs">
       <DependentUpon>FormMojaDjeca.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forme\FormObavijesti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\FormObavijesti.Designer.cs">
+      <DependentUpon>FormObavijesti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\FormObavijestiRoditelj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\FormObavijestiRoditelj.Designer.cs">
+      <DependentUpon>FormObavijestiRoditelj.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forme\FormPotvrdaBrisanja.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -209,6 +221,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\FormMojaDjeca.resx">
       <DependentUpon>FormMojaDjeca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\FormObavijesti.resx">
+      <DependentUpon>FormObavijesti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\FormObavijestiRoditelj.resx">
+      <DependentUpon>FormObavijestiRoditelj.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\FormPotvrdaBrisanja.resx">
       <DependentUpon>FormPotvrdaBrisanja.cs</DependentUpon>

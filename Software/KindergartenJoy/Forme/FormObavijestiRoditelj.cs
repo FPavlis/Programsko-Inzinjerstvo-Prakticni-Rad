@@ -7,11 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using iTextSharp.text;
-using iTextSharp.text.pdf;
-using System.Net;
-using System.Net.Mail;
-using System.IO;
 
 namespace KindergartenJoy.Forme
 {
@@ -40,7 +35,7 @@ namespace KindergartenJoy.Forme
 
         private void DgvObavijesti_SelectionChanged(object sender, EventArgs e)
         {
-            
+
             obavijest obv = dgvObavijesti.CurrentRow.DataBoundItem as obavijest;
             txtNazivObavijesti.Text = obv.naslov;
             txtOpisObavijesti.Text = obv.opis;

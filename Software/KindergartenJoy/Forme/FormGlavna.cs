@@ -59,7 +59,7 @@ namespace KindergartenJoy.Forme
 
         private void btnAktivnost_Click(object sender, EventArgs e)
         {
-            PregledajAktivnosti pregledajAktivnosti = new PregledajAktivnosti();
+            PregledajAktivnosti pregledajAktivnosti = new PregledajAktivnosti(OdabraniKorisnik);
             pregledajAktivnosti.ShowDialog();
         }
 
@@ -102,6 +102,20 @@ namespace KindergartenJoy.Forme
                 FormPrijava prijava = new FormPrijava();
                 prijava.ShowDialog();
                 Close();
+            }
+        }
+
+        private void btnObavijesti_Click(object sender, EventArgs e)
+        {
+            if (OdabraniKorisnik.tip_korisnik_id == 2)
+            {
+                FormObavijesti forma = new FormObavijesti(OdabraniKorisnik);
+                forma.ShowDialog();
+            }
+            else
+            {
+                FormObavijestiRoditelj forma = new FormObavijestiRoditelj();
+                forma.ShowDialog();
             }
         }
     }
