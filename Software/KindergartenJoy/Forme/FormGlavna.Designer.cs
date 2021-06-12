@@ -222,6 +222,7 @@
             this.lblIme.Size = new System.Drawing.Size(34, 13);
             this.lblIme.TabIndex = 12;
             this.lblIme.Text = "Ime";
+            this.lblIme.Click += new System.EventHandler(this.lblIme_Click);
             // 
             // pbProfil
             // 

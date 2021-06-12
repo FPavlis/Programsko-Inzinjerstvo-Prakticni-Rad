@@ -32,7 +32,19 @@ namespace KindergartenJoy.Forme
 
             pbProfil.MouseHover += PbProfil_MouseHover;
             pbProfil.MouseLeave += PbProfil_MouseLeave;
+            lblIme.MouseHover += LblIme_MouseHover;
+            lblIme.MouseLeave += LblIme_MouseLeave;
             
+        }
+
+        private void LblIme_MouseLeave(object sender, EventArgs e)
+        {
+            lblIme.ForeColor = System.Drawing.Color.Black;
+        }
+
+        private void LblIme_MouseHover(object sender, EventArgs e)
+        {
+            lblIme.ForeColor = System.Drawing.Color.Red;
         }
 
         private void PbProfil_MouseLeave(object sender, EventArgs e)
@@ -75,6 +87,21 @@ namespace KindergartenJoy.Forme
                 FormPrijava prijava = new FormPrijava();
                 prijava.ShowDialog();
                 Close();              
+            }
+        }
+
+        private void lblIme_Click(object sender, EventArgs e)
+        {
+            FormProfilKorisnika form = new FormProfilKorisnika(OdabraniKorisnik);
+            form.ShowDialog();
+
+            if (Reset == true)
+            {
+                Reset = false;
+                Hide();
+                FormPrijava prijava = new FormPrijava();
+                prijava.ShowDialog();
+                Close();
             }
         }
     }
