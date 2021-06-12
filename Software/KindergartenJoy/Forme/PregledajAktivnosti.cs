@@ -17,14 +17,23 @@ namespace KindergartenJoy.Forme
 {
     public partial class PregledajAktivnosti : Form
     {
-        public PregledajAktivnosti()
+        private korisnik korisnik;
+        public PregledajAktivnosti(korisnik odabraniKorisnik)
         {
             InitializeComponent();
+            korisnik = odabraniKorisnik;
         }
 
         private void PregledajAktivnosti_Load(object sender, EventArgs e)
         {
             LoadajDGV();
+            if(korisnik.tip_korisnik_id != 2)
+            {
+                btnDodajAktivnost.Enabled = false;
+                btnExport.Enabled = false;
+                btnObrisiAktivnost.Enabled = false;
+                btnPošaljiNaMail.Enabled = false;
+            }
         }
 
         private void LoadajCijeliDGV()
