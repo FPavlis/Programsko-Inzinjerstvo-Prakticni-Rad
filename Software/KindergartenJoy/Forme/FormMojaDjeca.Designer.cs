@@ -61,6 +61,7 @@ namespace KindergartenJoy.Forme
             // 
             // dgvDjeca
             // 
+            this.dgvDjeca.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDjeca.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDjeca.Location = new System.Drawing.Point(0, 121);
             this.dgvDjeca.Name = "dgvDjeca";

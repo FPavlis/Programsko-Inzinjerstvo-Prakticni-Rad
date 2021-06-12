@@ -131,7 +131,7 @@
             <PropertyRef Name="upis_id" />
           </Key>
           <Property Name="upis_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="korisnik_id" Type="int" Nullable="false" StoreGeneratedPattern="None" />
+          <Property Name="korisnik_id" Type="int" Nullable="false" />
           <Property Name="dijete_id" Type="int" Nullable="false" />
           <Property Name="datum_upis" Type="datetime" Nullable="false" />
         </EntityType>
