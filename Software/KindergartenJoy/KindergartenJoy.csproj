@@ -84,6 +84,12 @@
     <Compile Include="Forme\FormGlavna.Designer.cs">
       <DependentUpon>FormGlavna.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forme\FormMojaDjeca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\FormMojaDjeca.Designer.cs">
+      <DependentUpon>FormMojaDjeca.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forme\FormPotvrdaBrisanja.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -200,6 +206,9 @@
     </Compile>
     <EmbeddedResource Include="Forme\FormGlavna.resx">
       <DependentUpon>FormGlavna.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\FormMojaDjeca.resx">
+      <DependentUpon>FormMojaDjeca.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\FormPotvrdaBrisanja.resx">
       <DependentUpon>FormPotvrdaBrisanja.cs</DependentUpon>

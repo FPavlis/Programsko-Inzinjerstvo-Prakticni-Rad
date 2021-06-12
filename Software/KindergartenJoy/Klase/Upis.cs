@@ -31,5 +31,15 @@ namespace KindergartenJoy
 
             return novoDijete;
         }
+
+        public static List<upis> DohvatiSveUpise()
+        {
+            using (var context = new Entities())
+            {
+                List<upis> upisi = context.upis.ToList();
+
+                return upisi;
+            }
+        }
     }
 }

@@ -69,5 +69,12 @@ namespace KindergartenJoy.Forme
             }
             
         }
+
+        private void btnDjeca_Click(object sender, EventArgs e)
+        {
+            FormMojaDjeca form = new FormMojaDjeca(Korisnik);
+
+            form.ShowDialog();
+        }
     }
 }
