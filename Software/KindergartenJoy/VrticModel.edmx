@@ -85,7 +85,7 @@
           <Key>
             <PropertyRef Name="obavijest_id" />
           </Key>
-          <Property Name="obavijest_id" Type="int" Nullable="false" />
+          <Property Name="obavijest_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="korisnik_id" Type="int" Nullable="false" />
           <Property Name="naslov" Type="varchar" MaxLength="45" Nullable="false" />
           <Property Name="datum_vrijeme" Type="datetime2" Precision="0" Nullable="false" />

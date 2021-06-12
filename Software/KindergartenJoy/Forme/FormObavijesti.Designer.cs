@@ -33,14 +33,14 @@
             this.txtOpisObavijesti = new System.Windows.Forms.TextBox();
             this.dtpKreiranjaObavijesti = new System.Windows.Forms.DateTimePicker();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.btnSpremi = new System.Windows.Forms.Button();
             this.btnOdustani = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -59,8 +59,9 @@
             // txtOpisObavijesti
             // 
             this.txtOpisObavijesti.Location = new System.Drawing.Point(252, 133);
+            this.txtOpisObavijesti.Multiline = true;
             this.txtOpisObavijesti.Name = "txtOpisObavijesti";
-            this.txtOpisObavijesti.Size = new System.Drawing.Size(263, 20);
+            this.txtOpisObavijesti.Size = new System.Drawing.Size(263, 95);
             this.txtOpisObavijesti.TabIndex = 1;
             // 
             // dtpKreiranjaObavijesti
@@ -80,6 +81,16 @@
             this.panel1.Size = new System.Drawing.Size(799, 82);
             this.panel1.TabIndex = 3;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(208, 16);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(62, 55);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -90,16 +101,6 @@
             this.label1.Size = new System.Drawing.Size(182, 31);
             this.label1.TabIndex = 3;
             this.label1.Text = "OBAVIJESTI";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(208, 16);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(62, 55);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
             // 
             // panel2
             // 
@@ -115,6 +116,36 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(730, 266);
             this.panel2.TabIndex = 4;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(22, 131);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(165, 20);
+            this.label5.TabIndex = 19;
+            this.label5.Text = "OPIS OBAVIJESTI:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(22, 83);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(185, 20);
+            this.label4.TabIndex = 18;
+            this.label4.Text = "DATUM OBAVIJESTI:";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(537, 39);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(174, 189);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 17;
+            this.pictureBox2.TabStop = false;
             // 
             // label2
             // 
@@ -135,36 +166,6 @@
             this.label3.Size = new System.Drawing.Size(213, 20);
             this.label3.TabIndex = 17;
             this.label3.Text = "Napravite novu obavijesti:";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(537, 39);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(174, 189);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 17;
-            this.pictureBox2.TabStop = false;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(22, 83);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(185, 20);
-            this.label4.TabIndex = 18;
-            this.label4.Text = "DATUM OBAVIJESTI:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(22, 131);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(165, 20);
-            this.label5.TabIndex = 19;
-            this.label5.Text = "OPIS OBAVIJESTI:";
             // 
             // btnSpremi
             // 

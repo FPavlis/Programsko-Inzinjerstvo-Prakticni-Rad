@@ -114,7 +114,7 @@ namespace KindergartenJoy.Forme
             }
             else
             {
-                FormObavijestiRoditelj forma = new FormObavijestiRoditelj();
+                FormObavijestiRoditelj forma = new FormObavijestiRoditelj(OdabraniKorisnik);
                 forma.ShowDialog();
             }
         }

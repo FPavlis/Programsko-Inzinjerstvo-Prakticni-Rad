@@ -33,6 +33,7 @@ namespace KindergartenJoy
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lblNetocno = new System.Windows.Forms.Label();
             this.lblKreiraj = new System.Windows.Forms.Label();
             this.btnPrijava = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -40,7 +41,6 @@ namespace KindergartenJoy
             this.label2 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.lblNetocno = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -79,6 +79,17 @@ namespace KindergartenJoy
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(463, 562);
             this.panel2.TabIndex = 3;
+            // 
+            // lblNetocno
+            // 
+            this.lblNetocno.AutoSize = true;
+            this.lblNetocno.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNetocno.Location = new System.Drawing.Point(127, 314);
+            this.lblNetocno.Name = "lblNetocno";
+            this.lblNetocno.Size = new System.Drawing.Size(194, 18);
+            this.lblNetocno.TabIndex = 11;
+            this.lblNetocno.Text = "Netočno uneseni podaci!";
+            this.lblNetocno.Visible = false;
             // 
             // lblKreiraj
             // 
@@ -119,6 +130,7 @@ namespace KindergartenJoy
             // 
             this.txtLozinka.Location = new System.Drawing.Point(111, 266);
             this.txtLozinka.Name = "txtLozinka";
+            this.txtLozinka.PasswordChar = '*';
             this.txtLozinka.Size = new System.Drawing.Size(225, 20);
             this.txtLozinka.TabIndex = 6;
             // 
@@ -149,17 +161,6 @@ namespace KindergartenJoy
             this.label1.Size = new System.Drawing.Size(63, 20);
             this.label1.TabIndex = 3;
             this.label1.Text = "EMAIL";
-            // 
-            // lblNetocno
-            // 
-            this.lblNetocno.AutoSize = true;
-            this.lblNetocno.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNetocno.Location = new System.Drawing.Point(127, 314);
-            this.lblNetocno.Name = "lblNetocno";
-            this.lblNetocno.Size = new System.Drawing.Size(194, 18);
-            this.lblNetocno.TabIndex = 11;
-            this.lblNetocno.Text = "Netočno uneseni podaci!";
-            this.lblNetocno.Visible = false;
             // 
             // FormPrijava
             // 

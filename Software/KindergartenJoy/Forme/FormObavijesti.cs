@@ -40,6 +40,8 @@ namespace KindergartenJoy.Forme
                 context.SaveChanges();
             }
 
+            FormObavijestDodana form = new FormObavijestDodana();
+            form.ShowDialog();
         }
     }
 }

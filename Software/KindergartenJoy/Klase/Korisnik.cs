@@ -88,5 +88,16 @@ namespace KindergartenJoy
             }
         }
 
+        public static void Pretplata(korisnik odabraniKorisnik, string pretplata)
+        {
+            using (var context = new Entities())
+            {
+                context.korisnik.Attach(odabraniKorisnik);
+                odabraniKorisnik.pretplata = pretplata;
+                context.SaveChanges();
+            }
+
+        }
+
     }
 }
