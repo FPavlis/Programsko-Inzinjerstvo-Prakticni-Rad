@@ -19,7 +19,12 @@ namespace KindergartenJoy.Forme
             odabraniKorisnik = odabrani;
         }
 
-        private void btnSpremi_Click(object sender, EventArgs e)
+        private void btnOdustani_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnSpremi_Click_1(object sender, EventArgs e)
         {
             obavijest novaObavijest = new obavijest()
             {
@@ -34,7 +39,7 @@ namespace KindergartenJoy.Forme
                 context.obavijest.Add(novaObavijest);
                 context.SaveChanges();
             }
-        }
 
+        }
     }
 }
