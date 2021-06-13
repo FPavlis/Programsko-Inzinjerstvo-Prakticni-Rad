@@ -22,22 +22,40 @@ namespace KindergartenJoy.Forme
         {
             roditelj = odabraniKorisnik;
             InitializeComponent();
+            LoadCijeliDGV();
+        }
+
+        private void LoadCijeliDGV()
+        {
+            using (var context = new Entities())
+            {
+                var query = from o in context.obavijest
+                            select o;
+                dgvObavijesti.DataSource = query.ToList();
+                dgvObavijesti.Columns["korisnik"].Visible = false;
+                dgvObavijesti.Columns["obavijest_id"].Visible = false;
+                dgvObavijesti.Columns["korisnik_id"].Visible = false;
+            }
+
         }
 
         private void DgvObavijesti_SelectionChanged(object sender, EventArgs e)
         {
 
             obavijest obv = dgvObavijesti.CurrentRow.DataBoundItem as obavijest;
-            txtNazivObavijesti.Text = obv.naslov;
-            lblOpis.Text = obv.opis;
-            lblDatum.Text = obv.datum_vrijeme.ToShortDateString();
+
+            if(obv != null)
+            {
+                txtNazivObavijesti.Text = obv.naslov;
+                lblOpis.Text = obv.opis;
+                lblDatum.Text = obv.datum_vrijeme.ToShortDateString();
+            }
         }
 
         private void FormObavijestiRoditelj_Load(object sender, EventArgs e)
         {
             rbDa.Checked = true;
             lblPretplata.Visible = false;
-            LoadajDGV();
 
             dgvObavijesti.SelectionChanged += DgvObavijesti_SelectionChanged;
         }       
@@ -144,8 +162,9 @@ namespace KindergartenJoy.Forme
 
         private void btnPosaljiNaMail_Click(object sender, EventArgs e)
         {
-
+            LoadajDGV();
             PosaljiNaMail();
+            LoadCijeliDGV();
         }
     }
 }

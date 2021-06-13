@@ -33,6 +33,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnPosaljiNaMail = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -51,7 +52,6 @@
             this.btnPrijava = new System.Windows.Forms.Button();
             this.btnNaslovnica = new System.Windows.Forms.Button();
             this.lblPretplata = new System.Windows.Forms.Label();
-            this.btnPosaljiNaMail = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvObavijesti)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -105,6 +105,20 @@
             this.panel1.Size = new System.Drawing.Size(908, 87);
             this.panel1.TabIndex = 4;
             // 
+            // btnPosaljiNaMail
+            // 
+            this.btnPosaljiNaMail.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnPosaljiNaMail.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnPosaljiNaMail.Font = new System.Drawing.Font("Lucida Console", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPosaljiNaMail.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnPosaljiNaMail.Location = new System.Drawing.Point(563, 16);
+            this.btnPosaljiNaMail.Name = "btnPosaljiNaMail";
+            this.btnPosaljiNaMail.Size = new System.Drawing.Size(287, 44);
+            this.btnPosaljiNaMail.TabIndex = 29;
+            this.btnPosaljiNaMail.Text = "Pošalji mi obavijesti na mail";
+            this.btnPosaljiNaMail.UseVisualStyleBackColor = false;
+            this.btnPosaljiNaMail.Click += new System.EventHandler(this.btnPosaljiNaMail_Click);
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -145,11 +159,8 @@
             this.lblOpis.ForeColor = System.Drawing.Color.MidnightBlue;
             this.lblOpis.Location = new System.Drawing.Point(14, 11);
             this.lblOpis.Name = "lblOpis";
-            this.lblOpis.Size = new System.Drawing.Size(693, 60);
+            this.lblOpis.Size = new System.Drawing.Size(0, 20);
             this.lblOpis.TabIndex = 22;
-            this.lblOpis.Text = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\r\nAAAAAAAAAAAAAAAAAAAAAA" +
-    "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\r\nAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" +
-    "AAAAAAAAAAAAAA";
             // 
             // label4
             // 
@@ -168,9 +179,8 @@
             this.lblDatum.ForeColor = System.Drawing.Color.MidnightBlue;
             this.lblDatum.Location = new System.Drawing.Point(613, 22);
             this.lblDatum.Name = "lblDatum";
-            this.lblDatum.Size = new System.Drawing.Size(62, 20);
+            this.lblDatum.Size = new System.Drawing.Size(0, 20);
             this.lblDatum.TabIndex = 20;
-            this.lblDatum.Text = "Datum";
             // 
             // label3
             // 
@@ -189,9 +199,8 @@
             this.txtNazivObavijesti.ForeColor = System.Drawing.Color.MidnightBlue;
             this.txtNazivObavijesti.Location = new System.Drawing.Point(228, 22);
             this.txtNazivObavijesti.Name = "txtNazivObavijesti";
-            this.txtNazivObavijesti.Size = new System.Drawing.Size(62, 20);
+            this.txtNazivObavijesti.Size = new System.Drawing.Size(0, 20);
             this.txtNazivObavijesti.TabIndex = 18;
-            this.txtNazivObavijesti.Text = "Naslov";
             // 
             // panel4
             // 
@@ -307,20 +316,6 @@
             this.lblPretplata.TabIndex = 28;
             this.lblPretplata.Text = "Pretplata";
             this.lblPretplata.Visible = false;
-            // 
-            // btnPosaljiNaMail
-            // 
-            this.btnPosaljiNaMail.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnPosaljiNaMail.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnPosaljiNaMail.Font = new System.Drawing.Font("Lucida Console", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPosaljiNaMail.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnPosaljiNaMail.Location = new System.Drawing.Point(563, 16);
-            this.btnPosaljiNaMail.Name = "btnPosaljiNaMail";
-            this.btnPosaljiNaMail.Size = new System.Drawing.Size(287, 44);
-            this.btnPosaljiNaMail.TabIndex = 29;
-            this.btnPosaljiNaMail.Text = "Pošalji mi obavijesti na mail";
-            this.btnPosaljiNaMail.UseVisualStyleBackColor = false;
-            this.btnPosaljiNaMail.Click += new System.EventHandler(this.btnPosaljiNaMail_Click);
             // 
             // FormObavijestiRoditelj
             // 

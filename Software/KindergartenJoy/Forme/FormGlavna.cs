@@ -71,8 +71,11 @@ namespace KindergartenJoy.Forme
 
         private void btnStatistika_Click_1(object sender, EventArgs e)
         {
-            FormStatistika form = new FormStatistika();
-            form.ShowDialog();
+            if(OdabraniKorisnik.tip_korisnik_id == 2)
+            {
+                FormStatistika form = new FormStatistika();
+                form.ShowDialog();
+            }
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
