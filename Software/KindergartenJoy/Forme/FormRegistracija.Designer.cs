@@ -33,6 +33,7 @@ namespace KindergartenJoy.Forme
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lblPogreske = new System.Windows.Forms.Label();
             this.label3213 = new System.Windows.Forms.Label();
             this.txtTelefon = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -47,7 +48,6 @@ namespace KindergartenJoy.Forme
             this.label2 = new System.Windows.Forms.Label();
             this.txtEmailReg = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.lblPogreske = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -93,6 +93,18 @@ namespace KindergartenJoy.Forme
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(473, 564);
             this.panel2.TabIndex = 4;
+            // 
+            // lblPogreske
+            // 
+            this.lblPogreske.AutoSize = true;
+            this.lblPogreske.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPogreske.ForeColor = System.Drawing.Color.Black;
+            this.lblPogreske.Location = new System.Drawing.Point(19, 386);
+            this.lblPogreske.Name = "lblPogreske";
+            this.lblPogreske.Size = new System.Drawing.Size(75, 16);
+            this.lblPogreske.TabIndex = 19;
+            this.lblPogreske.Text = "Pogreske";
+            this.lblPogreske.Visible = false;
             // 
             // label3213
             // 
@@ -155,6 +167,7 @@ namespace KindergartenJoy.Forme
             this.txtLozinkaReg.BackColor = System.Drawing.SystemColors.Window;
             this.txtLozinkaReg.Location = new System.Drawing.Point(253, 149);
             this.txtLozinkaReg.Name = "txtLozinkaReg";
+            this.txtLozinkaReg.PasswordChar = '*';
             this.txtLozinkaReg.Size = new System.Drawing.Size(189, 20);
             this.txtLozinkaReg.TabIndex = 12;
             // 
@@ -224,18 +237,6 @@ namespace KindergartenJoy.Forme
             this.label1.Size = new System.Drawing.Size(58, 20);
             this.label1.TabIndex = 3;
             this.label1.Text = "EMAIL";
-            // 
-            // lblPogreske
-            // 
-            this.lblPogreske.AutoSize = true;
-            this.lblPogreske.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPogreske.ForeColor = System.Drawing.Color.Black;
-            this.lblPogreske.Location = new System.Drawing.Point(19, 386);
-            this.lblPogreske.Name = "lblPogreske";
-            this.lblPogreske.Size = new System.Drawing.Size(75, 16);
-            this.lblPogreske.TabIndex = 19;
-            this.lblPogreske.Text = "Pogreske";
-            this.lblPogreske.Visible = false;
             // 
             // FormRegistracija
             // 

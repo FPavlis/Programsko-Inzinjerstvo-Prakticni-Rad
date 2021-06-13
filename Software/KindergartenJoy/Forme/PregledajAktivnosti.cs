@@ -202,5 +202,10 @@ namespace KindergartenJoy.Forme
         {
             PošaljiPoruku();
         }
+
+        private void btnNaslovnica_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

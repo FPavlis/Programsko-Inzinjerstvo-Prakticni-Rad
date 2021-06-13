@@ -78,6 +78,12 @@
     <Compile Include="evidencija.cs">
       <DependentUpon>VrticModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Forme\FormAktivnostDodana.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\FormAktivnostDodana.Designer.cs">
+      <DependentUpon>FormAktivnostDodana.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forme\FormGlavna.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -222,6 +228,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>VrticModel.edmx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forme\FormAktivnostDodana.resx">
+      <DependentUpon>FormAktivnostDodana.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forme\FormGlavna.resx">
       <DependentUpon>FormGlavna.cs</DependentUpon>
     </EmbeddedResource>

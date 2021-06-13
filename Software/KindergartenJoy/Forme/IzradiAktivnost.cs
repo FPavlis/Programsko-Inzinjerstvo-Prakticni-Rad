@@ -23,7 +23,11 @@ namespace KindergartenJoy.Forme
             DateTime dateTime = dtpDatumIVrijemeAktivnosti.Value;
             aktivnost aktivnost1 = new aktivnost();
             aktivnost1.DodajAktivnost(nazivAktivnosti, opis, dateTime);
-            MessageBox.Show("Aktivnost uspiješno spremljena u bazu!");
+
+            FormAktivnostDodana form = new FormAktivnostDodana();
+            form.ShowDialog();
+
+            Close();
         }
 
         private void btnOdustani_Click_1(object sender, EventArgs e)
