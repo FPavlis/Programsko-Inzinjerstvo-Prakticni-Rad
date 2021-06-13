@@ -42,7 +42,7 @@ namespace KindergartenJoy.Forme
             this.btnVrati.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnVrati.Font = new System.Drawing.Font("Lucida Console", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVrati.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnVrati.Location = new System.Drawing.Point(160, 120);
+            this.btnVrati.Location = new System.Drawing.Point(205, 131);
             this.btnVrati.Name = "btnVrati";
             this.btnVrati.Size = new System.Drawing.Size(171, 42);
             this.btnVrati.TabIndex = 24;
@@ -56,9 +56,9 @@ namespace KindergartenJoy.Forme
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(46, 38);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(479, 39);
+            this.label1.Size = new System.Drawing.Size(485, 78);
             this.label1.TabIndex = 23;
-            this.label1.Text = "Obavijesti uspješno dodana!";
+            this.label1.Text = "Obavijest uspješno dodana\r\ni poslana roditeljima na mail!\r\n";
             // 
             // pictureBox1
             // 

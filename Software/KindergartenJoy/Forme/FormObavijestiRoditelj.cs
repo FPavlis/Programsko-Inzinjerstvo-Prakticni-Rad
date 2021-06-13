@@ -40,20 +40,7 @@ namespace KindergartenJoy.Forme
             LoadajDGV();
 
             dgvObavijesti.SelectionChanged += DgvObavijesti_SelectionChanged;
-        }
-        private string DohvatiMailingListu()
-        {
-            string mailingLista = "";
-            using (var context = new Entities())
-            {
-                var query = from a in context.korisnik
-                            where a.pretplata == "D"
-                            select a.email;
-                List<string> pomocna = query.ToList();
-                mailingLista = string.Join(",", pomocna);
-            }
-            return mailingLista;
-        }
+        }       
 
         private void PosaljiNaMail()
         {
