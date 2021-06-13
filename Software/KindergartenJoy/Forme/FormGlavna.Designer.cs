@@ -46,18 +46,21 @@
             this.pbProfil = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.btnNaslovnica = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbProfil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(546, 142);
+            this.pictureBox1.Location = new System.Drawing.Point(598, 142);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(207, 311);
             this.pictureBox1.TabIndex = 0;
@@ -66,7 +69,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(293, 190);
+            this.pictureBox2.Location = new System.Drawing.Point(345, 190);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(207, 311);
             this.pictureBox2.TabIndex = 1;
@@ -75,8 +78,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.PaleTurquoise;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(260, 18);
+            this.label1.Location = new System.Drawing.Point(24, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(218, 42);
             this.label1.TabIndex = 2;
@@ -208,7 +212,7 @@
             // 
             this.lblVrijeme.AutoSize = true;
             this.lblVrijeme.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVrijeme.Location = new System.Drawing.Point(704, 421);
+            this.lblVrijeme.Location = new System.Drawing.Point(771, 425);
             this.lblVrijeme.Name = "lblVrijeme";
             this.lblVrijeme.Size = new System.Drawing.Size(85, 16);
             this.lblVrijeme.TabIndex = 11;
@@ -217,8 +221,9 @@
             // lblIme
             // 
             this.lblIme.AutoSize = true;
+            this.lblIme.BackColor = System.Drawing.Color.PaleTurquoise;
             this.lblIme.Font = new System.Drawing.Font("Lucida Console", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIme.Location = new System.Drawing.Point(638, 31);
+            this.lblIme.Location = new System.Drawing.Point(318, 37);
             this.lblIme.Name = "lblIme";
             this.lblIme.Size = new System.Drawing.Size(34, 13);
             this.lblIme.TabIndex = 12;
@@ -227,8 +232,9 @@
             // 
             // pbProfil
             // 
+            this.pbProfil.BackColor = System.Drawing.Color.PaleTurquoise;
             this.pbProfil.Image = ((System.Drawing.Image)(resources.GetObject("pbProfil.Image")));
-            this.pbProfil.Location = new System.Drawing.Point(572, 12);
+            this.pbProfil.Location = new System.Drawing.Point(248, 18);
             this.pbProfil.Name = "pbProfil";
             this.pbProfil.Size = new System.Drawing.Size(60, 52);
             this.pbProfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -239,7 +245,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(354, 108);
+            this.pictureBox4.Location = new System.Drawing.Point(376, 120);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(116, 64);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -249,28 +255,52 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(476, 86);
+            this.pictureBox5.Location = new System.Drawing.Point(542, 83);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(116, 64);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 15;
             this.pictureBox5.TabStop = false;
             // 
+            // btnNaslovnica
+            // 
+            this.btnNaslovnica.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.btnNaslovnica.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnNaslovnica.Font = new System.Drawing.Font("Lucida Console", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNaslovnica.ForeColor = System.Drawing.Color.Black;
+            this.btnNaslovnica.Location = new System.Drawing.Point(518, 25);
+            this.btnNaslovnica.Name = "btnNaslovnica";
+            this.btnNaslovnica.Size = new System.Drawing.Size(135, 35);
+            this.btnNaslovnica.TabIndex = 27;
+            this.btnNaslovnica.Text = "Odjavi se";
+            this.btnNaslovnica.UseVisualStyleBackColor = false;
+            this.btnNaslovnica.Click += new System.EventHandler(this.btnNaslovnica_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.panel2.Controls.Add(this.btnNaslovnica);
+            this.panel2.Controls.Add(this.pbProfil);
+            this.panel2.Controls.Add(this.lblIme);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Location = new System.Drawing.Point(221, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(680, 81);
+            this.panel2.TabIndex = 28;
+            // 
             // FormGlavna
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
-            this.ClientSize = new System.Drawing.Size(844, 450);
+            this.ClientSize = new System.Drawing.Size(895, 450);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.pbProfil);
-            this.Controls.Add(this.lblIme);
             this.Controls.Add(this.lblVrijeme);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.panel2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormGlavna";
             this.Text = "FormGlavna";
@@ -282,6 +312,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbProfil)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -306,5 +338,7 @@
         private System.Windows.Forms.PictureBox pbProfil;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Button btnNaslovnica;
+        private System.Windows.Forms.Panel panel2;
     }
 }

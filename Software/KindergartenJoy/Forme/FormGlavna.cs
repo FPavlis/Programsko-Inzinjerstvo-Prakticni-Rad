@@ -121,5 +121,13 @@ namespace KindergartenJoy.Forme
                 forma.ShowDialog();
             }
         }
+
+        private void btnNaslovnica_Click(object sender, EventArgs e)
+        {
+            Hide();
+            FormPrijava prijava = new FormPrijava();
+            prijava.ShowDialog();
+            Close();
+        }
     }
 }
