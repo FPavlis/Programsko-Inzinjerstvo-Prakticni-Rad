@@ -51,14 +51,14 @@ namespace KindergartenJoy.Klase
                 poruka = "Lozinka mora imati 6 ili više znakova. Bez razmaka i jedno\rveliko i malo slovo.";
             }
 
-            if(korIme.Length == 0)
+            if(korIme.Length < 3)
             {
-                poruka = "Unesite korisnicko ime!";
+                poruka = "Korisnicko ime treba sadržavati barem 3 slova!";
             }
 
-            if(telefon.Length == 0)
+            if(telefon.Length < 6)
             {
-                poruka = "Unesite broj telefona!";
+                poruka = "Broj telefona treba biti ispravno unesen (barem 6 brojki!)";
             }
 
             if(poruka.Length == 0)
