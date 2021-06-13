@@ -163,9 +163,9 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(47, 112);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(213, 20);
+            this.label3.Size = new System.Drawing.Size(209, 20);
             this.label3.TabIndex = 17;
-            this.label3.Text = "Napravite novu obavijesti:";
+            this.label3.Text = "Napravite novu obavijest:";
             // 
             // btnSpremi
             // 
