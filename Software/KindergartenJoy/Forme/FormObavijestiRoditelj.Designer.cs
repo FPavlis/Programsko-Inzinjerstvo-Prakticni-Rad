@@ -35,30 +35,31 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.txtNazivObavijesti = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lblDatum = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.lblOpis = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.lblOpis = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lblDatum = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtNazivObavijesti = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.rbDa = new System.Windows.Forms.RadioButton();
-            this.rbNe = new System.Windows.Forms.RadioButton();
-            this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.rbNe = new System.Windows.Forms.RadioButton();
+            this.rbDa = new System.Windows.Forms.RadioButton();
+            this.label5 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.btnPrijava = new System.Windows.Forms.Button();
             this.btnNaslovnica = new System.Windows.Forms.Button();
             this.lblPretplata = new System.Windows.Forms.Label();
+            this.btnPosaljiNaMail = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvObavijesti)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
@@ -96,6 +97,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.panel1.Controls.Add(this.btnPosaljiNaMail);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(-1, -2);
@@ -127,47 +129,14 @@
             this.panel2.Size = new System.Drawing.Size(800, 216);
             this.panel2.TabIndex = 18;
             // 
-            // txtNazivObavijesti
+            // panel3
             // 
-            this.txtNazivObavijesti.AutoSize = true;
-            this.txtNazivObavijesti.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNazivObavijesti.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.txtNazivObavijesti.Location = new System.Drawing.Point(228, 22);
-            this.txtNazivObavijesti.Name = "txtNazivObavijesti";
-            this.txtNazivObavijesti.Size = new System.Drawing.Size(62, 20);
-            this.txtNazivObavijesti.TabIndex = 18;
-            this.txtNazivObavijesti.Text = "Naslov";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(422, 22);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(185, 20);
-            this.label3.TabIndex = 19;
-            this.label3.Text = "DATUM OBAVIJESTI:";
-            // 
-            // lblDatum
-            // 
-            this.lblDatum.AutoSize = true;
-            this.lblDatum.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDatum.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.lblDatum.Location = new System.Drawing.Point(613, 22);
-            this.lblDatum.Name = "lblDatum";
-            this.lblDatum.Size = new System.Drawing.Size(62, 20);
-            this.lblDatum.TabIndex = 20;
-            this.lblDatum.Text = "Datum";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(18, 63);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(165, 20);
-            this.label4.TabIndex = 21;
-            this.label4.Text = "OPIS OBAVIJESTI:";
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.lblOpis);
+            this.panel3.Location = new System.Drawing.Point(22, 101);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(751, 102);
+            this.panel3.TabIndex = 23;
             // 
             // lblOpis
             // 
@@ -182,14 +151,47 @@
     "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\r\nAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" +
     "AAAAAAAAAAAAAA";
             // 
-            // panel3
+            // label4
             // 
-            this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.lblOpis);
-            this.panel3.Location = new System.Drawing.Point(22, 101);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(751, 102);
-            this.panel3.TabIndex = 23;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(18, 63);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(165, 20);
+            this.label4.TabIndex = 21;
+            this.label4.Text = "OPIS OBAVIJESTI:";
+            // 
+            // lblDatum
+            // 
+            this.lblDatum.AutoSize = true;
+            this.lblDatum.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDatum.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.lblDatum.Location = new System.Drawing.Point(613, 22);
+            this.lblDatum.Name = "lblDatum";
+            this.lblDatum.Size = new System.Drawing.Size(62, 20);
+            this.lblDatum.TabIndex = 20;
+            this.lblDatum.Text = "Datum";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(422, 22);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(185, 20);
+            this.label3.TabIndex = 19;
+            this.label3.Text = "DATUM OBAVIJESTI:";
+            // 
+            // txtNazivObavijesti
+            // 
+            this.txtNazivObavijesti.AutoSize = true;
+            this.txtNazivObavijesti.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNazivObavijesti.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.txtNazivObavijesti.Location = new System.Drawing.Point(228, 22);
+            this.txtNazivObavijesti.Name = "txtNazivObavijesti";
+            this.txtNazivObavijesti.Size = new System.Drawing.Size(62, 20);
+            this.txtNazivObavijesti.TabIndex = 18;
+            this.txtNazivObavijesti.Text = "Naslov";
             // 
             // panel4
             // 
@@ -203,17 +205,25 @@
             this.panel4.Size = new System.Drawing.Size(287, 104);
             this.panel4.TabIndex = 19;
             // 
-            // rbDa
+            // pictureBox3
             // 
-            this.rbDa.AutoSize = true;
-            this.rbDa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbDa.Location = new System.Drawing.Point(44, 77);
-            this.rbDa.Name = "rbDa";
-            this.rbDa.Size = new System.Drawing.Size(50, 24);
-            this.rbDa.TabIndex = 0;
-            this.rbDa.TabStop = true;
-            this.rbDa.Text = "Da";
-            this.rbDa.UseVisualStyleBackColor = true;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(178, 0);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(70, 71);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 3;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(24, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(70, 71);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
             // 
             // rbNe
             // 
@@ -227,6 +237,18 @@
             this.rbNe.Text = "Ne";
             this.rbNe.UseVisualStyleBackColor = true;
             // 
+            // rbDa
+            // 
+            this.rbDa.AutoSize = true;
+            this.rbDa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbDa.Location = new System.Drawing.Point(44, 77);
+            this.rbDa.Name = "rbDa";
+            this.rbDa.Size = new System.Drawing.Size(50, 24);
+            this.rbDa.TabIndex = 0;
+            this.rbDa.TabStop = true;
+            this.rbDa.Text = "Da";
+            this.rbDa.UseVisualStyleBackColor = true;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -236,26 +258,6 @@
             this.label5.Size = new System.Drawing.Size(206, 40);
             this.label5.TabIndex = 20;
             this.label5.Text = "Želite li primati obavijesti\r\nna email?\r\n";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(24, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(70, 71);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(178, 0);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(70, 71);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 3;
-            this.pictureBox3.TabStop = false;
             // 
             // pictureBox4
             // 
@@ -306,6 +308,20 @@
             this.lblPretplata.Text = "Pretplata";
             this.lblPretplata.Visible = false;
             // 
+            // btnPosaljiNaMail
+            // 
+            this.btnPosaljiNaMail.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnPosaljiNaMail.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnPosaljiNaMail.Font = new System.Drawing.Font("Lucida Console", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPosaljiNaMail.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnPosaljiNaMail.Location = new System.Drawing.Point(563, 16);
+            this.btnPosaljiNaMail.Name = "btnPosaljiNaMail";
+            this.btnPosaljiNaMail.Size = new System.Drawing.Size(287, 44);
+            this.btnPosaljiNaMail.TabIndex = 29;
+            this.btnPosaljiNaMail.Text = "Pošalji mi obavijesti na mail";
+            this.btnPosaljiNaMail.UseVisualStyleBackColor = false;
+            this.btnPosaljiNaMail.Click += new System.EventHandler(this.btnPosaljiNaMail_Click);
+            // 
             // FormObavijestiRoditelj
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -334,8 +350,8 @@
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -366,5 +382,6 @@
         private System.Windows.Forms.Button btnPrijava;
         private System.Windows.Forms.Button btnNaslovnica;
         private System.Windows.Forms.Label lblPretplata;
+        private System.Windows.Forms.Button btnPosaljiNaMail;
     }
 }
