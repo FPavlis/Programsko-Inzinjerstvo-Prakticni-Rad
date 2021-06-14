@@ -12,7 +12,7 @@
           <Property Name="aktivnost_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="naziv" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="korisnik_id" Type="int" />
-          <Property Name="opis" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="opis" Type="varchar" MaxLength="300" Nullable="false" />
           <Property Name="vrijeme" Type="datetime2" Precision="7" Nullable="false" />
         </EntityType>
         <EntityType Name="biljeska">
@@ -498,7 +498,7 @@
           <Property Name="aktivnost_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="naziv" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="korisnik_id" Type="Int32" />
-          <Property Name="opis" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="opis" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="false" />
           <Property Name="vrijeme" Type="DateTime" Nullable="false" Precision="7" />
           <NavigationProperty Name="korisnik" Relationship="Model.FK_aktivnost_korisnik" FromRole="aktivnost" ToRole="korisnik" />
           <NavigationProperty Name="korisnik1" Relationship="Model.FK_korisnik_aktivnost" FromRole="aktivnost" ToRole="korisnik" />
