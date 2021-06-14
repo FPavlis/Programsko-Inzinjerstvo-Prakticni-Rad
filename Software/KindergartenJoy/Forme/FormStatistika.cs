@@ -12,6 +12,9 @@ namespace KindergartenJoy.Forme
 {
     public partial class FormStatistika : Form
     {
+        private int brojClickova = 0;
+        private List<int> yValues = new List<int>();
+        private List<string> xValues = new List<string>(){"DA", "NE" };
         public FormStatistika()
         {
             InitializeComponent();
@@ -19,6 +22,7 @@ namespace KindergartenJoy.Forme
 
         private void btnPrikaziDjecu_Click(object sender, EventArgs e)
         {
+            chartPretplatnici.Visible = false;
             int brojDjece = 0;
             using (var context = new Entities())
             {
@@ -35,6 +39,7 @@ namespace KindergartenJoy.Forme
 
         private void btnPrikaziKorisnike_Click(object sender, EventArgs e)
         {
+            chartPretplatnici.Visible = false;
             int brojKorisnika = 0;
             using (var context = new Entities())
             {
@@ -56,6 +61,7 @@ namespace KindergartenJoy.Forme
 
         private void btnPrikaziAktivnosti_Click(object sender, EventArgs e)
         {
+            chartPretplatnici.Visible = false;
             int brojAktivnosti = 0;
             using (var context = new Entities())
             {
@@ -72,7 +78,7 @@ namespace KindergartenJoy.Forme
 
         private void FormStatistika_Load(object sender, EventArgs e)
         {
-
+            chartPretplatnici.Visible = false;
         }
 
         private const string sHTMLHelpFileName = "User manual KindergartenJoy.chm";
@@ -85,6 +91,38 @@ namespace KindergartenJoy.Forme
             }
 
             return base.ProcessCmdKey(ref msg, keyData);
+        }
+
+        private void btnStatistikaPretplatnika_Click(object sender, EventArgs e)
+        {
+            brojClickova++;
+
+            chartPretplatnici.Visible = true;
+            if (brojClickova == 1) 
+            {
+                int brojDa, brojNe;
+                using (var context = new Entities())
+                {
+                    var query = from a in context.korisnik
+                                where a.pretplata == "D"
+                                select a;
+                    List<korisnik> listKorisnika = query.ToList();
+                    brojDa = listKorisnika.Count();
+                }
+                using (var context = new Entities())
+                {
+                    var query = from a in context.korisnik
+                                where a.pretplata == "N"
+                                select a;
+                    List<korisnik> listKorisnika = query.ToList();
+                    brojNe = listKorisnika.Count();
+                }
+                yValues.Add(brojDa);
+                yValues.Add(brojNe);
+
+                chartPretplatnici.Series["Broj pretplatnika"].Points.DataBindXY(xValues, yValues);
+            }
+            
         }
     }
 }

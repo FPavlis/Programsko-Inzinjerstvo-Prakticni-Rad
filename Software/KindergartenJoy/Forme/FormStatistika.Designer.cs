@@ -29,6 +29,9 @@ namespace KindergartenJoy.Forme
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.btnPrikaziDjecu = new System.Windows.Forms.Button();
             this.dgvGlavni = new System.Windows.Forms.DataGridView();
             this.btnPrikaziKorisnike = new System.Windows.Forms.Button();
@@ -39,7 +42,10 @@ namespace KindergartenJoy.Forme
             this.btnPrikaziAktivnosti = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.btnStatistikaPretplatnika = new System.Windows.Forms.Button();
+            this.chartPretplatnici = new System.Windows.Forms.DataVisualization.Charting.Chart();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGlavni)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartPretplatnici)).BeginInit();
             this.SuspendLayout();
             // 
             // btnPrikaziDjecu
@@ -61,7 +67,7 @@ namespace KindergartenJoy.Forme
             this.dgvGlavni.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvGlavni.Location = new System.Drawing.Point(12, 12);
             this.dgvGlavni.Name = "dgvGlavni";
-            this.dgvGlavni.Size = new System.Drawing.Size(776, 285);
+            this.dgvGlavni.Size = new System.Drawing.Size(794, 285);
             this.dgvGlavni.TabIndex = 10;
             // 
             // btnPrikaziKorisnike
@@ -152,12 +158,44 @@ namespace KindergartenJoy.Forme
             this.label6.TabIndex = 18;
             this.label6.Text = "0";
             // 
+            // btnStatistikaPretplatnika
+            // 
+            this.btnStatistikaPretplatnika.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnStatistikaPretplatnika.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnStatistikaPretplatnika.Font = new System.Drawing.Font("Lucida Console", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStatistikaPretplatnika.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnStatistikaPretplatnika.Location = new System.Drawing.Point(559, 394);
+            this.btnStatistikaPretplatnika.Name = "btnStatistikaPretplatnika";
+            this.btnStatistikaPretplatnika.Size = new System.Drawing.Size(247, 44);
+            this.btnStatistikaPretplatnika.TabIndex = 19;
+            this.btnStatistikaPretplatnika.Text = "STATISTIKA PRETPLATNIKA NA OBAVIJESTI";
+            this.btnStatistikaPretplatnika.UseVisualStyleBackColor = false;
+            this.btnStatistikaPretplatnika.Click += new System.EventHandler(this.btnStatistikaPretplatnika_Click);
+            // 
+            // chartPretplatnici
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chartPretplatnici.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartPretplatnici.Legends.Add(legend1);
+            this.chartPretplatnici.Location = new System.Drawing.Point(215, 56);
+            this.chartPretplatnici.Name = "chartPretplatnici";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Broj pretplatnika";
+            this.chartPretplatnici.Series.Add(series1);
+            this.chartPretplatnici.Size = new System.Drawing.Size(540, 300);
+            this.chartPretplatnici.TabIndex = 20;
+            this.chartPretplatnici.Text = "chart1";
+            // 
             // FormStatistika
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(815, 450);
+            this.Controls.Add(this.chartPretplatnici);
+            this.Controls.Add(this.btnStatistikaPretplatnika);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnPrikaziAktivnosti);
@@ -172,6 +210,7 @@ namespace KindergartenJoy.Forme
             this.Text = "Statistika";
             this.Load += new System.EventHandler(this.FormStatistika_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvGlavni)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartPretplatnici)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -189,5 +228,7 @@ namespace KindergartenJoy.Forme
         private System.Windows.Forms.Button btnPrikaziAktivnosti;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btnStatistikaPretplatnika;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartPretplatnici;
     }
 }
