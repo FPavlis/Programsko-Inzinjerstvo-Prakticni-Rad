@@ -26,8 +26,8 @@ namespace KindergartenJoy.Forme
 
         private void PregledajAktivnosti_Load(object sender, EventArgs e)
         {
-            LoadajDGV();
-            if(korisnik.tip_korisnik_id != 2)
+            LoadajCijeliDGV();
+            if (korisnik.tip_korisnik_id != 2)
             {
                 btnDodajAktivnost.Enabled = false;
                 btnExport.Enabled = false;
@@ -69,20 +69,19 @@ namespace KindergartenJoy.Forme
         {
             IzradiAktivnost izradiAktivnost = new IzradiAktivnost();
             izradiAktivnost.ShowDialog();
-            LoadajDGV();
+            LoadajCijeliDGV();
         }
 
         private void btnObrisiAktivnost_Click(object sender, EventArgs e)
         {
             using (var context = new Entities())
             {
-                LoadajCijeliDGV();
                 aktivnost aktivnostZaBrisanje = dgvAktivnosti.CurrentRow.DataBoundItem as aktivnost;
                 context.aktivnost.Attach(aktivnostZaBrisanje);
                 context.aktivnost.Remove(aktivnostZaBrisanje);
                 context.SaveChanges();
-                LoadajDGV();
             }
+            LoadajCijeliDGV();
         }
 
 
@@ -131,6 +130,7 @@ namespace KindergartenJoy.Forme
 
         private void btnExport_Click(object sender, EventArgs e)
         {
+            LoadajDGV();
             if (dgvAktivnosti.Rows.Count > 0)
             {
                 SaveFileDialog save = new SaveFileDialog();
@@ -206,6 +206,18 @@ namespace KindergartenJoy.Forme
         private void btnNaslovnica_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private const string sHTMLHelpFileName = "User manual KindergartenJoy.chm";
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == Keys.F1)
+            {
+                System.Windows.Forms.Help.ShowHelp(this, Application.StartupPath + @"\" + sHTMLHelpFileName);
+                return true;
+            }
+
+            return base.ProcessCmdKey(ref msg, keyData);
         }
     }
 }

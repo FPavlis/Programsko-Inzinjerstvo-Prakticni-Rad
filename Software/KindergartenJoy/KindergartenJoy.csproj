@@ -299,6 +299,9 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>VrticModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <Content Include="User manual KindergartenJoy.chm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="VrticModel.edmx.diagram">
       <DependentUpon>VrticModel.edmx</DependentUpon>
     </None>

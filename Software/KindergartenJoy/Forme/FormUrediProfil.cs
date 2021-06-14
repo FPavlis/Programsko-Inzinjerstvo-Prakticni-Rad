@@ -62,5 +62,17 @@ namespace KindergartenJoy.Forme
             korisnik.PromijeniPodatke(KorisnikProfil, email, telefon, pretplata);
 
         }
+
+        private const string sHTMLHelpFileName = "User manual KindergartenJoy.chm";
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == Keys.F1)
+            {
+                System.Windows.Forms.Help.ShowHelp(this, Application.StartupPath + @"\" + sHTMLHelpFileName);
+                return true;
+            }
+
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
     }
 }

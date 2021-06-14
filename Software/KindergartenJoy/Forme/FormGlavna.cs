@@ -12,6 +12,8 @@ namespace KindergartenJoy.Forme
 {
     public partial class FormGlavna : Form
     {
+        private const string sHTMLHelpFileName = "User manual KindergartenJoy.chm";
+
         public static bool Reset { get; set; }
         public korisnik OdabraniKorisnik { get; set; }
         public FormGlavna(korisnik odabraniKorisnik)
@@ -128,6 +130,17 @@ namespace KindergartenJoy.Forme
             FormPrijava prijava = new FormPrijava();
             prijava.ShowDialog();
             Close();
+        }
+
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == Keys.F1)
+            {
+                System.Windows.Forms.Help.ShowHelp(this, Application.StartupPath + @"\" + sHTMLHelpFileName);
+                return true;
+            }
+
+            return base.ProcessCmdKey(ref msg, keyData);
         }
     }
 }
