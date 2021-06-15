@@ -54,7 +54,7 @@ namespace KindergartenJoy.Forme
             doc.Add(new Paragraph("------------------------OBAVIJEST-----------------------"));
             doc.Add(new Paragraph($"Naslov obavijesti: {txtNazivObavijesti.Text}"));
             doc.Add(new Paragraph($"Opis obavijesti: {txtOpisObavijesti.Text}"));
-            doc.Add(new Paragraph($"Datum i vrijeme kreiranja obavijesti: {dtpKreiranjaObavijesti.Value}"));
+            doc.Add(new Paragraph($"Datum i vrijeme kreiranja obavijesti: {dtpDogađaja.Value}"));
 
             writer.CloseStream = false;
             doc.Close();
@@ -88,9 +88,10 @@ namespace KindergartenJoy.Forme
             obavijest novaObavijest = new obavijest()
             {
                 naslov = txtNazivObavijesti.Text,
-                datum_vrijeme = dtpKreiranjaObavijesti.Value,
+                datum_vrijeme = DateTime.Now,
                 opis = txtOpisObavijesti.Text,
-                korisnik_id = odabraniKorisnik.korisnik_id
+                korisnik_id = odabraniKorisnik.korisnik_id,
+                datum_dogadaja = dtpDogađaja.Value,
             };
 
             using (var context = new Entities())

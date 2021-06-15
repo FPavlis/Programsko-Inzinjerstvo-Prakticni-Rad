@@ -19,6 +19,7 @@ namespace KindergartenJoy
         public string naslov { get; set; }
         public System.DateTime datum_vrijeme { get; set; }
         public string opis { get; set; }
+        public System.DateTime datum_dogadaja { get; set; }
     
         public virtual korisnik korisnik { get; set; }
     }

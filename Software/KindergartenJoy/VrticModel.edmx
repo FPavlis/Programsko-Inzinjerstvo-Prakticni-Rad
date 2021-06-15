@@ -90,6 +90,7 @@
           <Property Name="naslov" Type="varchar" MaxLength="45" Nullable="false" />
           <Property Name="datum_vrijeme" Type="datetime2" Precision="0" Nullable="false" />
           <Property Name="opis" Type="varchar(max)" Nullable="false" />
+          <Property Name="datum_dogadaja" Type="datetime2" Precision="0" Nullable="false" />
         </EntityType>
         <EntityType Name="radi_u">
           <Key>
@@ -598,6 +599,7 @@
           <Property Name="datum_vrijeme" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="opis" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="korisnik" Relationship="Model.FK_obavijest_korisnik" FromRole="obavijest" ToRole="korisnik" />
+          <Property Name="datum_dogadaja" Type="DateTime" Nullable="false" Precision="0" />
         </EntityType>
         <EntityType Name="radi_u">
           <Key>
@@ -939,6 +941,7 @@
           <EntitySetMapping Name="obavijest">
             <EntityTypeMapping TypeName="Model.obavijest">
               <MappingFragment StoreEntitySet="obavijest">
+                <ScalarProperty Name="datum_dogadaja" ColumnName="datum_dogadaja" />
                 <ScalarProperty Name="opis" ColumnName="opis" />
                 <ScalarProperty Name="datum_vrijeme" ColumnName="datum_vrijeme" />
                 <ScalarProperty Name="naslov" ColumnName="naslov" />

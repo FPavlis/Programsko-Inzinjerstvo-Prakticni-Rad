@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormObavijesti));
             this.txtNazivObavijesti = new System.Windows.Forms.TextBox();
             this.txtOpisObavijesti = new System.Windows.Forms.TextBox();
-            this.dtpKreiranjaObavijesti = new System.Windows.Forms.DateTimePicker();
+            this.dtpDogađaja = new System.Windows.Forms.DateTimePicker();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -64,12 +64,12 @@
             this.txtOpisObavijesti.Size = new System.Drawing.Size(263, 95);
             this.txtOpisObavijesti.TabIndex = 1;
             // 
-            // dtpKreiranjaObavijesti
+            // dtpDogađaja
             // 
-            this.dtpKreiranjaObavijesti.Location = new System.Drawing.Point(252, 83);
-            this.dtpKreiranjaObavijesti.Name = "dtpKreiranjaObavijesti";
-            this.dtpKreiranjaObavijesti.Size = new System.Drawing.Size(209, 20);
-            this.dtpKreiranjaObavijesti.TabIndex = 2;
+            this.dtpDogađaja.Location = new System.Drawing.Point(252, 83);
+            this.dtpDogađaja.Name = "dtpDogađaja";
+            this.dtpDogađaja.Size = new System.Drawing.Size(209, 20);
+            this.dtpDogađaja.TabIndex = 2;
             // 
             // panel1
             // 
@@ -109,7 +109,7 @@
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.dtpKreiranjaObavijesti);
+            this.panel2.Controls.Add(this.dtpDogađaja);
             this.panel2.Controls.Add(this.txtOpisObavijesti);
             this.panel2.Controls.Add(this.txtNazivObavijesti);
             this.panel2.Location = new System.Drawing.Point(44, 155);
@@ -133,9 +133,9 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(22, 83);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(185, 20);
+            this.label4.Size = new System.Drawing.Size(179, 20);
             this.label4.TabIndex = 18;
-            this.label4.Text = "DATUM OBAVIJESTI:";
+            this.label4.Text = "DATUM DOGAĐAJA:";
             // 
             // pictureBox2
             // 
@@ -223,7 +223,7 @@
 
         private System.Windows.Forms.TextBox txtNazivObavijesti;
         private System.Windows.Forms.TextBox txtOpisObavijesti;
-        private System.Windows.Forms.DateTimePicker dtpKreiranjaObavijesti;
+        private System.Windows.Forms.DateTimePicker dtpDogađaja;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
