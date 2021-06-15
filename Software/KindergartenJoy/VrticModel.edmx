@@ -1,0 +1,1020 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="aktivnost">
+          <Key>
+            <PropertyRef Name="aktivnost_id" />
+          </Key>
+          <Property Name="aktivnost_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="naziv" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="korisnik_id" Type="int" />
+          <Property Name="opis" Type="varchar" MaxLength="300" Nullable="false" />
+          <Property Name="vrijeme" Type="datetime2" Precision="7" Nullable="false" />
+        </EntityType>
+        <EntityType Name="biljeska">
+          <Key>
+            <PropertyRef Name="biljeska_id" />
+          </Key>
+          <Property Name="biljeska_id" Type="int" Nullable="false" />
+          <Property Name="korisnik_id" Type="int" Nullable="false" />
+          <Property Name="dijete_id" Type="int" Nullable="false" />
+          <Property Name="sadrzaj" Type="varchar(max)" Nullable="false" />
+          <Property Name="datum" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="dijete">
+          <Key>
+            <PropertyRef Name="dijete_id" />
+          </Key>
+          <Property Name="dijete_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ime" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="prezime" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="spol" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="datum_rodjenja" Type="date" Nullable="false" />
+          <Property Name="oib" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="dnevnik">
+          <Key>
+            <PropertyRef Name="dnevnik_id" />
+          </Key>
+          <Property Name="dnevnik_id" Type="int" Nullable="false" />
+          <Property Name="korisnik_id" Type="int" Nullable="false" />
+          <Property Name="tip_radnja_id" Type="int" Nullable="false" />
+          <Property Name="sadrzaj" Type="varchar(max)" Nullable="false" />
+          <Property Name="datum_vrijeme" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="sigurnosna_kopija_sql" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="evidencija">
+          <Key>
+            <PropertyRef Name="evidencija_id" />
+          </Key>
+          <Property Name="evidencija_id" Type="int" Nullable="false" />
+          <Property Name="grupa_id" Type="int" Nullable="false" />
+          <Property Name="vrijeme_dolaska" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="vrijeme_odlaska" Type="datetime2" Precision="7" />
+        </EntityType>
+        <EntityType Name="grupa">
+          <Key>
+            <PropertyRef Name="grupa_id" />
+          </Key>
+          <Property Name="grupa_id" Type="int" Nullable="false" />
+          <Property Name="ime_grupa" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="opis_grupa" Type="varchar" MaxLength="45" Nullable="false" />
+        </EntityType>
+        <EntityType Name="korisnik">
+          <Key>
+            <PropertyRef Name="korisnik_id" />
+          </Key>
+          <Property Name="korisnik_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="aktivnost_id" Type="int" Nullable="false" />
+          <Property Name="tip_korisnik_id" Type="int" Nullable="false" />
+          <Property Name="korisnicko_ime" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="ime" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="prezime" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="lozinka" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="lozinka_sha256" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="email" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="telefon" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="status" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="pretplata" Type="char" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="obavijest">
+          <Key>
+            <PropertyRef Name="obavijest_id" />
+          </Key>
+          <Property Name="obavijest_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="korisnik_id" Type="int" Nullable="false" />
+          <Property Name="naslov" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="datum_vrijeme" Type="datetime2" Precision="0" Nullable="false" />
+          <Property Name="opis" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="radi_u">
+          <Key>
+            <PropertyRef Name="grupa_id" />
+            <PropertyRef Name="korisnik_id" />
+          </Key>
+          <Property Name="grupa_id" Type="int" Nullable="false" />
+          <Property Name="korisnik_id" Type="int" Nullable="false" />
+          <Property Name="opis" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="se_nalazi">
+          <Key>
+            <PropertyRef Name="evidencija_id" />
+            <PropertyRef Name="dijete_id" />
+          </Key>
+          <Property Name="evidencija_id" Type="int" Nullable="false" />
+          <Property Name="dijete_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tip_korisnik">
+          <Key>
+            <PropertyRef Name="tip_korisnik_id" />
+          </Key>
+          <Property Name="tip_korisnik_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="vrsta_korsnik" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="opis" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="kreirao" Type="varchar" MaxLength="50" />
+          <Property Name="kreiran" Type="datetime" />
+        </EntityType>
+        <EntityType Name="tip_radnja">
+          <Key>
+            <PropertyRef Name="tip_radnja_id" />
+          </Key>
+          <Property Name="tip_radnja_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ime" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="opis" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="upis">
+          <Key>
+            <PropertyRef Name="upis_id" />
+          </Key>
+          <Property Name="upis_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="korisnik_id" Type="int" Nullable="false" />
+          <Property Name="dijete_id" Type="int" Nullable="false" />
+          <Property Name="datum_upis" Type="datetime" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_aktivnost_korisnik">
+          <End Role="korisnik" Type="Self.korisnik" Multiplicity="0..1" />
+          <End Role="aktivnost" Type="Self.aktivnost" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="korisnik">
+              <PropertyRef Name="korisnik_id" />
+            </Principal>
+            <Dependent Role="aktivnost">
+              <PropertyRef Name="korisnik_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_biljeska_dijete">
+          <End Role="dijete" Type="Self.dijete" Multiplicity="1" />
+          <End Role="biljeska" Type="Self.biljeska" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="dijete">
+              <PropertyRef Name="dijete_id" />
+            </Principal>
+            <Dependent Role="biljeska">
+              <PropertyRef Name="dijete_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_biljeska_korisnik">
+          <End Role="korisnik" Type="Self.korisnik" Multiplicity="1" />
+          <End Role="biljeska" Type="Self.biljeska" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="korisnik">
+              <PropertyRef Name="korisnik_id" />
+            </Principal>
+            <Dependent Role="biljeska">
+              <PropertyRef Name="korisnik_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dnevnik_korisnik">
+          <End Role="korisnik" Type="Self.korisnik" Multiplicity="1" />
+          <End Role="dnevnik" Type="Self.dnevnik" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="korisnik">
+              <PropertyRef Name="korisnik_id" />
+            </Principal>
+            <Dependent Role="dnevnik">
+              <PropertyRef Name="korisnik_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dnevnik_tip_radnja">
+          <End Role="tip_radnja" Type="Self.tip_radnja" Multiplicity="1" />
+          <End Role="dnevnik" Type="Self.dnevnik" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tip_radnja">
+              <PropertyRef Name="tip_radnja_id" />
+            </Principal>
+            <Dependent Role="dnevnik">
+              <PropertyRef Name="tip_radnja_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_evidencija_grupa">
+          <End Role="grupa" Type="Self.grupa" Multiplicity="1" />
+          <End Role="evidencija" Type="Self.evidencija" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="grupa">
+              <PropertyRef Name="grupa_id" />
+            </Principal>
+            <Dependent Role="evidencija">
+              <PropertyRef Name="grupa_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_korisnik_aktivnost">
+          <End Role="aktivnost" Type="Self.aktivnost" Multiplicity="1" />
+          <End Role="korisnik" Type="Self.korisnik" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="aktivnost">
+              <PropertyRef Name="aktivnost_id" />
+            </Principal>
+            <Dependent Role="korisnik">
+              <PropertyRef Name="aktivnost_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_korisnik_tip_korisnik">
+          <End Role="tip_korisnik" Type="Self.tip_korisnik" Multiplicity="1" />
+          <End Role="korisnik" Type="Self.korisnik" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tip_korisnik">
+              <PropertyRef Name="tip_korisnik_id" />
+            </Principal>
+            <Dependent Role="korisnik">
+              <PropertyRef Name="tip_korisnik_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_obavijest_korisnik">
+          <End Role="korisnik" Type="Self.korisnik" Multiplicity="1" />
+          <End Role="obavijest" Type="Self.obavijest" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="korisnik">
+              <PropertyRef Name="korisnik_id" />
+            </Principal>
+            <Dependent Role="obavijest">
+              <PropertyRef Name="korisnik_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_radi_u_grupa">
+          <End Role="grupa" Type="Self.grupa" Multiplicity="1" />
+          <End Role="radi_u" Type="Self.radi_u" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="grupa">
+              <PropertyRef Name="grupa_id" />
+            </Principal>
+            <Dependent Role="radi_u">
+              <PropertyRef Name="grupa_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_radi_u_korisnik">
+          <End Role="korisnik" Type="Self.korisnik" Multiplicity="1" />
+          <End Role="radi_u" Type="Self.radi_u" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="korisnik">
+              <PropertyRef Name="korisnik_id" />
+            </Principal>
+            <Dependent Role="radi_u">
+              <PropertyRef Name="korisnik_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_se_nalazi_dijete">
+          <End Role="dijete" Type="Self.dijete" Multiplicity="1" />
+          <End Role="se_nalazi" Type="Self.se_nalazi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="dijete">
+              <PropertyRef Name="dijete_id" />
+            </Principal>
+            <Dependent Role="se_nalazi">
+              <PropertyRef Name="dijete_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_se_nalazi_evidencija">
+          <End Role="evidencija" Type="Self.evidencija" Multiplicity="1" />
+          <End Role="se_nalazi" Type="Self.se_nalazi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="evidencija">
+              <PropertyRef Name="evidencija_id" />
+            </Principal>
+            <Dependent Role="se_nalazi">
+              <PropertyRef Name="evidencija_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_se_nalazi_se_nalazi1">
+          <End Role="se_nalazi" Type="Self.se_nalazi" Multiplicity="1" />
+          <End Role="se_nalazi1" Type="Self.se_nalazi" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="se_nalazi">
+              <PropertyRef Name="evidencija_id" />
+              <PropertyRef Name="dijete_id" />
+            </Principal>
+            <Dependent Role="se_nalazi1">
+              <PropertyRef Name="evidencija_id" />
+              <PropertyRef Name="dijete_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_upis_dijete">
+          <End Role="dijete" Type="Self.dijete" Multiplicity="1" />
+          <End Role="upis" Type="Self.upis" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="dijete">
+              <PropertyRef Name="dijete_id" />
+            </Principal>
+            <Dependent Role="upis">
+              <PropertyRef Name="dijete_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_upis_korisnik">
+          <End Role="korisnik" Type="Self.korisnik" Multiplicity="1" />
+          <End Role="upis" Type="Self.upis" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="korisnik">
+              <PropertyRef Name="korisnik_id" />
+            </Principal>
+            <Dependent Role="upis">
+              <PropertyRef Name="korisnik_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ModelStoreContainer">
+          <EntitySet Name="aktivnost" EntityType="Self.aktivnost" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="biljeska" EntityType="Self.biljeska" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="dijete" EntityType="Self.dijete" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="dnevnik" EntityType="Self.dnevnik" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="evidencija" EntityType="Self.evidencija" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="grupa" EntityType="Self.grupa" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="korisnik" EntityType="Self.korisnik" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="obavijest" EntityType="Self.obavijest" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="radi_u" EntityType="Self.radi_u" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="se_nalazi" EntityType="Self.se_nalazi" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tip_korisnik" EntityType="Self.tip_korisnik" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tip_radnja" EntityType="Self.tip_radnja" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="upis" EntityType="Self.upis" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_aktivnost_korisnik" Association="Self.FK_aktivnost_korisnik">
+            <End Role="korisnik" EntitySet="korisnik" />
+            <End Role="aktivnost" EntitySet="aktivnost" />
+          </AssociationSet>
+          <AssociationSet Name="FK_biljeska_dijete" Association="Self.FK_biljeska_dijete">
+            <End Role="dijete" EntitySet="dijete" />
+            <End Role="biljeska" EntitySet="biljeska" />
+          </AssociationSet>
+          <AssociationSet Name="FK_biljeska_korisnik" Association="Self.FK_biljeska_korisnik">
+            <End Role="korisnik" EntitySet="korisnik" />
+            <End Role="biljeska" EntitySet="biljeska" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dnevnik_korisnik" Association="Self.FK_dnevnik_korisnik">
+            <End Role="korisnik" EntitySet="korisnik" />
+            <End Role="dnevnik" EntitySet="dnevnik" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dnevnik_tip_radnja" Association="Self.FK_dnevnik_tip_radnja">
+            <End Role="tip_radnja" EntitySet="tip_radnja" />
+            <End Role="dnevnik" EntitySet="dnevnik" />
+          </AssociationSet>
+          <AssociationSet Name="FK_evidencija_grupa" Association="Self.FK_evidencija_grupa">
+            <End Role="grupa" EntitySet="grupa" />
+            <End Role="evidencija" EntitySet="evidencija" />
+          </AssociationSet>
+          <AssociationSet Name="FK_korisnik_aktivnost" Association="Self.FK_korisnik_aktivnost">
+            <End Role="aktivnost" EntitySet="aktivnost" />
+            <End Role="korisnik" EntitySet="korisnik" />
+          </AssociationSet>
+          <AssociationSet Name="FK_korisnik_tip_korisnik" Association="Self.FK_korisnik_tip_korisnik">
+            <End Role="tip_korisnik" EntitySet="tip_korisnik" />
+            <End Role="korisnik" EntitySet="korisnik" />
+          </AssociationSet>
+          <AssociationSet Name="FK_obavijest_korisnik" Association="Self.FK_obavijest_korisnik">
+            <End Role="korisnik" EntitySet="korisnik" />
+            <End Role="obavijest" EntitySet="obavijest" />
+          </AssociationSet>
+          <AssociationSet Name="FK_radi_u_grupa" Association="Self.FK_radi_u_grupa">
+            <End Role="grupa" EntitySet="grupa" />
+            <End Role="radi_u" EntitySet="radi_u" />
+          </AssociationSet>
+          <AssociationSet Name="FK_radi_u_korisnik" Association="Self.FK_radi_u_korisnik">
+            <End Role="korisnik" EntitySet="korisnik" />
+            <End Role="radi_u" EntitySet="radi_u" />
+          </AssociationSet>
+          <AssociationSet Name="FK_se_nalazi_dijete" Association="Self.FK_se_nalazi_dijete">
+            <End Role="dijete" EntitySet="dijete" />
+            <End Role="se_nalazi" EntitySet="se_nalazi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_se_nalazi_evidencija" Association="Self.FK_se_nalazi_evidencija">
+            <End Role="evidencija" EntitySet="evidencija" />
+            <End Role="se_nalazi" EntitySet="se_nalazi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_se_nalazi_se_nalazi1" Association="Self.FK_se_nalazi_se_nalazi1">
+            <End Role="se_nalazi" EntitySet="se_nalazi" />
+            <End Role="se_nalazi1" EntitySet="se_nalazi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_upis_dijete" Association="Self.FK_upis_dijete">
+            <End Role="dijete" EntitySet="dijete" />
+            <End Role="upis" EntitySet="upis" />
+          </AssociationSet>
+          <AssociationSet Name="FK_upis_korisnik" Association="Self.FK_upis_korisnik">
+            <End Role="korisnik" EntitySet="korisnik" />
+            <End Role="upis" EntitySet="upis" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="aktivnost" EntityType="Model.aktivnost" />
+          <EntitySet Name="biljeska" EntityType="Model.biljeska" />
+          <EntitySet Name="dijete" EntityType="Model.dijete" />
+          <EntitySet Name="dnevnik" EntityType="Model.dnevnik" />
+          <EntitySet Name="evidencija" EntityType="Model.evidencija" />
+          <EntitySet Name="grupa" EntityType="Model.grupa" />
+          <EntitySet Name="korisnik" EntityType="Model.korisnik" />
+          <EntitySet Name="obavijest" EntityType="Model.obavijest" />
+          <EntitySet Name="radi_u" EntityType="Model.radi_u" />
+          <EntitySet Name="se_nalazi" EntityType="Model.se_nalazi" />
+          <EntitySet Name="tip_korisnik" EntityType="Model.tip_korisnik" />
+          <EntitySet Name="tip_radnja" EntityType="Model.tip_radnja" />
+          <EntitySet Name="upis" EntityType="Model.upis" />
+          <AssociationSet Name="FK_aktivnost_korisnik" Association="Model.FK_aktivnost_korisnik">
+            <End Role="korisnik" EntitySet="korisnik" />
+            <End Role="aktivnost" EntitySet="aktivnost" />
+          </AssociationSet>
+          <AssociationSet Name="FK_korisnik_aktivnost" Association="Model.FK_korisnik_aktivnost">
+            <End Role="aktivnost" EntitySet="aktivnost" />
+            <End Role="korisnik" EntitySet="korisnik" />
+          </AssociationSet>
+          <AssociationSet Name="FK_biljeska_dijete" Association="Model.FK_biljeska_dijete">
+            <End Role="dijete" EntitySet="dijete" />
+            <End Role="biljeska" EntitySet="biljeska" />
+          </AssociationSet>
+          <AssociationSet Name="FK_biljeska_korisnik" Association="Model.FK_biljeska_korisnik">
+            <End Role="korisnik" EntitySet="korisnik" />
+            <End Role="biljeska" EntitySet="biljeska" />
+          </AssociationSet>
+          <AssociationSet Name="FK_se_nalazi_dijete" Association="Model.FK_se_nalazi_dijete">
+            <End Role="dijete" EntitySet="dijete" />
+            <End Role="se_nalazi" EntitySet="se_nalazi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_upis_dijete" Association="Model.FK_upis_dijete">
+            <End Role="dijete" EntitySet="dijete" />
+            <End Role="upis" EntitySet="upis" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dnevnik_korisnik" Association="Model.FK_dnevnik_korisnik">
+            <End Role="korisnik" EntitySet="korisnik" />
+            <End Role="dnevnik" EntitySet="dnevnik" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dnevnik_tip_radnja" Association="Model.FK_dnevnik_tip_radnja">
+            <End Role="tip_radnja" EntitySet="tip_radnja" />
+            <End Role="dnevnik" EntitySet="dnevnik" />
+          </AssociationSet>
+          <AssociationSet Name="FK_evidencija_grupa" Association="Model.FK_evidencija_grupa">
+            <End Role="grupa" EntitySet="grupa" />
+            <End Role="evidencija" EntitySet="evidencija" />
+          </AssociationSet>
+          <AssociationSet Name="FK_se_nalazi_evidencija" Association="Model.FK_se_nalazi_evidencija">
+            <End Role="evidencija" EntitySet="evidencija" />
+            <End Role="se_nalazi" EntitySet="se_nalazi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_radi_u_grupa" Association="Model.FK_radi_u_grupa">
+            <End Role="grupa" EntitySet="grupa" />
+            <End Role="radi_u" EntitySet="radi_u" />
+          </AssociationSet>
+          <AssociationSet Name="FK_korisnik_tip_korisnik" Association="Model.FK_korisnik_tip_korisnik">
+            <End Role="tip_korisnik" EntitySet="tip_korisnik" />
+            <End Role="korisnik" EntitySet="korisnik" />
+          </AssociationSet>
+          <AssociationSet Name="FK_obavijest_korisnik" Association="Model.FK_obavijest_korisnik">
+            <End Role="korisnik" EntitySet="korisnik" />
+            <End Role="obavijest" EntitySet="obavijest" />
+          </AssociationSet>
+          <AssociationSet Name="FK_radi_u_korisnik" Association="Model.FK_radi_u_korisnik">
+            <End Role="korisnik" EntitySet="korisnik" />
+            <End Role="radi_u" EntitySet="radi_u" />
+          </AssociationSet>
+          <AssociationSet Name="FK_upis_korisnik" Association="Model.FK_upis_korisnik">
+            <End Role="korisnik" EntitySet="korisnik" />
+            <End Role="upis" EntitySet="upis" />
+          </AssociationSet>
+          <AssociationSet Name="FK_se_nalazi_se_nalazi1" Association="Model.FK_se_nalazi_se_nalazi1">
+            <End Role="se_nalazi" EntitySet="se_nalazi" />
+            <End Role="se_nalazi1" EntitySet="se_nalazi" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="aktivnost">
+          <Key>
+            <PropertyRef Name="aktivnost_id" />
+          </Key>
+          <Property Name="aktivnost_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="naziv" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="korisnik_id" Type="Int32" />
+          <Property Name="opis" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="vrijeme" Type="DateTime" Nullable="false" Precision="7" />
+          <NavigationProperty Name="korisnik" Relationship="Model.FK_aktivnost_korisnik" FromRole="aktivnost" ToRole="korisnik" />
+          <NavigationProperty Name="korisnik1" Relationship="Model.FK_korisnik_aktivnost" FromRole="aktivnost" ToRole="korisnik" />
+        </EntityType>
+        <EntityType Name="biljeska">
+          <Key>
+            <PropertyRef Name="biljeska_id" />
+          </Key>
+          <Property Name="biljeska_id" Type="Int32" Nullable="false" />
+          <Property Name="korisnik_id" Type="Int32" Nullable="false" />
+          <Property Name="dijete_id" Type="Int32" Nullable="false" />
+          <Property Name="sadrzaj" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="datum" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="dijete" Relationship="Model.FK_biljeska_dijete" FromRole="biljeska" ToRole="dijete" />
+          <NavigationProperty Name="korisnik" Relationship="Model.FK_biljeska_korisnik" FromRole="biljeska" ToRole="korisnik" />
+        </EntityType>
+        <EntityType Name="dijete">
+          <Key>
+            <PropertyRef Name="dijete_id" />
+          </Key>
+          <Property Name="dijete_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ime" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="prezime" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="spol" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="datum_rodjenja" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="oib" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="biljeska" Relationship="Model.FK_biljeska_dijete" FromRole="dijete" ToRole="biljeska" />
+          <NavigationProperty Name="se_nalazi" Relationship="Model.FK_se_nalazi_dijete" FromRole="dijete" ToRole="se_nalazi" />
+          <NavigationProperty Name="upis" Relationship="Model.FK_upis_dijete" FromRole="dijete" ToRole="upis" />
+        </EntityType>
+        <EntityType Name="dnevnik">
+          <Key>
+            <PropertyRef Name="dnevnik_id" />
+          </Key>
+          <Property Name="dnevnik_id" Type="Int32" Nullable="false" />
+          <Property Name="korisnik_id" Type="Int32" Nullable="false" />
+          <Property Name="tip_radnja_id" Type="Int32" Nullable="false" />
+          <Property Name="sadrzaj" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="datum_vrijeme" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="sigurnosna_kopija_sql" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="korisnik" Relationship="Model.FK_dnevnik_korisnik" FromRole="dnevnik" ToRole="korisnik" />
+          <NavigationProperty Name="tip_radnja" Relationship="Model.FK_dnevnik_tip_radnja" FromRole="dnevnik" ToRole="tip_radnja" />
+        </EntityType>
+        <EntityType Name="evidencija">
+          <Key>
+            <PropertyRef Name="evidencija_id" />
+          </Key>
+          <Property Name="evidencija_id" Type="Int32" Nullable="false" />
+          <Property Name="grupa_id" Type="Int32" Nullable="false" />
+          <Property Name="vrijeme_dolaska" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="vrijeme_odlaska" Type="DateTime" Precision="7" />
+          <NavigationProperty Name="grupa" Relationship="Model.FK_evidencija_grupa" FromRole="evidencija" ToRole="grupa" />
+          <NavigationProperty Name="se_nalazi" Relationship="Model.FK_se_nalazi_evidencija" FromRole="evidencija" ToRole="se_nalazi" />
+        </EntityType>
+        <EntityType Name="grupa">
+          <Key>
+            <PropertyRef Name="grupa_id" />
+          </Key>
+          <Property Name="grupa_id" Type="Int32" Nullable="false" />
+          <Property Name="ime_grupa" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="opis_grupa" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="evidencija" Relationship="Model.FK_evidencija_grupa" FromRole="grupa" ToRole="evidencija" />
+          <NavigationProperty Name="radi_u" Relationship="Model.FK_radi_u_grupa" FromRole="grupa" ToRole="radi_u" />
+        </EntityType>
+        <EntityType Name="korisnik">
+          <Key>
+            <PropertyRef Name="korisnik_id" />
+          </Key>
+          <Property Name="korisnik_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="aktivnost_id" Type="Int32" Nullable="false" />
+          <Property Name="tip_korisnik_id" Type="Int32" Nullable="false" />
+          <Property Name="korisnicko_ime" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="ime" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="prezime" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="lozinka" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="lozinka_sha256" Type="String" Nullable="false" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="email" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="telefon" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="status" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="pretplata" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="aktivnost" Relationship="Model.FK_aktivnost_korisnik" FromRole="korisnik" ToRole="aktivnost" />
+          <NavigationProperty Name="aktivnost1" Relationship="Model.FK_korisnik_aktivnost" FromRole="korisnik" ToRole="aktivnost" />
+          <NavigationProperty Name="biljeska" Relationship="Model.FK_biljeska_korisnik" FromRole="korisnik" ToRole="biljeska" />
+          <NavigationProperty Name="dnevnik" Relationship="Model.FK_dnevnik_korisnik" FromRole="korisnik" ToRole="dnevnik" />
+          <NavigationProperty Name="tip_korisnik" Relationship="Model.FK_korisnik_tip_korisnik" FromRole="korisnik" ToRole="tip_korisnik" />
+          <NavigationProperty Name="obavijest" Relationship="Model.FK_obavijest_korisnik" FromRole="korisnik" ToRole="obavijest" />
+          <NavigationProperty Name="radi_u" Relationship="Model.FK_radi_u_korisnik" FromRole="korisnik" ToRole="radi_u" />
+          <NavigationProperty Name="upis" Relationship="Model.FK_upis_korisnik" FromRole="korisnik" ToRole="upis" />
+        </EntityType>
+        <EntityType Name="obavijest">
+          <Key>
+            <PropertyRef Name="obavijest_id" />
+          </Key>
+          <Property Name="obavijest_id" Type="Int32" Nullable="false" />
+          <Property Name="korisnik_id" Type="Int32" Nullable="false" />
+          <Property Name="naslov" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="datum_vrijeme" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="opis" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="korisnik" Relationship="Model.FK_obavijest_korisnik" FromRole="obavijest" ToRole="korisnik" />
+        </EntityType>
+        <EntityType Name="radi_u">
+          <Key>
+            <PropertyRef Name="grupa_id" />
+            <PropertyRef Name="korisnik_id" />
+          </Key>
+          <Property Name="grupa_id" Type="Int32" Nullable="false" />
+          <Property Name="korisnik_id" Type="Int32" Nullable="false" />
+          <Property Name="opis" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="grupa" Relationship="Model.FK_radi_u_grupa" FromRole="radi_u" ToRole="grupa" />
+          <NavigationProperty Name="korisnik" Relationship="Model.FK_radi_u_korisnik" FromRole="radi_u" ToRole="korisnik" />
+        </EntityType>
+        <EntityType Name="se_nalazi">
+          <Key>
+            <PropertyRef Name="evidencija_id" />
+            <PropertyRef Name="dijete_id" />
+          </Key>
+          <Property Name="evidencija_id" Type="Int32" Nullable="false" />
+          <Property Name="dijete_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="dijete" Relationship="Model.FK_se_nalazi_dijete" FromRole="se_nalazi" ToRole="dijete" />
+          <NavigationProperty Name="evidencija" Relationship="Model.FK_se_nalazi_evidencija" FromRole="se_nalazi" ToRole="evidencija" />
+          <NavigationProperty Name="se_nalazi1" Relationship="Model.FK_se_nalazi_se_nalazi1" FromRole="se_nalazi" ToRole="se_nalazi1" />
+          <NavigationProperty Name="se_nalazi2" Relationship="Model.FK_se_nalazi_se_nalazi1" FromRole="se_nalazi1" ToRole="se_nalazi" />
+        </EntityType>
+        <EntityType Name="tip_korisnik">
+          <Key>
+            <PropertyRef Name="tip_korisnik_id" />
+          </Key>
+          <Property Name="tip_korisnik_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="vrsta_korsnik" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="opis" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="kreirao" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="kreiran" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="korisnik" Relationship="Model.FK_korisnik_tip_korisnik" FromRole="tip_korisnik" ToRole="korisnik" />
+        </EntityType>
+        <EntityType Name="tip_radnja">
+          <Key>
+            <PropertyRef Name="tip_radnja_id" />
+          </Key>
+          <Property Name="tip_radnja_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ime" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="opis" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="dnevnik" Relationship="Model.FK_dnevnik_tip_radnja" FromRole="tip_radnja" ToRole="dnevnik" />
+        </EntityType>
+        <EntityType Name="upis">
+          <Key>
+            <PropertyRef Name="upis_id" />
+          </Key>
+          <Property Name="upis_id" Type="Int32" Nullable="false" />
+          <Property Name="korisnik_id" Type="Int32" annotation:StoreGeneratedPattern="None" Nullable="false" />
+          <Property Name="dijete_id" Type="Int32" Nullable="false" />
+          <Property Name="datum_upis" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="dijete" Relationship="Model.FK_upis_dijete" FromRole="upis" ToRole="dijete" />
+          <NavigationProperty Name="korisnik" Relationship="Model.FK_upis_korisnik" FromRole="upis" ToRole="korisnik" />
+        </EntityType>
+        <Association Name="FK_aktivnost_korisnik">
+          <End Type="Model.korisnik" Role="korisnik" Multiplicity="0..1" />
+          <End Type="Model.aktivnost" Role="aktivnost" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="korisnik">
+              <PropertyRef Name="korisnik_id" />
+            </Principal>
+            <Dependent Role="aktivnost">
+              <PropertyRef Name="korisnik_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_korisnik_aktivnost">
+          <End Type="Model.aktivnost" Role="aktivnost" Multiplicity="1" />
+          <End Type="Model.korisnik" Role="korisnik" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="aktivnost">
+              <PropertyRef Name="aktivnost_id" />
+            </Principal>
+            <Dependent Role="korisnik">
+              <PropertyRef Name="aktivnost_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_biljeska_dijete">
+          <End Type="Model.dijete" Role="dijete" Multiplicity="1" />
+          <End Type="Model.biljeska" Role="biljeska" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="dijete">
+              <PropertyRef Name="dijete_id" />
+            </Principal>
+            <Dependent Role="biljeska">
+              <PropertyRef Name="dijete_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_biljeska_korisnik">
+          <End Type="Model.korisnik" Role="korisnik" Multiplicity="1" />
+          <End Type="Model.biljeska" Role="biljeska" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="korisnik">
+              <PropertyRef Name="korisnik_id" />
+            </Principal>
+            <Dependent Role="biljeska">
+              <PropertyRef Name="korisnik_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_se_nalazi_dijete">
+          <End Type="Model.dijete" Role="dijete" Multiplicity="1" />
+          <End Type="Model.se_nalazi" Role="se_nalazi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="dijete">
+              <PropertyRef Name="dijete_id" />
+            </Principal>
+            <Dependent Role="se_nalazi">
+              <PropertyRef Name="dijete_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_upis_dijete">
+          <End Type="Model.dijete" Role="dijete" Multiplicity="1" />
+          <End Type="Model.upis" Role="upis" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="dijete">
+              <PropertyRef Name="dijete_id" />
+            </Principal>
+            <Dependent Role="upis">
+              <PropertyRef Name="dijete_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dnevnik_korisnik">
+          <End Type="Model.korisnik" Role="korisnik" Multiplicity="1" />
+          <End Type="Model.dnevnik" Role="dnevnik" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="korisnik">
+              <PropertyRef Name="korisnik_id" />
+            </Principal>
+            <Dependent Role="dnevnik">
+              <PropertyRef Name="korisnik_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dnevnik_tip_radnja">
+          <End Type="Model.tip_radnja" Role="tip_radnja" Multiplicity="1" />
+          <End Type="Model.dnevnik" Role="dnevnik" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tip_radnja">
+              <PropertyRef Name="tip_radnja_id" />
+            </Principal>
+            <Dependent Role="dnevnik">
+              <PropertyRef Name="tip_radnja_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_evidencija_grupa">
+          <End Type="Model.grupa" Role="grupa" Multiplicity="1" />
+          <End Type="Model.evidencija" Role="evidencija" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="grupa">
+              <PropertyRef Name="grupa_id" />
+            </Principal>
+            <Dependent Role="evidencija">
+              <PropertyRef Name="grupa_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_se_nalazi_evidencija">
+          <End Type="Model.evidencija" Role="evidencija" Multiplicity="1" />
+          <End Type="Model.se_nalazi" Role="se_nalazi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="evidencija">
+              <PropertyRef Name="evidencija_id" />
+            </Principal>
+            <Dependent Role="se_nalazi">
+              <PropertyRef Name="evidencija_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_radi_u_grupa">
+          <End Type="Model.grupa" Role="grupa" Multiplicity="1" />
+          <End Type="Model.radi_u" Role="radi_u" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="grupa">
+              <PropertyRef Name="grupa_id" />
+            </Principal>
+            <Dependent Role="radi_u">
+              <PropertyRef Name="grupa_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_korisnik_tip_korisnik">
+          <End Type="Model.tip_korisnik" Role="tip_korisnik" Multiplicity="1" />
+          <End Type="Model.korisnik" Role="korisnik" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tip_korisnik">
+              <PropertyRef Name="tip_korisnik_id" />
+            </Principal>
+            <Dependent Role="korisnik">
+              <PropertyRef Name="tip_korisnik_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_obavijest_korisnik">
+          <End Type="Model.korisnik" Role="korisnik" Multiplicity="1" />
+          <End Type="Model.obavijest" Role="obavijest" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="korisnik">
+              <PropertyRef Name="korisnik_id" />
+            </Principal>
+            <Dependent Role="obavijest">
+              <PropertyRef Name="korisnik_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_radi_u_korisnik">
+          <End Type="Model.korisnik" Role="korisnik" Multiplicity="1" />
+          <End Type="Model.radi_u" Role="radi_u" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="korisnik">
+              <PropertyRef Name="korisnik_id" />
+            </Principal>
+            <Dependent Role="radi_u">
+              <PropertyRef Name="korisnik_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_upis_korisnik">
+          <End Type="Model.korisnik" Role="korisnik" Multiplicity="1" />
+          <End Type="Model.upis" Role="upis" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="korisnik">
+              <PropertyRef Name="korisnik_id" />
+            </Principal>
+            <Dependent Role="upis">
+              <PropertyRef Name="korisnik_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_se_nalazi_se_nalazi1">
+          <End Type="Model.se_nalazi" Role="se_nalazi" Multiplicity="1" />
+          <End Type="Model.se_nalazi" Role="se_nalazi1" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="se_nalazi">
+              <PropertyRef Name="evidencija_id" />
+              <PropertyRef Name="dijete_id" />
+            </Principal>
+            <Dependent Role="se_nalazi1">
+              <PropertyRef Name="evidencija_id" />
+              <PropertyRef Name="dijete_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Entities">
+          <EntitySetMapping Name="aktivnost">
+            <EntityTypeMapping TypeName="Model.aktivnost">
+              <MappingFragment StoreEntitySet="aktivnost">
+                <ScalarProperty Name="vrijeme" ColumnName="vrijeme" />
+                <ScalarProperty Name="opis" ColumnName="opis" />
+                <ScalarProperty Name="korisnik_id" ColumnName="korisnik_id" />
+                <ScalarProperty Name="naziv" ColumnName="naziv" />
+                <ScalarProperty Name="aktivnost_id" ColumnName="aktivnost_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="biljeska">
+            <EntityTypeMapping TypeName="Model.biljeska">
+              <MappingFragment StoreEntitySet="biljeska">
+                <ScalarProperty Name="datum" ColumnName="datum" />
+                <ScalarProperty Name="sadrzaj" ColumnName="sadrzaj" />
+                <ScalarProperty Name="dijete_id" ColumnName="dijete_id" />
+                <ScalarProperty Name="korisnik_id" ColumnName="korisnik_id" />
+                <ScalarProperty Name="biljeska_id" ColumnName="biljeska_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="dijete">
+            <EntityTypeMapping TypeName="Model.dijete">
+              <MappingFragment StoreEntitySet="dijete">
+                <ScalarProperty Name="oib" ColumnName="oib" />
+                <ScalarProperty Name="datum_rodjenja" ColumnName="datum_rodjenja" />
+                <ScalarProperty Name="spol" ColumnName="spol" />
+                <ScalarProperty Name="prezime" ColumnName="prezime" />
+                <ScalarProperty Name="ime" ColumnName="ime" />
+                <ScalarProperty Name="dijete_id" ColumnName="dijete_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="dnevnik">
+            <EntityTypeMapping TypeName="Model.dnevnik">
+              <MappingFragment StoreEntitySet="dnevnik">
+                <ScalarProperty Name="sigurnosna_kopija_sql" ColumnName="sigurnosna_kopija_sql" />
+                <ScalarProperty Name="datum_vrijeme" ColumnName="datum_vrijeme" />
+                <ScalarProperty Name="sadrzaj" ColumnName="sadrzaj" />
+                <ScalarProperty Name="tip_radnja_id" ColumnName="tip_radnja_id" />
+                <ScalarProperty Name="korisnik_id" ColumnName="korisnik_id" />
+                <ScalarProperty Name="dnevnik_id" ColumnName="dnevnik_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="evidencija">
+            <EntityTypeMapping TypeName="Model.evidencija">
+              <MappingFragment StoreEntitySet="evidencija">
+                <ScalarProperty Name="vrijeme_odlaska" ColumnName="vrijeme_odlaska" />
+                <ScalarProperty Name="vrijeme_dolaska" ColumnName="vrijeme_dolaska" />
+                <ScalarProperty Name="grupa_id" ColumnName="grupa_id" />
+                <ScalarProperty Name="evidencija_id" ColumnName="evidencija_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="grupa">
+            <EntityTypeMapping TypeName="Model.grupa">
+              <MappingFragment StoreEntitySet="grupa">
+                <ScalarProperty Name="opis_grupa" ColumnName="opis_grupa" />
+                <ScalarProperty Name="ime_grupa" ColumnName="ime_grupa" />
+                <ScalarProperty Name="grupa_id" ColumnName="grupa_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="korisnik">
+            <EntityTypeMapping TypeName="Model.korisnik">
+              <MappingFragment StoreEntitySet="korisnik">
+                <ScalarProperty Name="pretplata" ColumnName="pretplata" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="telefon" ColumnName="telefon" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="lozinka_sha256" ColumnName="lozinka_sha256" />
+                <ScalarProperty Name="lozinka" ColumnName="lozinka" />
+                <ScalarProperty Name="prezime" ColumnName="prezime" />
+                <ScalarProperty Name="ime" ColumnName="ime" />
+                <ScalarProperty Name="korisnicko_ime" ColumnName="korisnicko_ime" />
+                <ScalarProperty Name="tip_korisnik_id" ColumnName="tip_korisnik_id" />
+                <ScalarProperty Name="aktivnost_id" ColumnName="aktivnost_id" />
+                <ScalarProperty Name="korisnik_id" ColumnName="korisnik_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="obavijest">
+            <EntityTypeMapping TypeName="Model.obavijest">
+              <MappingFragment StoreEntitySet="obavijest">
+                <ScalarProperty Name="opis" ColumnName="opis" />
+                <ScalarProperty Name="datum_vrijeme" ColumnName="datum_vrijeme" />
+                <ScalarProperty Name="naslov" ColumnName="naslov" />
+                <ScalarProperty Name="korisnik_id" ColumnName="korisnik_id" />
+                <ScalarProperty Name="obavijest_id" ColumnName="obavijest_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="radi_u">
+            <EntityTypeMapping TypeName="Model.radi_u">
+              <MappingFragment StoreEntitySet="radi_u">
+                <ScalarProperty Name="opis" ColumnName="opis" />
+                <ScalarProperty Name="korisnik_id" ColumnName="korisnik_id" />
+                <ScalarProperty Name="grupa_id" ColumnName="grupa_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="se_nalazi">
+            <EntityTypeMapping TypeName="Model.se_nalazi">
+              <MappingFragment StoreEntitySet="se_nalazi">
+                <ScalarProperty Name="dijete_id" ColumnName="dijete_id" />
+                <ScalarProperty Name="evidencija_id" ColumnName="evidencija_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tip_korisnik">
+            <EntityTypeMapping TypeName="Model.tip_korisnik">
+              <MappingFragment StoreEntitySet="tip_korisnik">
+                <ScalarProperty Name="kreiran" ColumnName="kreiran" />
+                <ScalarProperty Name="kreirao" ColumnName="kreirao" />
+                <ScalarProperty Name="opis" ColumnName="opis" />
+                <ScalarProperty Name="vrsta_korsnik" ColumnName="vrsta_korsnik" />
+                <ScalarProperty Name="tip_korisnik_id" ColumnName="tip_korisnik_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tip_radnja">
+            <EntityTypeMapping TypeName="Model.tip_radnja">
+              <MappingFragment StoreEntitySet="tip_radnja">
+                <ScalarProperty Name="opis" ColumnName="opis" />
+                <ScalarProperty Name="ime" ColumnName="ime" />
+                <ScalarProperty Name="tip_radnja_id" ColumnName="tip_radnja_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="upis">
+            <EntityTypeMapping TypeName="Model.upis">
+              <MappingFragment StoreEntitySet="upis">
+                <ScalarProperty Name="datum_upis" ColumnName="datum_upis" />
+                <ScalarProperty Name="dijete_id" ColumnName="dijete_id" />
+                <ScalarProperty Name="korisnik_id" ColumnName="korisnik_id" />
+                <ScalarProperty Name="upis_id" ColumnName="upis_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

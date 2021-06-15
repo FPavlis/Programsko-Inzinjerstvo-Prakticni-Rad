@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{613C9A99-4DDF-4348-A00A-B60D33FEF0BC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>KindergartenJoy</RootNamespace>
+    <AssemblyName>KindergartenJoy</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>output-onlinepngtools.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.6.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.6.1\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.2, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.2\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="aktivnost.cs">
+      <DependentUpon>VrticModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="biljeska.cs">
+      <DependentUpon>VrticModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dijete.cs">
+      <DependentUpon>VrticModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dnevnik.cs">
+      <DependentUpon>VrticModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="evidencija.cs">
+      <DependentUpon>VrticModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\FormAktivnostDodana.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\FormAktivnostDodana.Designer.cs">
+      <DependentUpon>FormAktivnostDodana.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\FormGlavna.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\FormGlavna.Designer.cs">
+      <DependentUpon>FormGlavna.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\FormMojaDjeca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\FormMojaDjeca.Designer.cs">
+      <DependentUpon>FormMojaDjeca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\FormObavijestDodana.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\FormObavijestDodana.Designer.cs">
+      <DependentUpon>FormObavijestDodana.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\FormObavijesti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\FormObavijesti.Designer.cs">
+      <DependentUpon>FormObavijesti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\FormObavijestiRoditelj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\FormObavijestiRoditelj.Designer.cs">
+      <DependentUpon>FormObavijestiRoditelj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\FormPotvrdaBrisanja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\FormPotvrdaBrisanja.Designer.cs">
+      <DependentUpon>FormPotvrdaBrisanja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\FormPrijava.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\FormPrijava.Designer.cs">
+      <DependentUpon>FormPrijava.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\FormProfilKorisnika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\FormProfilKorisnika.Designer.cs">
+      <DependentUpon>FormProfilKorisnika.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\FormStatistika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\FormStatistika.Designer.cs">
+      <DependentUpon>FormStatistika.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\FormUpisDjece.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\FormUpisDjece.Designer.cs">
+      <DependentUpon>FormUpisDjece.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\FormUpisObavljen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\FormUpisObavljen.Designer.cs">
+      <DependentUpon>FormUpisObavljen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\FormUrediProfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\FormUrediProfil.Designer.cs">
+      <DependentUpon>FormUrediProfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\IzradiAktivnost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\IzradiAktivnost.Designer.cs">
+      <DependentUpon>IzradiAktivnost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\FormRegistracija.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\FormRegistracija.Designer.cs">
+      <DependentUpon>FormRegistracija.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\PregledajAktivnosti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\PregledajAktivnosti.Designer.cs">
+      <DependentUpon>PregledajAktivnosti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="grupa.cs">
+      <DependentUpon>VrticModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Klase\aktivnost.cs" />
+    <Compile Include="Klase\Bilješka.cs" />
+    <Compile Include="Klase\Dijete.cs" />
+    <Compile Include="Klase\Dnevnik.cs" />
+    <Compile Include="Klase\Evidencija.cs" />
+    <Compile Include="Klase\Grupa.cs" />
+    <Compile Include="Klase\Korisnik.cs" />
+    <Compile Include="Klase\Obavijest.cs" />
+    <Compile Include="Klase\prava.cs" />
+    <Compile Include="Klase\TipRadnja.cs" />
+    <Compile Include="Klase\Upis.cs" />
+    <Compile Include="Klase\ValidacijaRegistracija.cs" />
+    <Compile Include="korisnik.cs">
+      <DependentUpon>VrticModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="obavijest.cs">
+      <DependentUpon>VrticModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Klase\TipKorisnika.cs" />
+    <Compile Include="radi_u.cs">
+      <DependentUpon>VrticModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="se_nalazi.cs">
+      <DependentUpon>VrticModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tip_korisnik.cs">
+      <DependentUpon>VrticModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tip_radnja.cs">
+      <DependentUpon>VrticModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="upis.cs">
+      <DependentUpon>VrticModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VrticModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VrticModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VrticModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VrticModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VrticModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VrticModel.edmx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forme\FormAktivnostDodana.resx">
+      <DependentUpon>FormAktivnostDodana.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\FormGlavna.resx">
+      <DependentUpon>FormGlavna.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\FormMojaDjeca.resx">
+      <DependentUpon>FormMojaDjeca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\FormObavijestDodana.resx">
+      <DependentUpon>FormObavijestDodana.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\FormObavijesti.resx">
+      <DependentUpon>FormObavijesti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\FormObavijestiRoditelj.resx">
+      <DependentUpon>FormObavijestiRoditelj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\FormPotvrdaBrisanja.resx">
+      <DependentUpon>FormPotvrdaBrisanja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\FormPrijava.resx">
+      <DependentUpon>FormPrijava.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\FormProfilKorisnika.resx">
+      <DependentUpon>FormProfilKorisnika.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\FormRegistracija.resx">
+      <DependentUpon>FormRegistracija.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\FormStatistika.resx">
+      <DependentUpon>FormStatistika.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\FormUpisDjece.resx">
+      <DependentUpon>FormUpisDjece.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\FormUpisObavljen.resx">
+      <DependentUpon>FormUpisObavljen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\FormUrediProfil.resx">
+      <DependentUpon>FormUrediProfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\IzradiAktivnost.resx">
+      <DependentUpon>IzradiAktivnost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\PregledajAktivnosti.resx">
+      <DependentUpon>PregledajAktivnosti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EntityDeploy Include="VrticModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>VrticModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="output-onlinepngtools.ico" />
+    <Content Include="User manual KindergartenJoy.chm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="VrticModel.edmx.diagram">
+      <DependentUpon>VrticModel.edmx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="VrticModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>VrticModel.Context.cs</LastGenOutput>
+      <DependentUpon>VrticModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="VrticModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>VrticModel.edmx</DependentUpon>
+      <LastGenOutput>VrticModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
