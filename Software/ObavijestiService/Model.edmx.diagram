@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b51125a045174a6bae013731368402cf" Name="Diagram1">
+        <EntityTypeShape EntityType="Model.aktivnost" Width="1.5" PointX="5.25" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.biljeska" Width="1.5" PointX="5.25" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.dijete" Width="1.5" PointX="3" PointY="14.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.dnevnik" Width="1.5" PointX="8.25" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.evidencija" Width="1.5" PointX="6" PointY="20.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.grupa" Width="1.5" PointX="6" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.korisnik" Width="1.5" PointX="3" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.obavijest" Width="1.5" PointX="5.25" PointY="17.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.radi_u" Width="1.5" PointX="8.25" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.se_nalazi" Width="1.5" PointX="8.25" PointY="16.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.tip_korisnik" Width="1.5" PointX="0.75" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.tip_radnja" Width="1.5" PointX="6" PointY="14.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.upis" Width="1.5" PointX="8.25" PointY="13.375" IsExpanded="true" />
+        <AssociationConnector Association="Model.FK_aktivnost_korisnik" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_korisnik_aktivnost" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_biljeska_dijete" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_biljeska_korisnik" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_se_nalazi_dijete" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_upis_dijete" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_dnevnik_korisnik" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_dnevnik_tip_radnja" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_evidencija_grupa" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_se_nalazi_evidencija" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_radi_u_grupa" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_korisnik_tip_korisnik" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_obavijest_korisnik" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_radi_u_korisnik" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_upis_korisnik" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_se_nalazi_se_nalazi1" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

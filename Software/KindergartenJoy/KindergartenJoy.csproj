@@ -159,6 +159,12 @@
     <Compile Include="Forme\FormUrediProfil.Designer.cs">
       <DependentUpon>FormUrediProfil.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forme\FormWinService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\FormWinService.Designer.cs">
+      <DependentUpon>FormWinService.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forme\IzradiAktivnost.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -272,6 +278,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\FormUrediProfil.resx">
       <DependentUpon>FormUrediProfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\FormWinService.resx">
+      <DependentUpon>FormWinService.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\IzradiAktivnost.resx">
       <DependentUpon>IzradiAktivnost.cs</DependentUpon>

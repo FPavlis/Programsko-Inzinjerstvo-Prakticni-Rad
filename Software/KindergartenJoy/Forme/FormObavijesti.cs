@@ -117,5 +117,11 @@ namespace KindergartenJoy.Forme
 
             return base.ProcessCmdKey(ref msg, keyData);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FormWinService formWinService = new FormWinService();
+            formWinService.ShowDialog();
+        }
     }
 }
