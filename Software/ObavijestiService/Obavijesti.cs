@@ -21,7 +21,7 @@ namespace ObavijestiService
 
         public Obavijesti()
         {
-            _timer = new Timer(15000) { AutoReset = true };
+            _timer = new Timer(86400000) { AutoReset = true };
             _timer.Elapsed += TimerElapsed;
         }
 
