@@ -64,6 +64,8 @@ namespace KindergartenJoy.Forme
             // 
             // dgvGlavni
             // 
+            this.dgvGlavni.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvGlavni.BackgroundColor = System.Drawing.Color.LightCyan;
             this.dgvGlavni.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvGlavni.Location = new System.Drawing.Point(12, 12);
             this.dgvGlavni.Name = "dgvGlavni";
