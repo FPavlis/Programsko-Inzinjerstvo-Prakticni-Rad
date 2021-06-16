@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.ServiceProcess;
+using System.Diagnostics;
 
 namespace KindergartenJoy.Forme
 {
@@ -22,10 +23,20 @@ namespace KindergartenJoy.Forme
         }
 
         private void btnInstaliraj_Click(object sender, EventArgs e)
-        {           
-            string fileName = "install.bat";
-            string path = Path.GetFullPath(fileName);
-            System.Diagnostics.Process.Start(path);
+        {
+            Process process = new Process();
+            process.StartInfo.UseShellExecute = true;
+            process.StartInfo.Verb = "runas";
+            process.StartInfo.WorkingDirectory = @"C:\Users\kowas\Documents\pi21-skovacic2-fpavlis-iparac\Software\ObavijestiService\bin\Debug";
+            process.StartInfo.FileName = "cmd.exe";
+            process.StartInfo.RedirectStandardInput = true;
+            process.StartInfo.RedirectStandardOutput = true;
+            process.StartInfo.UseShellExecute = false;
+            process.Start();
+            process.StandardInput.WriteLine("ObavijestiService install");
+            process.StandardInput.Flush();
+            process.StandardInput.Close();
+            process.WaitForExit();
             label1.Text = "Servisi instalirani, da bi ih pokrenuli kliknite start!";
             btnDeinstaliraj.Enabled = true;
             btnInstaliraj.Enabled = false;
@@ -35,9 +46,19 @@ namespace KindergartenJoy.Forme
 
         private void btnStart_Click(object sender, EventArgs e)
         {
-            string fileName = "start.bat";
-            string path = Path.GetFullPath(fileName);
-            System.Diagnostics.Process.Start(path);
+            Process process = new Process();
+            process.StartInfo.UseShellExecute = true;
+            process.StartInfo.Verb = "runas";
+            process.StartInfo.WorkingDirectory = @"C:\Users\kowas\Documents\pi21-skovacic2-fpavlis-iparac\Software\ObavijestiService\bin\Debug";
+            process.StartInfo.FileName = "cmd.exe";
+            process.StartInfo.RedirectStandardInput = true;
+            process.StartInfo.RedirectStandardOutput = true;
+            process.StartInfo.UseShellExecute = false;
+            process.Start();
+            process.StandardInput.WriteLine("ObavijestiService start");
+            process.StandardInput.Flush();
+            process.StandardInput.Close();
+            process.WaitForExit();
             label1.Text = "Servisi pokrenuti, možete izaći iz aplikacije!";
             btnDeinstaliraj.Enabled = false;
             btnInstaliraj.Enabled = false;
@@ -46,10 +67,20 @@ namespace KindergartenJoy.Forme
         }
 
         private void btnStop_Click(object sender, EventArgs e)
-        {        
-            string fileName = "stop.bat";
-            string path = Path.GetFullPath(fileName);
-            System.Diagnostics.Process.Start(path);
+        {
+            Process process = new Process();
+            process.StartInfo.UseShellExecute = true;
+            process.StartInfo.Verb = "runas";
+            process.StartInfo.WorkingDirectory = @"C:\Users\kowas\Documents\pi21-skovacic2-fpavlis-iparac\Software\ObavijestiService\bin\Debug";
+            process.StartInfo.FileName = "cmd.exe";
+            process.StartInfo.RedirectStandardInput = true;
+            process.StartInfo.RedirectStandardOutput = true;
+            process.StartInfo.UseShellExecute = false;
+            process.Start();
+            process.StandardInput.WriteLine("ObavijestiService stop");
+            process.StandardInput.Flush();
+            process.StandardInput.Close();
+            process.WaitForExit();
             label1.Text = "Servisi stopirani, možete ih deinstalirati ili opet pokrenuti!";
             btnDeinstaliraj.Enabled = true;
             btnInstaliraj.Enabled = false;
@@ -58,10 +89,20 @@ namespace KindergartenJoy.Forme
         }
 
         private void btnDeinstaliraj_Click(object sender, EventArgs e)
-        {           
-            string fileName = "uninstall.bat";
-            string path = Path.GetFullPath(fileName);
-            System.Diagnostics.Process.Start(path);
+        {
+            Process process = new Process();
+            process.StartInfo.UseShellExecute = true;
+            process.StartInfo.Verb = "runas";
+            process.StartInfo.WorkingDirectory = @"C:\Users\kowas\Documents\pi21-skovacic2-fpavlis-iparac\Software\ObavijestiService\bin\Debug";
+            process.StartInfo.FileName = "cmd.exe";
+            process.StartInfo.RedirectStandardInput = true;
+            process.StartInfo.RedirectStandardOutput = true;
+            process.StartInfo.UseShellExecute = false;
+            process.Start();
+            process.StandardInput.WriteLine("ObavijestiService uninstall");
+            process.StandardInput.Flush();
+            process.StandardInput.Close();
+            process.WaitForExit();
             label1.Text = "Servisi deinstalirani, možete ih opet instalirati po potrebi!";
             btnDeinstaliraj.Enabled = false;
             btnInstaliraj.Enabled = true;
